@@ -1,0 +1,4228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    --widgets-background: transparent;
+    --sports-menu-bg: #0A0E1C !important;
+    --carousel-bullet: var(--miscelaneous-group);
+    --odd-button-bg: #2f2f32;
+    --bt-menu-default: var(--background-btn-menu);
+    --max-height: calc(var(--height-base) - 54px);
+    --min-height: calc(var(--height-base) - 54px);
+    --theme-mobile-height: calc(100vh - 135px) !important;
+    --theme-desktop-height: calc(100vh - 85px) !important;
+    --footer-bg: #0A0E1C;
+    --casino-background: #000000
+}
+
+/* 🟠 Header menu-top-bar - MODIFICADO */
+div.menu-top-bar {
+    background-color: #172448 !important;
+    height: 72px !important;
+}
+
+/* 🟠 Register button - remover glow interno e externos - MODIFICADO */
+button.register-btn.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button,
+html body .register-btn,
+body .register-btn,
+.menu-top-bar .register-btn {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+}
+
+.register-btn span.mat-mdc-button-touch-target {
+    background-color: #FF6300 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Register button específico por ID - MODIFICADO */
+#register-button,
+button#register-button,
+button#register-button.mdc-button {
+    background: #FF6300 !important;
+    background-color: #FF6300 !important;
+    background-image: none !important;
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    padding: 0 20px !important;
+    height: 40px !important;
+    min-width: 94px !important;
+    opacity: 1 !important;
+}
+
+#register-button:hover,
+button#register-button:hover,
+button#register-button.mdc-button:hover {
+    background: #FF6300 !important;
+    background-color: #FF6300 !important;
+    opacity: 0.9 !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Aplicar estilo também nos elementos internos */
+#register-button span,
+#register-button .mat-mdc-button-touch-target {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Forçar fundo laranja em TODOS os casos */
+#register-button,
+#register-button.mdc-button,
+#register-button.mat-mdc-button,
+button#register-button,
+button#register-button.mdc-button,
+button#register-button.mat-mdc-button,
+[id="register-button"] {
+    background: #FF6300 !important;
+    background-color: #FF6300 !important;
+    background-image: none !important;
+    opacity: 1 !important;
+}
+
+/* 🟠 Botão Login/Entrar - FORÇAR remoção de neon e aplicar laranja primário */
+button.mat-mdc-menu-trigger.hover-register,
+button.hover-register,
+.mat-mdc-menu-trigger.hover-register,
+.hover-register,
+button.mat-mdc-menu-trigger.mdc-button.hover-register {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: 2px solid #FF6300 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #FF6300 !important;
+    border-radius: 8px !important;
+    color: #FF6300 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    height: 40px !important;
+    padding: 0 20px !important;
+    min-width: 75px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    animation: none !important;
+    transition: opacity 0.2s !important;
+}
+
+/* Forçar em TODOS os estados possíveis */
+button.mat-mdc-menu-trigger.hover-register:hover,
+button.mat-mdc-menu-trigger.hover-register:focus,
+button.mat-mdc-menu-trigger.hover-register:active,
+button.mat-mdc-menu-trigger.hover-register:focus-visible,
+button.mat-mdc-menu-trigger.hover-register:focus-within,
+button.hover-register:hover,
+button.hover-register:focus,
+button.hover-register:active,
+.mat-mdc-menu-trigger.hover-register:hover,
+.mat-mdc-menu-trigger.hover-register:focus,
+.mat-mdc-menu-trigger.hover-register:active,
+.hover-register:hover,
+.hover-register:focus,
+.hover-register:active {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid #FF6300 !important;
+    border-width: 2px !important;
+    border-style: solid !important;
+    border-color: #FF6300 !important;
+    opacity: 0.8 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    text-shadow: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    animation: none !important;
+}
+
+/* Remover pseudo-elementos que podem criar efeitos */
+button.mat-mdc-menu-trigger.hover-register::before,
+button.mat-mdc-menu-trigger.hover-register::after,
+.hover-register::before,
+.hover-register::after {
+    display: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Aplicar estilo nos elementos internos */
+.mat-mdc-menu-trigger.hover-register span,
+.hover-register span,
+button.mat-mdc-menu-trigger.hover-register span {
+    color: #FF6300 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    text-shadow: none !important;
+    filter: none !important;
+    box-shadow: none !important;
+}
+
+
+
+/* 🟠 Botão Cancelar - mesmo estilo do Provedor (laranja) */
+.mdc-button__label span:contains("Cancelar"),
+span:contains("Cancelar") {
+    background-color: #FF6300 !important;
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    padding: 8px 16px !important;
+    display: inline-block !important;
+}
+
+/* 🟠 mat-mdc-button-touch-target do botão Cancelar */
+button:has(.mdc-button__label span:contains("Cancelar")) span.mat-mdc-button-touch-target,
+button:has(span:contains("Cancelar")) span.mat-mdc-button-touch-target {
+    background-color: #FF6300 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+    border: none !important;
+    outline: none !important;
+}
+
+.register-btn span.mdc-button__label {
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* 🟠 Login button - aplicar border-radius em todos os elementos - MODIFICADO */
+.login-btn,
+.login-btn *,
+html body .login-btn span.mat-mdc-button-touch-target,
+html body .login-btn .mat-mdc-button-touch-target,
+body .login-btn span.mat-mdc-button-touch-target,
+body .login-btn .mat-mdc-button-touch-target,
+.menu-top-bar .login-btn span.mat-mdc-button-touch-target,
+.menu-top-bar .login-btn .mat-mdc-button-touch-target {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+}
+
+/* Login button - tornar botão externo completamente invisível */
+html body .login-btn::before,
+body .login-btn::before,
+.menu-top-bar .login-btn::before,
+html body .login-btn::after,
+body .login-btn::after,
+.menu-top-bar .login-btn::after {
+    display: none !important;
+}
+
+/* Remover TODAS as bordas do botão pai */
+html body button.login-btn.mdc-button.mat-mdc-button,
+body button.login-btn.mdc-button.mat-mdc-button,
+.menu-top-bar button.login-btn.mdc-button.mat-mdc-button,
+html body .login-btn,
+body .login-btn,
+.menu-top-bar .login-btn {
+    background: transparent !important;
+    border: 0px solid transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+    outline: 0px solid transparent !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    box-sizing: border-box !important;
+}
+
+/* Login button - estilos do elemento interno (mat-mdc-button-touch-target) */
+html body .login-btn span.mat-mdc-button-touch-target,
+html body .login-btn .mat-mdc-button-touch-target,
+body .login-btn span.mat-mdc-button-touch-target,
+body .login-btn .mat-mdc-button-touch-target,
+.menu-top-bar .login-btn span.mat-mdc-button-touch-target,
+.menu-top-bar .login-btn .mat-mdc-button-touch-target {
+    background-color: transparent !important;
+    border: 2px solid #FF6300 !important;
+    height: 40px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+    outline: none !important;
+}
+
+.login-btn span.mdc-button__label {
+    color: #FF6300 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background: none !important;
+}
+
+/* Remover efeitos neon do container e botões - cores chapadas */
+div.menu-right,
+div.menu-right * {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+}
+
+.register-btn span.mat-mdc-button-touch-target,
+.login-btn span.mat-mdc-button-touch-target {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* Mat drawer backdrop - translúcido sem efeitos neon */
+.mat-drawer-container div.mat-drawer-backdrop,
+div.mat-drawer-backdrop.ng-star-inserted,
+.mat-drawer-backdrop.ng-star-inserted {
+    background: rgba(0, 0, 0, 0.5) !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+}
+
+/* Background da página */
+html, body,
+app-root,
+app-generic-widgets-layout,
+div.app-component-view,
+.app-component-view,
+.mat-drawer-container,
+.example-container,
+.background-router-outlet-mobile {
+    background-color: #0A0E1C !important;
+    background: #0A0E1C !important;
+}
+
+:root,[data-theme=dark] {
+    --neon-primary-color: #FF6300;
+    --neon-secondary-color: #ff00ea;
+    --neon-tertiary-color: rgb(246 19 19 / 60%);
+    --neon-light-color: #FFFFFF;
+    --custom-neon-border: #ffe2a9;
+    --custom-neon-glow1: rgba(255, 7, 7, 0.8);
+    --custom-neon-glow2: var(--neon-secondary-color);
+    --custom-neon-glow3: var(--neon-tertiary-color);
+    --submenu-item-container-color: rgba(58, 58, 61, 0.5);
+    --bt-default: var(--theme-color-4-plus2);
+    --fill-stroke-color: rgba(255, 255, 255, .05);
+    --background-level-1: rgba(38, 38, 38, 0.80);
+    --background-btn-menu: rgba(0, 0, 0, .15);
+    font-family: "Poppins", "DM Sans", sans-serif;
+    --miscelaneous-group: #3a3a3d;
+    --theme-color-1-plus2: #000000;
+    --theme-color-1-plus2-30: #1919194d;
+    --theme-color-1-plus2-50: #19191980;
+    --theme-color-1-plus2-dark: #191919;
+    --theme-color-2-plus2: #FF6300;
+    --theme-color-2-plus2-10: #ffdc151A;
+    --theme-color-1: #191919;
+    --theme-color-1-alpha: #191919c4;
+    --theme-color-odds-button-selected-plus2: #711361;
+    --theme-odds-button-hover-plus2: #fc00df;
+    --theme-color-2: #c2cdda;
+    --theme-color-3: #ffffff;
+    --theme-color-4: #f4f4f4;
+    --theme-color-5: #d300a5;
+    --theme-color-6: #ff9a24;
+    --theme-color-7: rgba(255, 154, 36, 0.4);
+    --theme-color-8: #808080;
+    --theme-color-9: #cb3838;
+    --theme-color-10: #cccccc;
+    --theme-color-11: #ebebeb;
+    --theme-color-12: rgba(179, 200, 225, 0.41);
+    --theme-color-13: rgba(179, 200, 225, 0.41);
+    --theme-color-14: rgba(255, 154, 36, 0.1);
+    --theme-text-color: #000000;
+    --theme-text-color-1: #ffffff;
+    --theme-text-color-2: #ffffff;
+    --theme-text-color-3: #404040;
+    --background-input: #ffffff;
+    --theme-new-bg-coupon-expandible: #feffe2;
+    --theme-new-cl-coupon-expandible: black;
+    --theme-color-13: #e8e8e8;
+    --theme-color-13-plus2: rgba(179, 200, 225, .41);
+    --theme-text-color-plus2: #ffffff;
+    --theme-text-color-plus2-white: #ffffff;
+    --theme-calendar-color: #ffffff;
+    --theme-scroll-color: #3a3a3d;
+    --theme-color-3-plus2: #606060;
+    --theme-color-4-plus2: #3a3a3d;
+    --theme-color-5-plus2: #49494d;
+    --theme-color-6-plus2: #ffffff;
+    --theme-color-7-plus2: #2f2f32;
+    --theme-color-8-plus2: #000000;
+    --theme-color-9-plus2: #a8a8a8;
+    --theme-color-11-plus2: #e5e5e5;
+    --theme-color-12-plus2: #ececec;
+    --theme-color-14-plus2: #e9e9e9;
+    --theme-color-15-plus2: #151515;
+    --theme-color-16-plus2: #ffffff1a;
+    --theme-color-17-plus2: #3a3a3d;
+    --theme-color-18-plus2: #5b5b5f;
+    --theme-color-black-plus2: black;
+    --theme-color-highlights-plus2: #3e3e42;
+    --theme-color-highlights-dark-plus2: #3e3e4200;
+    --theme-color-degrad-plus2: #606060;
+    --theme-color-degrad-dark-plus2: #60606000;
+    --theme-color-separator-plus2: #a8a8a8;
+    --theme-color-light-plus2: #f5f5f5;
+    --theme-color-button-text-plus2: #000000;
+    --theme-color-coupon: #f0f0f0;
+    --theme-search-bg-color: #111111;
+    --theme-back-office-color: #FCB500;
+    --theme-background-menu-top-bar: rgba(0, 0, 0, .8) !important;
+    --theme-color-panel-user-text-plus2: #ffffff;
+    --theme-color-dashboard-user-text-active-plus2: var(--theme-color-2-plus2);
+    --background-system: #49494D;
+    --miscelaneous-group: rgba(38, 38, 38, 0.80);
+    --background-level-1-mobile: rgba(38, 38, 38);
+    --fill-secondary: rgba(77, 77, 77, 0.30);
+    --background-level-3: rgba(77, 77, 77, 0.40);
+    --background-level-alternative: rgba(0, 0, 0, .4);
+    --background-content-primary: rgba(77, 77, 77, .5);
+    --background-selected-payment-methods: rgba(128, 128, 128, 0.25);
+    --background-hover-btn-menu: rgba(229, 229, 229, .25);
+    --background-bw: rgba(26, 26, 26, 1);
+    --background-level-1-statistic: #262626;
+    --background-statistic-card: #2d2d2e;
+    --background-statistic-thead: #3e3e3f;
+    --background-btn-fill-1: rgba(255, 255, 255, 0.15);
+    --background-btn-fill-2: rgba(0, 0, 0, 0.15);
+    --background-btn-fill-3: rgba(255, 255, 255, 0.1);
+    --authentication-info-action-btn-color: rgba(77, 77, 77, 0.25);
+    --fill-stroke-alt: rgba(255, 255, 255, 0.15);
+    --fill-stroke: rgba(255, 255, 255, 0.1);
+    --fill-stroke-alternative: rgba(255, 255, 255, .20);
+    --fill-stroke: rgba(255, 255, 255, .05);
+    --fill-separator: rgba(178, 178, 178, .8);
+    --fill-alternative: rgba(13, 13, 13, .3);
+    --fill-secondary-color: #4d4d4d;
+    --fill-primary: rgba(89, 89, 89, 0.5);
+    --fill-secondary: rgba(77, 77, 77, 0.25);
+    --text-tertiary: rgba(153, 153, 153, 1);
+    --miscelaneous-PopUp: rgba(94, 94, 94, 1);
+    --theme-text-color-plus2-inverted: #FFFFFF;
+    --input-default-color: rgba(0, 0, 0, .3);
+    --input-stroke-default-color: rgba(255, 255, 255, .3);
+    --input-disabled-color: rgba(255, 255, 255, .15);
+    --input-stroke-disabled-color: rgba(255, 255, 255, .2);
+    --input-text-disabled-color: rgba(204, 204, 204, .5);
+    --input-focus-color: rgba(0, 0, 0, .3);
+    --input-focus-color-light: rgba(166, 166, 166, 0.6);
+    --input-stroke-focus-color: rgba(255, 255, 255, .6);
+    --input-stroke-error-color: #FF453A;
+    --colors-red: rgba(227, 57, 57, 1);
+    --colors-purple: rgba(134, 26, 201, 1);
+    --colors-orange: rgba(255, 155, 83, 1);
+    --colors-green: rgba(60, 182, 76, 1);
+    --colors-brown: rgba(137, 110, 103, 1);
+    --colors-yellow: rgba(255, 223, 66, 1);
+    --colors-yellow-2: rgba(255, 223, 66, 0.3);
+    --colors-blue: rgba(44, 104, 234, 1);
+    --colors-red-alt: rgba(255, 165, 160, 1);
+    --menu-btn-selected: rgba(0, 0, 0, 0.3);
+    --menu-btn-default: rgba(0, 0, 0, 0.15);
+    --menu-btn-hover: rgba(128, 128, 128, 0.25);
+    --bt-pressed: rgba(0, 0, 0, 0.3);
+    --bt-toggle-stroke: rgba(255, 255, 255, 0.5);
+    --alert-warning-icon-color: #FFD60A;
+    --alert-warning-background-color: rgba(255, 214, 10, 0.30);
+    --alert-error-default: #ff453a;
+    --alert-error-background: rgba(255, 69, 58, 0.3);
+    --alert-success-default: #34c759;
+    --alert-success-background: rgba(52, 199, 89, 0.3);
+    --alert-info-default: #007aff;
+    --alert-info-background: rgba(0, 122, 255, 0.3);
+    --alert-warning-default: #fc0;
+    --alert-warning-background: rgba(255, 204, 0, 0.3);
+    --theme-background-dialog: #262626;
+    --text-primary: rgba(255, 255, 255, .9);
+    --secondary-text-color: rgba(229, 229, 229, .8);
+    --tertiary-text-color: rgba(204, 204, 204, 0.65);
+    --footer-bg: #080808
+}
+
+:root app-super-odds-item .super_odds__card_content,[data-theme=dark] app-super-odds-item .super_odds__card_content {
+    padding: 8px;
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--theme-text-color-2);
+    overflow: auto
+}
+
+:root app-super-odds-item .super_odds__card,[data-theme=dark] app-super-odds-item .super_odds__card {
+    border-radius: 4px;
+    overflow: hidden;
+    width: 290px;
+    max-width: 300px;
+    background: var(--theme-color-1-alpha);
+    height: 175px;
+    max-height: 175px;
+    position: relative
+}
+
+:root app-super-odds-item .super_odds__card .super_odds__card_title,[data-theme=dark] app-super-odds-item .super_odds__card .super_odds__card_title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px 8px 0;
+    gap: 8px;
+    min-width: 100%;
+    width: auto;
+    font-size: 13px;
+    color: #fff;
+    font-weight: bold
+}
+
+:root app-window-desktop .router-outlet:not(.bg-casino,.bg_casino_v2),[data-theme=dark] app-window-desktop .router-outlet:not(.bg-casino,.bg_casino_v2) {
+    height: calc(100vh - 80px) !important
+}
+
+:root app-menu-top-bar-plus2 .menu-tb-s .second-bar,[data-theme=dark] app-menu-top-bar-plus2 .menu-tb-s .second-bar {
+    padding: 0 16px;
+    height: 40px;
+    background: #282b2d !important;
+    display: flex
+}
+
+:root app-menu-top-bar-plus2 .menu-tb-s .title,[data-theme=dark] app-menu-top-bar-plus2 .menu-tb-s .title {
+    color: var(--theme-color-2-plus2) !important;
+    font-size: 14px !important;
+    font-family: "Poppins", sans-serif !important /* 🟠 DM Sans → Poppins - MODIFICADO */
+}
+
+:root app-menu-top-bar-plus2 .menu-tb-s .theme-button .mat-button,[data-theme=dark] app-menu-top-bar-plus2 .menu-tb-s .theme-button .mat-button {
+    border-radius: 15px !important
+}
+
+:root app-menu-top-bar-plus2 .menu-tb-s .menu_top_bar__main_list .active-bar,[data-theme=dark] app-menu-top-bar-plus2 .menu-tb-s .menu_top_bar__main_list .active-bar {
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+:root app-menu-top-bar-plus2 #register-button,[data-theme=dark] app-menu-top-bar-plus2 #register-button {
+    width: 94px !important;
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 35px !important;
+    padding: 0 20px;
+    border-radius: 17.5px;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    box-shadow: 0 0 8.9px 0 red,0 0 15px 0 red,0 0 85.2px 13px rgba(255,0,0,.5),0 0 100px 10px rgba(255,0,0,.4);
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+:root app-menu-top-bar-plus2 #register-button:hover,[data-theme=dark] app-menu-top-bar-plus2 #register-button:hover {
+    box-shadow: 0 0 12px 0 red,0 0 20px 0 red,0 0 110px 18px rgba(255,0,0,.7),0 0 130px 20px rgba(255,0,0,.5);
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8)
+}
+
+:root app-menu-top-bar-plus2 .register-container,:root app-menu-top-bar-mobile-plus2 .register-container,[data-theme=dark] app-menu-top-bar-plus2 .register-container,[data-theme=dark] app-menu-top-bar-mobile-plus2 .register-container {
+    position: relative;
+    display: inline-block
+}
+
+:root app-menu-top-bar-mobile-plus2 .pix-tag,[data-theme=dark] app-menu-top-bar-mobile-plus2 .pix-tag {
+    right: 5px !important
+}
+
+:root app-authentication-info .register-container,[data-theme=dark] app-authentication-info .register-container {
+    position: relative;
+    display: inline-block
+}
+
+:root app-authentication-info .pix-tag img,[data-theme=dark] app-authentication-info .pix-tag img {
+    width: 12px;
+    height: 12px
+}
+
+:root app-authentication-info .pix-tag,[data-theme=dark] app-authentication-info .pix-tag {
+    position: absolute;
+    top: -8px;
+    right: -310px;
+    background-color: #ff0;
+    color: #000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 999
+}
+
+:root app-menu-login-sidebar-mobile-plus2 app-authentication-info .pix-tag,[data-theme=dark] app-menu-login-sidebar-mobile-plus2 app-authentication-info .pix-tag {
+    right: -260px !important
+}
+
+:root app-authentication-field .authentication-field-2 .hover-register:hover:enabled,[data-theme=dark] app-authentication-field .authentication-field-2 .hover-register:hover:enabled {
+    --theme-color-6-plus2: transparent !important
+}
+
+:root app-authentication-field .authentication-field-2 .custom-button button,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button button {
+    width: auto !important;
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff7e7 !important;
+    height: 35px !important;
+    padding: 0 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border: 2px solid #ffe7ba !important;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px rgba(255,7,7,.29),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
+    transition: all .3s ease-in-out
+}
+
+:root app-authentication-field .authentication-field-2 .custom-button button:first-of-type,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button button:first-of-type {
+    margin: 0 1em
+}
+
+:root app-authentication-field .authentication-field-2 .custom-button button#register-button,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button button#register-button {
+    background-color: rgba(0,0,0,0);
+    color: var(--theme-text-color-1)
+}
+
+:root app-authentication-field .authentication-field-2 .custom-button button:hover,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button button:hover {
+    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
+}
+
+:root app-authentication-field .authentication-field-2 .custom-button .open-form-login,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button .open-form-login {
+    background-color: rgba(0,0,0,0);
+    color: var(--theme-text-color-1)
+}
+
+:root app-authentication-field .authentication-field-2 .button__deposit,[data-theme=dark] app-authentication-field .authentication-field-2 .button__deposit {
+    background-color: var(--theme-color-2-plus2) !important;
+    color: var(--theme-color-8-plus2) !important;
+    border: none !important
+}
+
+:root .background-router-outlet,[data-theme=dark] .background-router-outlet {
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-size: 25%,25%,100% 100%;
+    background-position: left,right,center;
+    opacity: 1;
+    background: #0A0E1C !important
+}
+
+:root .background-router-outlet-mobile,[data-theme=dark] .background-router-outlet-mobile {
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: right bottom,left top,center;
+    opacity: 1;
+    background: #0A0E1C !important
+}
+
+:root .submenu-item-container,[data-theme=dark] .submenu-item-container {
+    background: var(--submenu-item-container-color) !important
+}
+
+/* 🟠 Casino filter categories - padding lateral - ORIGINAL */
+div.casino_filter__categories.casino_filter__mobile_container.cursor_grab.px {
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+/* 🟠 Container geral app-generic-widgets-layout - padding - MODIFICADO */
+app-generic-widgets-layout {
+    padding: 10px !important;
+}
+
+/* 🟠 Container específico do filtro casino - MODIFICADO */
+div.casino_filter__container.w-100.h-100,
+div.casino_filter__container {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+}
+
+/* 🟠 Botão de busca do casino - MODIFICADO */
+div.casino_button_filter__container.cursor_pointer,
+.casino_button_filter__container,
+div.casino_filter__search_button.w-100 {
+    background-color: #172448 !important;
+    height: 37px !important;
+    border: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    outline: none !important;
+    border-radius: 8px !important;
+}
+
+/* Título do botão de busca */
+div.casino_button_filter__container_title.ng-star-inserted,
+.casino_button_filter__container_title,
+.casino_filter__search_button span,
+.casino_filter__search_button div:not(.mat-icon) {
+    color: #BBBDD4 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+}
+
+/* 🟠 Botão específico do Provedor - fundo laranja - MODIFICADO */
+app-casino-button-filter.ng-tns-c684038197-4:nth-child(2) .casino_button_filter__container,
+app-casino-button-filter.ng-tns-c684038197-16:nth-child(2) .casino_button_filter__container,
+app-casino-button-filter[class*="ng-tns-"]:nth-child(2) .casino_button_filter__container,
+app-casino-button-filter:nth-child(2) .casino_button_filter__container,
+app-casino-button-filter .casino_button_filter__container:has(span:contains("Provedor")),
+.casino_button_filter__container.cursor_pointer:nth-of-type(2),
+div.casino_button_filter__container.cursor_pointer:nth-of-type(2),
+div.casino_button_filter__container.cursor_pointer:last-child {
+    background-color: #FF6300 !important;
+}
+
+/* 🟠 Botão Buscar - manter azul */
+app-casino-button-filter:first-child .casino_button_filter__container,
+app-casino-button-filter:nth-child(1) .casino_button_filter__container {
+    background-color: #172448 !important;
+}
+
+/* 🟠 Botão Provedor - forçar laranja */
+app-casino-button-filter:last-child .casino_button_filter__container,
+app-casino-button-filter:nth-child(2) .casino_button_filter__container {
+    background-color: #FF6300 !important;
+}
+
+/* 🟠 Texto 'Provedor' - branco, Poppins Bold 14px - MODIFICADO */
+app-casino-button-filter:nth-child(2) .casino_button_filter__container_title {
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+}
+
+/* 🟠 Ícone do botão de busca - branco - MODIFICADO */
+.casino_button_filter__container mat-icon.mat-icon.notranslate.material-symbols-rounded,
+.casino_button_filter__container mat-icon,
+.casino_button_filter__container mat-icon.text_primary,
+.casino_filter__search_button mat-icon {
+    color: #FFFFFF !important;
+    font-family: 'Material Icons' !important;
+}
+
+/* 🟠 Bottom menu - background azul - MODIFICADO */
+div.main[class*="ng-tns-c"].ng-trigger.ng-trigger-slideInOut,
+.bottom-nav-container .main,
+div.bottom-nav-container[class*="ng-tns-c"],
+.bottom-nav-container {
+    background-color: #172448 !important;
+}
+
+/* 🟠 Remover borda/linha neon laranja superior + border-radius - MODIFICADO */
+div.bottom-nav-container[class*="ng-tns-c"],
+.bottom-nav-container,
+div.main[class*="ng-tns-c"].ng-trigger {
+    border-top: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    border-radius: 30px 30px 0 0 !important;
+}
+
+/* 🟠 Fontes dos elementos filhos do bottom menu - Poppins Semibold 12px #BBBDD4 - MODIFICADO */
+div.main[class*="ng-tns-c"] *,
+.bottom-nav-container .main *,
+div.bottom-nav-container[class*="ng-tns-c"] * {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: #BBBDD4 !important;
+}
+
+/* 🟠 Títulos específicos dos botões do bottom menu - MODIFICADO */
+div.game-button-mobile-title,
+.game-button-mobile-title,
+div.bottom-nav-container[class*="ng-tns-c"] .game-button-mobile-title {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: #BBBDD4 !important;
+}
+
+/* 🟠 Título 'Atalhos' - Poppins Bold 16px - MODIFICADO */
+span.event-title-truncate,
+.event-title-truncate,
+.custom-layout.title-content span.event-title-truncate {
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+/* 🟠 Swiper container - padding lateral 6px - MODIFICADO */
+swiper-container,
+#casino-swiper_0,
+.w-100.casino-banners__container swiper-container {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+
+/* 🟠 Header 'Top Jogos' - padding 8px - MODIFICADO */
+div.event_block__header.font_14.weight_700.ng-star-inserted,
+.event_block__header {
+    padding: 8px !important;
+}
+
+/* 🟠 Título dos eventos (Copa do Brasil, etc) - Poppins - MODIFICADO */
+span.event-highlight-card__title,
+.event-highlight-card__title {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* 🟠 Substituição global Inter → Poppins (exceto ícones) - MODIFICADO */
+*:not(.material-icons):not(.material-symbols-rounded):not(.mat-icon):not([class*="icon"]):not(i) {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* 🟠 Botão Cancelar - mesmo estilo do Register - ADICIONADO */
+button[class*="mdc-button"]:has(.mdc-button__label span:contains("Cancelar")),
+.mdc-button__label:has(span:contains("Cancelar")) {
+    background-color: #FF6300 !important;
+    border-radius: 8px !important;
+    min-height: 40px !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background-image: none !important;
+    background-clip: initial !important;
+    -webkit-background-clip: initial !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Texto do botão Cancelar - branco Poppins Bold */
+.mdc-button__label span:contains("Cancelar") {
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+
+/* 🟠 Title links específicos - MODIFICADO */
+.title_link.ng-star-inserted,
+div.title_link {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* 🟠 Swiper slides - margin-right original 10px - MODIFICADO */
+swiper-slide,
+swiper-slide.ng-star-inserted {
+    margin-right: 10px !important;
+}
+
+/* 🟠 Casino providers dialog - gradient background - MODIFICADO */
+div.casino_providers__full.casino_providers__full_mobile,
+.casino_providers__full {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+}
+
+/* 🟠 Sidebar - aplicar mesmo gradiente */
+div.sidebar,
+.sidebar {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+}
+
+/* 🟠 Authentication Info Container - transparente com bordas esquerdas arredondadas */
+div.authentication_info__container,
+.authentication_info__container,
+div.authentication_info__container.THEME_LIGHT.p_8.font_13.position_relative {
+    background: transparent !important;
+    background-color: transparent !important;
+    border-radius: 5px 0 0 5px !important;
+    border-top-left-radius: 5px !important;
+    border-bottom-left-radius: 5px !important;
+    -webkit-border-radius: 5px 0 0 5px !important;
+    -moz-border-radius: 5px 0 0 5px !important;
+}
+
+/* 🟠 Login Container Mobile - esconder */
+app-login-container-mobile-plus2 {
+    display: none !important;
+}
+
+/* 🟠 Botão Entrar - mesmo estilo do Register */
+button.global_login__btn.global_login__sign-in-btn,
+.global_login__btn.global_login__sign-in-btn {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+.global_login__sign-in-btn span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: #F75703 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+.global_login__sign-in-btn span.mdc-button__label {
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 40px !important;
+    padding: 0 16px !important;
+}
+
+/* 🟠 Botão Registrar (sidebar login) - estilo do login-btn - ESPECÍFICO */
+button.global_login__btn.global_login__register.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button,
+.global_login__btn.global_login__register.mdc-button,
+button.global_login__register {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 0px solid transparent !important;
+    border-width: 0 !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+button.global_login__register span.mat-mdc-button-touch-target,
+.global_login__register span.mat-mdc-button-touch-target {
+    background: #212A42 !important;
+    background-color: #212A42 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+button.global_login__register span.mdc-button__label,
+.global_login__register span.mdc-button__label {
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 40px !important;
+    padding: 0 16px !important;
+}
+
+/* Regra removida - conflitava com ícone branco */
+
+/* 🟠 Input field - bordas laranjas apenas quando preenchido */
+div.st_input.st_input_outlined.ng-star-inserted.filled-input,
+div.st_input.ng-tns-c1282772257-1.st_input_outlined.ng-star-inserted.filled-input {
+    border: none !important;
+    border-top: 1px solid #FF6300 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    outline: none !important;
+}
+
+/* Input field vazio - sem bordas laranjas */
+div.st_input.st_input_outlined.ng-star-inserted:not(.filled-input) {
+    box-shadow: none !important;
+    filter: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Input interno - bordas completas APENAS quando preenchido (ng-dirty) */
+.st_input.filled-input input.form-control.w-100,
+.st_input.filled-input input.form-control.w-100.st_input__with_suffix,
+.st_input.filled-input input,
+input.form-control.w-100.ng-dirty.ng-touched.st_input_error.ng-invalid,
+input.form-control.w-100.ng-dirty.st_input_error,
+input[class*="form-control"][class*="w-100"][class*="ng-dirty"][class*="st_input_error"],
+input[class*="form-control"][class*="w-100"][class*="ng-dirty"] {
+    border-left: 1px solid #FF6300 !important;
+    border-right: 1px solid #FF6300 !important;
+    border-bottom: 1px solid #FF6300 !important;
+    border-top: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Input específico - forçar bordas laterais mesmo com ng-invalid e ng-touched */
+html body div#register-page__container input.form-control.w-100.ng-dirty.ng-invalid.ng-touched,
+html body div#register-page__container input.form-control.w-100.ng-dirty.ng-touched,
+html body div#register-page__container input.form-control.w-100.ng-dirty,
+html body div#personal-data-form-cpf input.form-control.w-100,
+html body div#personal-data-form-cpf input,
+div#personal-data-form-cpf input,
+input[class*="form-control"][class*="w-100"][class*="ng-dirty"][class*="ng-invalid"][class*="ng-touched"] {
+    border-left: 1px solid #FF6300 !important;
+    border-right: 1px solid #FF6300 !important;
+    border-bottom: 1px solid #FF6300 !important;
+    border-top: none !important;
+    border-color: #FF6300 !important;
+    border-style: solid !important;
+    border-width: 0 1px 1px 1px !important;
+}
+
+
+/* 🟠 Label Contato - remover apenas bordas superior e laterais */
+st-contact#access_data_form__contact_input .ng-tns-c3463803563-15 {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* 🟠 Input Contato - remover apenas borda inferior */
+input#mat-input-0 {
+    border-bottom: none !important;
+}
+
+/* 🟠 Form Contato - remover todas as bordas */
+st-contact#access_data_form__contact_input form.st_input,
+st-contact#access_data_form__contact_input form.st_input.st_input_error {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Label - bordas laranjas */
+label.ng-tns-c1282772257-33 {
+    border-left: 1px solid #FF6300 !important;
+    border-right: 1px solid #FF6300 !important;
+    border-top: 1px solid #FF6300 !important;
+    border-bottom: none !important;
+}
+
+/* 🟠 Todos inputs com erro - remover todas as bordas */
+input.form-control.w-100.st_input_error,
+input.st_input_error,
+div#register-page__container input.st_input_error {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Todos inputs CPF (todos os estados) - remover todas as bordas */
+html body div#register-page__container div#personal-data-form-cpf input.form-control.w-100,
+div#personal-data-form-cpf input.form-control.w-100.ng-pristine.ng-invalid.ng-touched,
+div#personal-data-form-cpf input.form-control.w-100.ng-dirty.ng-invalid.ng-touched,
+div#personal-data-form-cpf input.form-control.w-100.ng-pristine,
+div#personal-data-form-cpf input.form-control.w-100 {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Todos inputs dirty invalid touched - remover todas as bordas */
+html body div#register-page__container input.form-control.w-100.ng-dirty.ng-touched.ng-invalid,
+div#register-page__container input.form-control.w-100.ng-dirty.ng-touched.ng-invalid {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Todos inputs dirty touched valid - remover todas as bordas */
+html body div#register-page__container input.form-control.w-100.ng-dirty.ng-touched.ng-valid,
+div#register-page__container input.form-control.w-100.ng-dirty.ng-touched.ng-valid {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+
+/* 🟠 Label com erro - remover todas as bordas incluindo top border */
+html body div#register-page__container label[class*="ng-tns-c"].st_input_error,
+label[class*="ng-tns-c"].st_input_error {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+    border-top-color: transparent !important;
+}
+
+/* 🟠 Label genérico - remover bordas de todos labels Angular na página de registro */
+html body div#register-page__container label[class*="ng-tns-c1282772257"],
+div#register-page__container label[class*="ng-tns-c1282772257"],
+label[class*="ng-tns-c1282772257"] {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+    border-top-color: transparent !important;
+    background: #0A0E1C !important;
+}
+
+/* 🟠 Label contato - remover bordas e pintar azul escuro */
+html body div#register-page__container label[class*="ng-tns-c3463803563"],
+div#register-page__container label[class*="ng-tns-c3463803563"],
+label[class*="ng-tns-c3463803563"] {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+    border-top-color: transparent !important;
+    background: #0A0E1C !important;
+}
+
+/* 🟠 Div select field contato - remover bordas e pintar azul escuro */
+html body div#register-page__container div[class*="ng-tns-c3463803563"].st_select_field,
+div#register-page__container div[class*="ng-tns-c3463803563"].st_select_field,
+div[class*="ng-tns-c3463803563"].st_select_field {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+    border-top-color: transparent !important;
+    background: #0A0E1C !important;
+}
+
+/* 🟠 NGX Mat Intl Tel Input - remover bordas e pintar azul escuro */
+html body div#register-page__container ngx-mat-intl-tel-input[class*="ng-tns-c3463803563"],
+div#register-page__container ngx-mat-intl-tel-input[class*="ng-tns-c3463803563"],
+ngx-mat-intl-tel-input[class*="ng-tns-c3463803563"] {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top-width: 0 !important;
+    border-top-style: none !important;
+    border-top-color: transparent !important;
+    background: #0A0E1C !important;
+}
+
+/* 🟠 Contact form elements - manter apenas borda superior */
+st-contact form.st_input[class*="ng-tns-c3463803563"],
+form.st_input[class*="ng-tns-c3463803563"],
+div[class*="ng-tns-c3463803563"].st_select__field,
+label[class*="ng-tns-c3463803563"].st_select__field {
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    /* Manter border-top se existir */
+}
+
+/* 🟠 REMOVE TODAS AS BORDAS do campo de telefone */
+div.st_select__field {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Força remoção de bordas no campo de telefone dentro de st-contact */
+st-contact div.st_select__field,
+#access_data_form__contact_input div.st_select__field,
+form.st_input div.st_select__field,
+form.st_contact_edit_outlined div.st_select__field {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ULTRA ESPECÍFICO - baseado na hierarquia exata */
+st-contact#access_data_form__contact_input form.st_input.st_contact_edit_outlined div.st_select__field,
+form.st_input.st_input_outlined.st_contact_edit_outlined div.st_select__field,
+form.filled-input div.st_select__field {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Usando o ngx-mat-intl-tel-input como ponto de referência */
+div.st_select__field:has(ngx-mat-intl-tel-input) {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+}
+
+/* NUCLEAR - força com atributos Angular */
+div[_ngcontent-bet-plus-web-c3463803563].st_select__field {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Forçar em QUALQUER div com classe st_select__field */
+body div.st_select__field,
+html body div.st_select__field,
+* div.st_select__field {
+    border: transparent !important;
+    border-width: 0px !important;
+    border-style: none !important;
+}
+
+/* 🟠 REMOVE BORDAS dos inputs de login/registro */
+st-input input.form-control.w-100,
+div.st_input input.form-control.w-100,
+div.st_input_outlined input.form-control.w-100 {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Específico com atributos Angular */
+input[_ngcontent-bet-plus-web-c1282772257].form-control.w-100 {
+    border: none !important;
+    border-width: 0px !important;
+    border-style: none !important;
+    border-color: transparent !important;
+}
+
+/* ULTRA ESPECÍFICO baseado na hierarquia */
+st-input div.st_input.filled-input input.form-control,
+st-input div.st_input_outlined.filled-input input.form-control,
+div.st_input.st_input_outlined.filled-input input.form-control.w-100 {
+    border: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-top: transparent !important;
+    border-bottom: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+}
+
+/* Nuclear - classes Angular dinâmicas */
+input[class*="ng-tns-c1282772257"] {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Alert Error - adicionar margem inferior */
+div.alert__container.alert__error.alert__border,
+.alert__error.alert__border,
+app-alert div.alert__error {
+    margin-bottom: 20px !important;
+}
+
+/* 🟠 Olhinho do campo de senha - posicionar corretamente */
+div.st_input__suffix {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    bottom: auto !important;
+}
+
+/* Específico para o ícone de visibilidade */
+mat-icon.st_input__visibility_icon {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+}
+
+/* Container do input de senha - garantir posição relativa */
+st-input div.st_input,
+div.st_input.st_input_outlined {
+    position: relative !important;
+}
+
+/* 🟠 Olhinho ESPECÍFICO da página de registro */
+st-input.password-field div.st_input__suffix,
+#register-page__container div.st_input__suffix,
+div.st_input.filled-input div.st_input__suffix {
+    position: absolute !important;
+    right: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    bottom: auto !important;
+    z-index: 10 !important;
+}
+
+/* Forçar posição relativa no container do password field */
+st-input.password-field div.st_input,
+#register-page__container st-input div.st_input {
+    position: relative !important;
+}
+
+/* 🟠 Olhinho do campo de senha - SOLUÇÃO DEFINITIVA */
+/* PROBLEMA: Olhinho ficava desalinhado quando campo vazio vs preenchido */
+/* - Campo vazio (sem .filled-input): olhinho ficava muito baixo */
+/* - Campo preenchido (com .filled-input): olhinho ficava correto */
+/* SOLUÇÃO: Posicionamento diferente para cada estado */
+
+/* Olhinho quando campo VAZIO (sem filled-input) - posição fixa 12px do topo */
+div.st_input.st_input_outlined:not(.filled-input) div.st_input__suffix,
+div.st_input:not(.filled-input) div.st_input__suffix {
+    position: absolute !important;
+    right: 12px !important;
+    top: 12px !important;
+    transform: none !important;
+    bottom: auto !important;
+    z-index: 10 !important;
+}
+
+/* Container quando vazio também precisa position relative */
+div.st_input.st_input_outlined:not(.filled-input),
+div.st_input:not(.filled-input) {
+    position: relative !important;
+}
+
+/* Ajuste adicional para quando tem erro */
+input.st_input_error.st_input__with_suffix ~ div.st_input__suffix {
+    top: 12px !important;
+    transform: none !important;
+}
+
+/* FORÇA com seletor mais específico usando classes Angular */
+st-input div.st_input:not(.filled-input) div.st_input__suffix[class*="ng-tns"] {
+    top: 12px !important;
+    transform: none !important;
+    position: absolute !important;
+}
+
+/* 🟠 Espaçamento entre botões Login/Registrar */
+div.row-reverse button.global_login__btn,
+.global_login__container button.global_login__btn,
+div.row-reverse button.global_login__register {
+    margin-left: 2.5px !important;
+    margin-right: 2.5px !important;
+}
+
+/* Alternativa usando gap no container flex */
+div.row-reverse,
+.global_login__container div.row-reverse {
+    gap: 5px !important;
+}
+
+/* 🟠 Authentication Info Container - border-radius no topo esquerdo */
+div.authentication_info__container,
+app-authentication-info div.authentication_info__container,
+.authentication_info__container.THEME_LIGHT {
+    border-top-left-radius: 8px !important;
+}
+
+/* 🟠 Cancel Dialog Container - gradiente azul invertido */
+div.cancel-container,
+app-cancel-dialog div.cancel-container,
+.cancel-container[_ngcontent-bet-plus-web-c1742945428] {
+    background: linear-gradient(180deg, #0A0E1C 0%, #2E4182 100%) !important;
+    background-image: linear-gradient(180deg, #0A0E1C 0%, #2E4182 100%) !important;
+    border-radius: 8px !important;
+}
+
+/* 🟠 Botão "Continuar cadastro" - mesmo estilo do botão Entrar */
+app-cancel-dialog .st_button.st_button__theme_color span.mat-mdc-button-touch-target,
+.cancel-container__actions .st_button__theme_color span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: #F75703 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    width: 100% !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Label do botão "Continuar cadastro" */
+app-cancel-dialog .st_button.st_button__theme_color span.mdc-button__label,
+.cancel-container__actions .st_button__theme_color span.mdc-button__label {
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 40px !important;
+    padding: 0 16px !important;
+}
+
+/* Remover efeitos neon do botão */
+app-cancel-dialog .st_button.st_button__theme_color,
+.cancel-container__actions .st_button__theme_color {
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* 🟠 Botão "Cancelar" - transparente */
+app-cancel-dialog .st_button.st_button__undefined,
+.cancel-container__actions .st_button__undefined,
+st-button .st_button__undefined {
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    border: none !important;
+}
+
+/* Touch target do botão Cancelar também transparente */
+app-cancel-dialog .st_button__undefined span.mat-mdc-button-touch-target,
+.st_button__undefined span.mat-mdc-button-touch-target {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Mat-drawer inner container - PAI 1 TRANSPARENTE */
+.mat-drawer-inner-container,
+div.mat-drawer-inner-container,
+mat-drawer div.mat-drawer-inner-container {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 App-menu-login-sidebar DEBUG VERMELHO */
+app-menu-login-sidebar-mobile-plus2,
+app-menu-login-sidebar-mobile-plus2.ng-star-inserted {
+    background: red !important;
+    background-color: red !important;
+}
+
+/* 🟠 PAI 2 TRANSPARENTE - mat-drawer */
+mat-drawer.mat-drawer.home_mobile__mat_drawer,
+.home_mobile__mat_drawer.mat-drawer,
+mat-drawer.mat-drawer-opened {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 PAI 3 AZUL ESCURO - mat-drawer-container */
+mat-drawer-container.mat-drawer-container.example-container,
+.example-container.mat-drawer-container,
+mat-drawer-container.background-router-outlet-mobile {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Sidebar - border-radius 10px apenas topo esquerdo */
+div.sidebar,
+.sidebar[_ngcontent-bet-plus-web-c1838182738],
+app-menu-login-sidebar-mobile-plus2 div.sidebar {
+    border-top-left-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* 🟠 Event Block Background - azul escuro */
+div.event-block__bg,
+.event-block__bg {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Event Block Header - azul escuro */
+div.event_block__header,
+.event_block__header.highlight,
+div.event_block__header.font_14.highlight.weight_700 {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Menu Sidebar Mobile Container - azul escuro + borda lateral direita */
+div.menu_sidebar_mobile__container,
+.menu_sidebar_mobile__container,
+app-menu-sidebar-mobile-plus2 div.menu_sidebar_mobile__container {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    border-top-left-radius: 10px !important;
+    border-right: 1px solid #2E4182 !important;
+    border-left: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    overflow: hidden !important;
+}
+
+/* 🟠 App Sports Menu - remover borda */
+app-sports-menu,
+app-sports-menu.ng-star-inserted,
+div.menu_sidebar_mobile__container app-sports-menu {
+    border: none !important;
+    border-color: transparent !important;
+}
+
+/* 🟠 Menu Top Bar com transparentBg - aplicar background do menu-top-bar normal */
+div.menu-top-bar.transparentBg,
+app-menu-top-bar-mobile-plus2 div.menu-top-bar.transparentBg {
+    background-color: #172448 !important;
+    background: #172448 !important;
+}
+
+/* 🟠 Input campo de senha - azul escuro */
+input.form-control.w-100.st_input__with_suffix,
+st-input input.form-control.w-100.st_input__with_suffix,
+div.st_input input.form-control.w-100.st_input__with_suffix,
+input.st_input__with_suffix.st_input_error,
+div.st_input.filled-input input.form-control.w-100.st_input__with_suffix {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* FORÇA com classes Angular específicas */
+input[class*="ng-tns-c1282772257"].st_input__with_suffix,
+input.form-control.w-100[class*="ng-tns-c1282772257"] {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* NUCLEAR - força com atributo Angular */
+input[_ngcontent-bet-plus-web-c1282772257].form-control.w-100,
+input[_ngcontent-bet-plus-web-c1282772257].st_input__with_suffix {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* ULTRA ESPECÍFICO - seletor completo baseado na hierarquia */
+st-input.password-field div.st_input.filled-input input.form-control.w-100.st_input__with_suffix {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* PAIS DO INPUT - azul escuro */
+div.st_input.filled-input,
+st-input.password-field div.st_input,
+form[class*="ng-tns-c1282772257"] {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* Pai específico com atributos Angular */
+st-input[_ngcontent-bet-plus-web-c4053512509].password-field,
+div.st_input[_ngcontent-bet-plus-web-c1282772257].filled-input {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Banner Top Register Dialog - azul claro */
+div.banner-top,
+div.banner-top.ng-star-inserted,
+app-register-dialog div.banner-top {
+    background: #2E4182 !important;
+    background-color: #2E4182 !important;
+}
+
+/* 🟠 Authentication Info Container - border-radius no topo esquerdo */
+div.authentication_info__container,
+app-authentication-info div.authentication_info__container,
+.authentication_info__container.THEME_LIGHT {
+    border-top-left-radius: 8px !important;
+}
+
+/* 🟠 REMOVE BORDAS do label de contato */
+label.ng-tns-c3463803563-30,
+form.st_contact_edit_outlined label,
+st-contact label,
+#access_data_form__contact_input label {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Específico com atributo Angular */
+label[_ngcontent-bet-plus-web-c3463803563] {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* NUCLEAR - qualquer label com classes ng-tns */
+label[class*="ng-tns-c3463803563"] {
+    border: transparent !important;
+    border-width: 0px !important;
+    border-style: none !important;
+    border-top: transparent !important;
+    border-bottom: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+}
+
+/* OVERRIDE TOTAL - Remove QUALQUER borda de labels no contact form */
+st-contact form.st_input label,
+st-contact form.st_contact_edit_outlined label,
+st-contact#access_data_form__contact_input form label,
+form.st_input.st_contact_edit_outlined label[class*="ng-tns"],
+form.st_input.st_input_outlined.st_contact_edit_outlined label {
+    border: 0 solid transparent !important;
+    border-width: 0px !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: 0 solid transparent !important;
+    border-bottom: 0 solid transparent !important;
+    border-left: 0 solid transparent !important;
+    border-right: 0 solid transparent !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+/* ESPECÍFICO para o label "Contato *" */
+form.st_input.st_contact_edit_outlined > label:first-child,
+form.st_contact_edit_outlined > label,
+st-contact label[_ngcontent-bet-plus-web-c3463803563] {
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+/* 🟠 Todos inputs com suffix - remover todas as bordas */
+html body div#register-page__container input.form-control.w-100.st_input__with_suffix,
+input.form-control.w-100.st_input__with_suffix.ng-dirty.ng-touched,
+input.form-control.w-100.st_input__with_suffix,
+input.st_input__with_suffix,
+div#register-page__container input.st_input__with_suffix {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+}
+
+
+/* 🟠 Olhinho senha - posicionar ao lado direito do campo (genérico) */
+div.mat-mdc-tooltip-trigger[class*="ng-tns-c1282772257"] {
+    position: absolute !important;
+    right: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+}
+
+/* 🟠 Container st_input senha - posição relativa para conter o olhinho */
+div.st_input.filled-input {
+    position: relative !important;
+}
+
+/* 🟠 Container form senha - posição relativa para conter o olhinho */
+form[class*="ng-tns-c1282772257"] {
+    position: relative !important;
+}
+
+
+/* 🟠 Overlay Backdrop - sem borda superior */
+.cdk-overlay-backdrop {
+    border-top: none !important;
+}
+
+/* Input interno vazio - sem borda inferior laranja */
+.st_input:not(.filled-input) input.form-control.w-100,
+.st_input:not(.filled-input) input {
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Regra removida - causava problemas de layout */
+
+/* 🟠 Mensagem de erro - apenas cor laranja */
+div[class*="st_input_error__error"][class*="st_input_error_color__light_theme"],
+div[class*="st_input_error__error"].email,
+div[class*="ng-trigger-fadeInOut"][class*="st_input_error__error"],
+.st_input_error__error.required,
+.st_input_error__error.email,
+.st_input_error__error,
+st-input-error {
+    color: #FF9501 !important;
+}
+
+/* 🟠 Register User Container - gradiente azul vertical com padding */
+div.register-user__container,
+.register-user__container {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: #2E4182 !important;
+    padding: 8px !important;
+}
+
+/* 🟠 Advertisement container - border radius */
+div.register-page__advertisement.ng-star-inserted,
+.register-page__advertisement {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
+
+/* 🟠 Mobile Header - cor azul clara, texto branco, sem neon */
+div.p_2.mobile-header.ng-star-inserted,
+.p_2.mobile-header {
+    background-color: #2E4182 !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+}
+
+/* Todo conteúdo dentro do mobile-header em branco */
+.p_2.mobile-header *,
+.p_2.mobile-header mat-icon,
+.p_2.mobile-header .mat-icon {
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    background: none !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* 🟠 Register User Header - cor azul clara */
+div.register-user__header.mobile.mb_0.ng-star-inserted,
+.register-user__header.mobile {
+    background-color: #2E4182 !important;
+}
+
+/* 🟠 Ícone Close Register - FORÇAR BRANCO */
+div.p_2.mobile-header mat-icon.register-user__close-btn,
+.p_2.mobile-header .register-user__close-btn,
+.mobile-header mat-icon.register-user__close-btn,
+mat-icon.register-user__close-btn,
+.register-user__close-btn {
+    color: #FFFFFF !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    background-clip: text !important;
+    filter: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+/* 🟠 Inputs - background azul escuro */
+input.form-control.w-100.ng-star-inserted,
+input.form-control.w-100.ng-pristine,
+input.form-control.w-100.ng-dirty,
+input.form-control.w-100.ng-touched,
+input.form-control.w-100.st_input_error,
+input.form-control.w-100.ng-invalid,
+input.form-control.w-100.st_input__with_suffix,
+input.form-control.w-100,
+.st_input input.form-control,
+input.form-control {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+}
+
+/* 🟠 Labels e texto dos inputs - z-index alto e bordas laterais quando com erro */
+.st_input label,
+.st_input .st_input__label,
+.st_input span,
+.st_input div:not(input) {
+    z-index: 10 !important;
+    position: relative !important;
+}
+
+/* Label com erro - bordas completas laranjas e background azul */
+label.st_input_error,
+.st_input label.st_input_error {
+    border-left: 1px solid #FF6300 !important;
+    border-right: 1px solid #FF6300 !important;
+    border-top: 1px solid #FF6300 !important;
+    border-bottom: none !important;
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+/* 🟠 FORÇAR background azul escuro em TODOS os inputs do registro */
+#register-page__container input,
+#register-page__container input.form-control,
+#register-page__container input.form-control.w-100,
+#register-page__container input[type="text"],
+#register-page__container input[type="password"],
+#register-page__container input[type="email"],
+div#register-page__container input.form-control.w-100.ng-pristine,
+div#register-page__container input.form-control.w-100.st_input__with_suffix,
+html body input.form-control.w-100 {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+}
+
+/* 🟠 FORÇAR ESPECÍFICO - input válido com bordas e background */
+input#9b5a6d4e-b923-4040-9cda-d21995bda42c,
+input.form-control.w-100.ng-dirty.ng-valid,
+input.form-control.w-100.ng-dirty.ng-touched,
+#register-page__container input.ng-dirty.ng-valid,
+#register-page__container input.ng-dirty {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+    border-left: 1px solid #FF6300 !important;
+    border-right: 1px solid #FF6300 !important;
+    border-bottom: 1px solid #FF6300 !important;
+    border-top: none !important;
+    color: #FFFFFF !important;
+}
+
+/* 🟠 Alert container - background transparente, fonte e borda laranja */
+div.w-100.alert__container.alert__warning.alert__border,
+.alert__container.alert__warning,
+.alert__warning {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #FF9501 !important;
+    border-color: #FF9501 !important;
+    border-width: 1px !important;
+}
+
+/* 🟠 Botão Concluir Registro ESPECÍFICO - não afetar outros botões */
+div#register-page__container st-button,
+div#register-page__container st-button *,
+div#register-page__container st-button button,
+div#register-page__container st-button .mdc-button,
+div#register-page__container st-button span,
+div#register-page__container st-button::before,
+div#register-page__container st-button::after,
+div#register-page__container st-button:hover,
+div#register-page__container st-button:focus,
+div#register-page__container st-button:active {
+    background: #202844 !important;
+    background-color: #202844 !important;
+    background-image: none !important;
+    color: #EEEEF0 !important;
+    border: 0px solid transparent !important;
+    border-width: 0px !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 0 transparent !important;
+    -moz-box-shadow: 0 0 0 0 transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    text-shadow: 0 0 0 transparent !important;
+    outline: 0px solid transparent !important;
+    transition: none !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
+    font-weight: bold !important;
+}
+
+/* Regras genéricas removidas - eram muito abrangentes */
+
+/* 🟠 st-button - EXTERMINADOR FINAL DE NEON */
+html body div#register-page__container st-button,
+html body div#register-page__container st-button *,
+html body div#register-page__container st-button *::before,
+html body div#register-page__container st-button *::after,
+html body div#register-page__container st-button:hover,
+html body div#register-page__container st-button:focus,
+html body div#register-page__container st-button:active,
+html body div#register-page__container st-button .mat-mdc-button-touch-target,
+html body div#register-page__container st-button .mdc-button,
+html body div#register-page__container st-button button {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-image: none !important;
+    box-shadow: 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 transparent !important;
+    -moz-box-shadow: 0 0 0 transparent !important;
+    text-shadow: 0 0 0 transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    outline: 0 !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+}
+
+/* 🟠 Alert error - background transparente */
+div.w-100.alert__container.alert__error.alert__border,
+.alert__container.alert__error,
+.alert__error {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Imagens do carousel - MODIFICADO */
+img.slide-image,
+.slide-image {
+    display: block; /* Removendo regra vazia */
+}
+
+/* 🟠 Conteúdo central - Events area - margem lateral 50px */
+div.events-area-min[class*="ng-tns-c948289396"] {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+/* 🟠 Conteúdo central - Alternativa genérica */
+div.events-area-min {
+    margin-left: 50px !important;
+    margin-right: 50px !important;
+}
+
+/* 🟠 Breakpoint - Esconder coupon em telas menores que 1280px */
+
+
+:root .bettor-container,[data-theme=dark] .bettor-container {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .custom-button button,[data-theme=dark] .custom-button button {
+    border-radius: 24px;
+    height: 34px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: rgba(0,0,0,0);
+    color: var(--theme-text-color-1);
+    border: 1px solid var(--theme-text-color-1);
+    font-weight: bold
+}
+
+:root .custom-button button:first-of-type,[data-theme=dark] .custom-button button:first-of-type {
+    margin: 0 1em
+}
+
+:root .custom-button button#register-button,[data-theme=dark] .custom-button button#register-button {
+    background-color: rgba(0,0,0,0);
+    color: var(--theme-text-color-1)
+}
+
+:root .custom-button .open-form-login,[data-theme=dark] .custom-button .open-form-login {
+    background-color: rgba(0,0,0,0);
+    color: var(--theme-text-color-1)
+}
+
+:root .button__deposit,[data-theme=dark] .button__deposit {
+    background-color: var(--theme-color-2-plus2) !important;
+    color: var(--theme-color-8-plus2) !important;
+    border: none !important
+}
+
+:root .card-container,[data-theme=dark] .card-container {
+    border-top: none;
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .card-container .card-content-padding,[data-theme=dark] .card-container .card-content-padding {
+    padding: 0 5px 20px 5px
+}
+
+:root .card-container .padding-top-only,[data-theme=dark] .card-container .padding-top-only {
+    padding: 0 0 10px 0
+}
+
+:root .card-container .card-header,[data-theme=dark] .card-container .card-header {
+    background-color: rgba(0,0,0,0) !important;
+    height: 30px
+}
+
+:root .card-container .mat-tab-label-active,[data-theme=dark] .card-container .mat-tab-label-active {
+    font-weight: bold !important;
+    opacity: 1 !important
+}
+
+:root .card-container .mat-tab-link,[data-theme=dark] .card-container .mat-tab-link {
+    color: var(--theme-text-color-1) !important;
+    text-transform: none !important;
+    height: 41px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    min-width: 0;
+    padding: 10px 10px 0 10px !important
+}
+
+:root .card-container .mat-ink-bar,[data-theme=dark] .card-container .mat-ink-bar {
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 2px
+}
+
+:root .card-container .card-title,[data-theme=dark] .card-container .card-title {
+    font-size: 13px;
+    font-weight: bold
+}
+
+:root .not-expanded,[data-theme=dark] .not-expanded {
+    max-height: 0;
+    transition: max-height .1s ease-out
+}
+
+:root .not-expanded.expanded,[data-theme=dark] .not-expanded.expanded {
+    height: auto;
+    max-height: 100%;
+    transition: max-height .1s ease-in;
+    z-index: 2
+}
+
+:root .widget-icon,[data-theme=dark] .widget-icon {
+    margin-right: 0 !important;
+    height: 20px !important;
+    width: auto
+}
+
+:root .casino__list_arrow_button mat-icon,[data-theme=dark] .casino__list_arrow_button mat-icon {
+    width: 40px !important
+}
+
+:root app-display-game #value_casino_message,[data-theme=dark] app-display-game #value_casino_message {
+    display: none !important
+}
+
+:root app-display-game #collapseFooterGame,[data-theme=dark] app-display-game #collapseFooterGame {
+    display: none !important
+}
+
+:root .card-row-fav,[data-theme=dark] .card-row-fav {
+    background-color: rgba(0,0,0,0);
+    box-shadow: none
+}
+
+:root .card-row-fav .frame-footer,[data-theme=dark] .card-row-fav .frame-footer {
+    color: var(--theme-text-color-1);
+    border-bottom-left-radius: 5px
+}
+
+:root .frame-casino-item-mobile .frame-footer,[data-theme=dark] .frame-casino-item-mobile .frame-footer {
+    border-bottom-left-radius: 5px;
+    font-size: 10px !important
+}
+
+:root #casino-item-mobile,[data-theme=dark] #casino-item-mobile {
+    box-shadow: none !important
+}
+
+:root .display_game__vertical_buttons button.primary-button-fav,[data-theme=dark] .display_game__vertical_buttons button.primary-button-fav {
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: var(--theme-color-2-plus2);
+    color: var(--theme-color-black-plus2);
+    border: 1px solid var(--theme-color-black-plus2);
+    line-height: 10px;
+    font-weight: bold;
+    word-break: break-word;
+    width: 194px;
+    height: 48px
+}
+
+:root .display_game__vertical_buttons button.secondary-button-fav,[data-theme=dark] .display_game__vertical_buttons button.secondary-button-fav {
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: var(--theme-color-black-plus2);
+    color: var(--theme-color-2-plus2);
+    line-height: 16px;
+    font-weight: bold;
+    width: 194px;
+    height: 34px;
+    margin-top: 10px
+}
+
+:root button.primary-button-fav,[data-theme=dark] button.primary-button-fav {
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: var(--theme-color-2-plus2);
+    color: var(--theme-color-black-plus2);
+    border: 1px solid var(--theme-color-black-plus2);
+    line-height: 10px;
+    font-weight: bold;
+    width: 91px;
+    height: 25px;
+    word-break: break-word
+}
+
+:root button.secondary-button-fav,[data-theme=dark] button.secondary-button-fav {
+    border-radius: 10px;
+    font-size: 10px;
+    background-color: var(--theme-color-black-plus2);
+    color: var(--theme-color-2-plus2);
+    line-height: 10px;
+    font-weight: bold;
+    width: 91px;
+    height: 25px;
+    margin-top: 3px;
+    word-break: break-word
+}
+
+:root button.secondary-button-fav .mat-button-wrapper,[data-theme=dark] button.secondary-button-fav .mat-button-wrapper {
+    white-space: pre-line
+}
+
+:root .container-search,[data-theme=dark] .container-search {
+    border-radius: 32px !important
+}
+
+:root .casino_button_filter__container,[data-theme=dark] .casino_button_filter__container {
+    border-radius: 16px !important
+}
+
+:root .main-page-column,[data-theme=dark] .main-page-column {
+    max-width: 50%
+}
+
+:root .events-area-container .overflow_hidden .title-card,[data-theme=dark] .events-area-container .overflow_hidden .title-card {
+    background-color: rgba(234, 7, 7, 0) !important;
+    color: #fff !important
+}
+
+:root .events-area-container .plus2-tabs,[data-theme=dark] .events-area-container .plus2-tabs {
+    border-bottom: none !important;
+    position: relative !important
+}
+
+:root .events-area-container .plus2-tabs .back-button,[data-theme=dark] .events-area-container .plus2-tabs .back-button {
+    cursor: pointer;
+    margin: 10px 3px 0 5px;
+    color: var(--theme-text-color-1)
+}
+
+:root .events-area-container .plus2-tabs .mat-tab-link,[data-theme=dark] .events-area-container .plus2-tabs .mat-tab-link {
+    color: var(--theme-text-color-1) !important;
+    text-transform: none !important;
+    height: 41px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    min-width: 0;
+    padding: 10px 10px 0 10px !important
+}
+
+:root .events-area-container .plus2-tabs .mat-tab-label-active,[data-theme=dark] .events-area-container .plus2-tabs .mat-tab-label-active {
+    font-weight: bold
+}
+
+:root .events-area-container .plus2-tabs .mat-tab-links,[data-theme=dark] .events-area-container .plus2-tabs .mat-tab-links {
+    border-bottom: 1px solid var(--theme-color-2-plus2);
+    display: flex;
+    align-items: center
+}
+
+:root .events-area-container .plus2-tabs .mat-ink-bar,[data-theme=dark] .events-area-container .plus2-tabs .mat-ink-bar {
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 2px
+}
+
+:root .game-details-header,[data-theme=dark] .game-details-header {
+    background-color: #000
+}
+
+:root .odds-group-select-container,[data-theme=dark] .odds-group-select-container {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .event-item-1 .text-area,[data-theme=dark] .event-item-1 .text-area {
+    background: rgba(0,0,0,0) linear-gradient(270deg, rgba(0, 0, 0, 0.3490196078) 0%, rgba(255, 255, 255, 0.2392156863) 100%) 0 0 no-repeat padding-box !important;
+    border-radius: 8px;
+    opacity: 1
+}
+
+:root .event-item-2 .text-area,[data-theme=dark] .event-item-2 .text-area {
+    background: rgba(0,0,0,0) linear-gradient(90deg, rgba(0, 0, 0, 0.3490196078) 0%, rgba(255, 255, 255, 0.1411764706) 100%) 0 0 no-repeat padding-box !important;
+    border-radius: 8px;
+    opacity: 1
+}
+
+:root :host .event-body,[data-theme=dark] :host .event-body {
+    background: rgba(0,0,0,0) linear-gradient(270deg, var(--theme-color-highlights-plus2) 0%, var(--theme-color-highlights-dark-plus2) 100%) 0 0 no-repeat padding-box !important
+}
+
+:root :host .event-body-custom .text-area,[data-theme=dark] :host .event-body-custom .text-area {
+    background: rgba(0,0,0,0) linear-gradient(270deg, var(--theme-color-highlights-plus2) 0%, var(--theme-color-highlights-dark-plus2) 100%) 0 0 no-repeat padding-box !important
+}
+
+:root .event-body-custom,[data-theme=dark] .event-body-custom {
+    height: 113px !important;
+    background: rgba(0,0,0,0) !important;
+    padding-bottom: 5px;
+    border-right: 2px solid var(--theme-color-5-plus2)
+}
+
+:root .event-body-custom .text-area,[data-theme=dark] .event-body-custom .text-area {
+    background: rgba(0,0,0,0) linear-gradient(270deg, var(--theme-color-7-plus2) 0%, transparent 100%) 0 0 no-repeat padding-box !important
+}
+
+:root .event-body-custom .odds-area,[data-theme=dark] .event-body-custom .odds-area {
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5px;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px
+}
+
+
+:root .plus2-tabs,[data-theme=dark] .plus2-tabs {
+    border-bottom: none !important;
+    position: relative !important
+}
+
+:root .plus2-tabs .back-button,[data-theme=dark] .plus2-tabs .back-button {
+    cursor: pointer;
+    margin: 10px 3px 0 5px;
+    color: var(--theme-color-1-plus2)
+}
+
+:root .plus2-tabs .mat-tab-link,[data-theme=dark] .plus2-tabs .mat-tab-link {
+    color: var(--theme-color-1-plus2) !important;
+    text-transform: none !important;
+    height: 41px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    min-width: 0;
+    padding: 10px 10px 0 10px !important
+}
+
+:root .plus2-tabs .mat-tab-label-active,[data-theme=dark] .plus2-tabs .mat-tab-label-active {
+    font-weight: bold
+}
+
+:root .plus2-tabs .mat-tab-links,[data-theme=dark] .plus2-tabs .mat-tab-links {
+    border-bottom: 1px solid var(--theme-color-2-plus2);
+    display: flex;
+    align-items: center
+}
+
+:root .plus2-tabs .mat-ink-bar,[data-theme=dark] .plus2-tabs .mat-ink-bar {
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 2px
+}
+
+:root .live-card .card-container .title-card,[data-theme=dark] .live-card .card-container .title-card {
+    background-color: var(--theme-color-2-plus2) !important;
+    color: #000 !important
+}
+
+:root .events-area-column .back-button,[data-theme=dark] .events-area-column .back-button {
+    cursor: pointer;
+    margin: 10px 3px 0 5px;
+    color: var(--theme-text-color)
+}
+
+:root .events-area-column .mat-tab-label-active,[data-theme=dark] .events-area-column .mat-tab-label-active {
+    font-weight: bold !important;
+    opacity: 1 !important
+}
+
+:root .events-area-column .mat-tab-link,[data-theme=dark] .events-area-column .mat-tab-link {
+    color: var(--theme-text-color) !important;
+    text-transform: none !important;
+    height: 41px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    min-width: 0;
+    padding: 10px 10px 0 10px !important
+}
+
+:root .events-area-column .mat-ink-bar,[data-theme=dark] .events-area-column .mat-ink-bar {
+    background-color: var(--theme-text-color) !important;
+    height: 4px
+}
+
+:root .events-area-column .card-container,[data-theme=dark] .events-area-column .card-container {
+    border-top: none;
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .events-area-column .card-container .card-header,[data-theme=dark] .events-area-column .card-container .card-header {
+    background-color: rgba(0,0,0,0) !important;
+    height: 30px
+}
+
+:root .events-area-column .card-container .title-card,[data-theme=dark] .events-area-column .card-container .title-card {
+    background-color: var(--theme-color-2-plus2);
+    border-radius: 16px;
+    opacity: 1;
+    padding: 10px;
+    max-width: 270px;
+    color: var(--theme-text-color)
+}
+
+:root .events-area-column .card-container .card-title,[data-theme=dark] .events-area-column .card-container .card-title {
+    font-size: 13px;
+    font-weight: bold
+}
+
+:root .title-card,[data-theme=dark] .title-card {
+    border-radius: 6px;
+    opacity: 1;
+    padding: 10px;
+    border-top: 4px solid var(--theme-color-2-plus2)
+}
+
+:root .white-title,[data-theme=dark] .white-title {
+    color: #fff !important
+}
+
+:root :host,[data-theme=dark] :host {
+    margin-top: 0
+}
+
+:root :host .events-list,[data-theme=dark] :host .events-list {
+    background: var(--theme-color-4-plus2)
+}
+
+:root :host .filter-area,[data-theme=dark] :host .filter-area {
+    padding-left: 16px;
+    border-radius: 5px 5px 0 0;
+    background: var(--theme-color-4-plus2);
+    height: 40px;
+    margin-bottom: 3px;
+    border-top: solid 3px var(--theme-color-1)
+}
+
+:root :host .live-events-title,[data-theme=dark] :host .live-events-title {
+    color: var(--theme-text-color-3);
+    font-weight: bold;
+    font-size: 12px
+}
+
+:root :host .live-events-title .current-live-event,[data-theme=dark] :host .live-events-title .current-live-event {
+    color: var(--theme-color-14);
+    font-family: "Poppins", "Helvetica", sans-serif
+}
+
+:root :host .live-events-title .played-time,[data-theme=dark] :host .live-events-title .played-time {
+    font-weight: normal;
+    color: var(--theme-text-color-2);
+    font-family: "Poppins", "Helvetica", sans-serif;
+    margin: 0 4px
+}
+
+:root :host .live-events-title .back-icon,[data-theme=dark] :host .live-events-title .back-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    margin-right: 8px
+}
+
+:root :host .plus2-tabs-mobile,[data-theme=dark] :host .plus2-tabs-mobile {
+    border-bottom: none !important;
+    position: relative
+}
+
+:root :host .plus2-tabs-mobile .back-button,[data-theme=dark] :host .plus2-tabs-mobile .back-button {
+    cursor: pointer;
+    margin-right: 8px
+}
+
+:root :host .plus2-tabs-mobile .mat-tab-link,[data-theme=dark] :host .plus2-tabs-mobile .mat-tab-link {
+    color: var(--theme-text-color-1) !important;
+    text-transform: none !important;
+    height: 41px !important;
+    font-weight: 500 !important;
+    font-size: 12px !important;
+    min-width: 0;
+    padding: 10px 10px 0 10px !important
+}
+
+:root :host .plus2-tabs-mobile .mat-tab-label-active,[data-theme=dark] :host .plus2-tabs-mobile .mat-tab-label-active {
+    font-weight: bold
+}
+
+:root :host .plus2-tabs-mobile .mat-tab-links,[data-theme=dark] :host .plus2-tabs-mobile .mat-tab-links {
+    border-bottom: 1px solid var(--theme-color-1-plus2);
+    display: flex;
+    align-items: center
+}
+
+:root :host .plus2-tabs-mobile .mat-ink-bar,[data-theme=dark] :host .plus2-tabs-mobile .mat-ink-bar {
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 2px
+}
+
+:root :host .icons-container mat-icon,[data-theme=dark] :host .icons-container mat-icon {
+    cursor: pointer;
+    margin: 0 16px;
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    color: var(--theme-text-color-3)
+}
+
+:root :host .icons-container .form-filter,[data-theme=dark] :host .icons-container .form-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center
+}
+
+:root :host .event-list-title,[data-theme=dark] :host .event-list-title {
+    color: var(--theme-text-color-plus2)
+}
+
+:root :host .separatorRow,[data-theme=dark] :host .separatorRow {
+    min-height: fit-content !important;
+    height: auto !important
+}
+
+:root :host .hasAds,[data-theme=dark] :host .hasAds {
+    height: calc(100vh - 320px - 6vh) !important;
+    min-height: calc(100vh - 320px - 6vh) !important;
+    overflow: auto
+}
+
+:root :host .hasCoupon,[data-theme=dark] :host .hasCoupon {
+    height: calc(100vh - 120px - 7vh) !important;
+    min-height: calc(100vh - 120px - 7vh) !important;
+    overflow: auto
+}
+
+:root :host .hasAdsCoupon,[data-theme=dark] :host .hasAdsCoupon {
+    height: calc(100vh - 320px - 4vh) !important;
+    min-height: calc(100vh - 320px - 4vh) !important;
+    overflow: auto
+}
+
+:root :host .items-area,[data-theme=dark] :host .items-area {
+    height: unset !important;
+    min-height: unset !important;
+    overflow: unset !important
+}
+
+:root :host .height-list,[data-theme=dark] :host .height-list {
+    height: calc(100vh - 120px) !important
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations {
+    padding: 0 5px 0 5px;
+    border-bottom: none
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column {
+    border: solid 1px var(--theme-color-4-plus2);
+    padding-top: 0 !important
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns>div,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns>div,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns>div,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column>div,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns>div,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns>div,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns>div,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column>div {
+    padding: 8px 0 0 0 !important
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns>div:last-of-type,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns>div:last-of-type,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns>div:last-of-type,:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column>div:last-of-type,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .three-columns>div:last-of-type,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .array-two-columns>div:last-of-type,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .two-columns>div:last-of-type,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .correct-score-column>div:last-of-type {
+    padding-bottom: 8px !important
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .space-between:nth-child(even),[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .space-between:nth-child(even) {
+    border-right: none;
+    margin-right: 0;
+    padding-right: 0
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations .no-data,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations .no-data {
+    padding-top: 0;
+    padding-bottom: 10px
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled {
+    cursor: default;
+    opacity: .5
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled .title,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled .title {
+    color: var(--theme-text-color-plus2) !important
+}
+
+:root :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled .odd,[data-theme=dark] :host ::ng-deep app-quotations-desktop-plus2 .quotations app-odd-button-plus2 button:disabled .odd {
+    color: var(--theme-text-color-plus2) !important
+}
+
+:root :host ::ng-deep app-event-item-desktop-plus2 .event-body .odds-area,[data-theme=dark] :host ::ng-deep app-event-item-desktop-plus2 .event-body .odds-area {
+    justify-content: flex-end !important
+}
+
+:root ::ng-deep .filter-area mat-form-field .mat-form-field-flex,[data-theme=dark] ::ng-deep .filter-area mat-form-field .mat-form-field-flex {
+    padding: 4px 0;
+    background-color: rgba(0,0,0,0)
+}
+
+:root ::ng-deep .filter-area mat-form-field .mat-form-field-flex .mat-form-field-infix .mat-input-element,[data-theme=dark] ::ng-deep .filter-area mat-form-field .mat-form-field-flex .mat-form-field-infix .mat-input-element {
+    margin-bottom: -10px;
+    font-family: "Poppins", "Helvetica", sans-serif
+}
+
+:root .events-area-container,[data-theme=dark] .events-area-container {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .events-area-column,[data-theme=dark] .events-area-column {
+    margin-right: 0 !important
+}
+
+:root .footer-home-desktop,[data-theme=dark] .footer-home-desktop {
+    padding: 0 4% 1% 4%;
+    background-color: rgba(0,0,0,0)
+}
+
+:root .footer-desktop-p2__body,[data-theme=dark] .footer-desktop-p2__body {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .footer__background-color,[data-theme=dark] .footer__background-color {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .footer-body,[data-theme=dark] .footer-body {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .license,[data-theme=dark] .license {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .game-button,[data-theme=dark] .game-button {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .game-button .container,[data-theme=dark] .game-button .container {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .container-button-mobile,[data-theme=dark] .container-button-mobile {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .game-button:focus,[data-theme=dark] .game-button:focus {
+    outline: 0
+}
+
+:root .game-button:hover:enabled,[data-theme=dark] .game-button:hover:enabled {
+    background-color: inherit !important
+}
+
+:root .ngx-expandable-node .ngx-node .game-button,[data-theme=dark] .ngx-expandable-node .ngx-node .game-button {
+    padding-left: 40px !important
+}
+
+:root .game-selection-accordion,[data-theme=dark] .game-selection-accordion {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .event-item,[data-theme=dark] .event-item {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .menu-games-mobile,[data-theme=dark] .menu-games-mobile {
+    background-color: rgba(0,0,0,0) !important;
+    border: none !important
+}
+
+:root app-app-game-selection-mobile-expandable-plus2 .games,[data-theme=dark] app-app-game-selection-mobile-expandable-plus2 .games {
+    align-content: center
+}
+
+:root .advertisement,[data-theme=dark] .advertisement {
+    padding: 5px;
+    margin: 0 13px;
+    overflow: hidden !important;
+    border-radius: 32px
+}
+
+:root .advertisement-right,[data-theme=dark] .advertisement-right {
+    overflow: hidden !important;
+    border-radius: 32px
+}
+
+:root #game-selection-mobile .submenu-item,[data-theme=dark] #game-selection-mobile .submenu-item {
+    border: solid 1px var(--theme-color-4-plus2);
+    background-color: rgba(0,0,0,0)
+}
+
+:root .ngx-menu-tree .mat-tree-node,[data-theme=dark] .ngx-menu-tree .mat-tree-node {
+    background: rgba(0,0,0,0) !important
+}
+
+:root .highlight-casino-container,[data-theme=dark] .highlight-casino-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding-left: 6px;
+    padding-top: 6px
+}
+
+:root .highlight-casino-container.highlight-casino-container-desktop,[data-theme=dark] .highlight-casino-container.highlight-casino-container-desktop {
+    overflow: hidden;
+    border-radius: 8px;
+    opacity: 1;
+    margin-top: 20px
+}
+
+:root .highlight-casino-container.highlight-casino-container-vertical,[data-theme=dark] .highlight-casino-container.highlight-casino-container-vertical {
+    margin-top: -10px
+}
+
+:root .highlight-casino-container .boxShadowFav,[data-theme=dark] .highlight-casino-container .boxShadowFav {
+    box-shadow: none !important;
+    height: 120px !important;
+    min-height: 120px !important;
+    width: 150px !important;
+    min-width: 150px !important
+}
+
+:root .highlight-casino-container .card-fav-row,[data-theme=dark] .highlight-casino-container .card-fav-row {
+    box-shadow: none !important;
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .highlight-casino-container .card-fav-row .frame-container,[data-theme=dark] .highlight-casino-container .card-fav-row .frame-container {
+    min-width: 150px
+}
+
+:root .highlight-casino-container .frame-footer,[data-theme=dark] .highlight-casino-container .frame-footer {
+    text-align: center !important;
+    font: normal normal 300 12px/19px DM Sans !important;
+    letter-spacing: 0 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+    font-weight: 100 !important
+}
+
+:root .vertical-buttons-container,[data-theme=dark] .vertical-buttons-container {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .vertical-buttons-container button.primary-button-fav,[data-theme=dark] .vertical-buttons-container button.primary-button-fav {
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--theme-color-2-plus2);
+    color: var(--theme-color-black-plus2);
+    border: 1px solid var(--theme-color-black-plus2);
+    line-height: 16px;
+    font-weight: bold;
+    width: 194px;
+    height: 48px
+}
+
+:root .vertical-buttons-container button.secondary-button-fav,[data-theme=dark] .vertical-buttons-container button.secondary-button-fav {
+    border-radius: 10px;
+    font-size: 16px;
+    background-color: var(--theme-color-black-plus2);
+    color: var(--theme-color-2-plus2);
+    line-height: 16px;
+    font-weight: bold;
+    width: 194px;
+    height: 34px;
+    margin-top: 10px
+}
+
+:root .container-highlights-championships,[data-theme=dark] .container-highlights-championships {
+    background-color: rgba(0,0,0,0) !important;
+    margin-bottom: 15px;
+    height: auto !important
+}
+
+:root .item-list,[data-theme=dark] .item-list {
+    max-height: 40px
+}
+
+:root .item-list img,[data-theme=dark] .item-list img {
+    height: 40px !important;
+    width: 40px !important;
+    object-fit: cover
+}
+
+:root .bg-casino,[data-theme=dark] .bg-casino {
+    background-image: none;
+    height: 100vh !important
+}
+
+:root .events,[data-theme=dark] .events {
+    background-color: #0A0E1C !important
+}
+
+:root .example-container,[data-theme=dark] .example-container {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .live-card-container .card-header,[data-theme=dark] .live-card-container .card-header {
+    height: 35px;
+    background-color: rgba(0,0,0,0)
+}
+
+:root .live-card-container .border-top,[data-theme=dark] .live-card-container .border-top {
+    width: 100%;
+    min-height: 0;
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(0,0,0,0) !important;
+    border-top: solid 3px rgba(0,0,0,0) !important
+}
+
+:root .plus2-tabs-menu-top-bar .mat-ink-bar,[data-theme=dark] .plus2-tabs-menu-top-bar .mat-ink-bar {
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 10px !important;
+    border-radius: 12px 12px 0 0 !important
+}
+
+:root .menu-tb-s .first-bar,[data-theme=dark] .menu-tb-s .first-bar {
+    border-bottom: 1px solid #2e2d2d
+}
+
+:root .menu-tb-s .second-bar,[data-theme=dark] .menu-tb-s .second-bar {
+    display: none !important
+}
+
+:root .menu-tb-s .second-bar-casino,[data-theme=dark] .menu-tb-s .second-bar-casino {
+    display: none !important
+}
+
+:root .menu-tb-s .title,[data-theme=dark] .menu-tb-s .title {
+    color: var(--theme-color-2-plus2) !important;
+    font-size: 14px !important;
+    font-family: "Poppins", sans-serif !important /* 🟠 DM Sans → Poppins - MODIFICADO */
+}
+
+:root .menu-tb-s .theme-button .mat-button,[data-theme=dark] .menu-tb-s .theme-button .mat-button {
+    border-radius: 15px !important
+}
+
+:root #register-button,[data-theme=dark] #register-button {
+    background-color: var(--theme-color-2-plus2) !important;
+    color: var(--theme-color-8-plus2) !important;
+    border: none !important;
+    border-radius: 24px
+}
+
+:root .download-app,[data-theme=dark] .download-app {
+    display: none
+}
+
+:root .menu-top-bar .menu-right,[data-theme=dark] .menu-top-bar .menu-right {
+    gap: 10px !important
+}
+
+:root .menu-top-bar .menu-right-container .deposit-button,[data-theme=dark] .menu-top-bar .menu-right-container .deposit-button {
+    height: 35px !important
+}
+
+:root .menu-top-bar .menu-right-container .logged_button,[data-theme=dark] .menu-top-bar .menu-right-container .logged_button {
+    height: 34px !important
+}
+
+:root .menu-top-bar .menu-right .login-btn,[data-theme=dark] .menu-top-bar .menu-right .login-btn {
+    width: 75px !important;
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff7e7 !important;
+    height: 34px !important;
+    padding: 0 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border: 2px solid #ffe7ba !important;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
+    transition: all .3s ease-in-out
+}
+
+:root .menu-top-bar .menu-right .login-btn:hover,[data-theme=dark] .menu-top-bar .menu-right .login-btn:hover {
+    box-shadow: 0 0 8px #fdcb6a,0 0 15px #e7550a,0 0 30px rgba(255,0,0,.8);
+    text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
+}
+
+:root .menu-top-bar .menu-right .register-btn,[data-theme=dark] .menu-top-bar .menu-right .register-btn {
+    width: 94px !important;
+    background-color: var(--theme-color-2-plus2) !important;
+    height: 35px !important;
+    padding: 0 20px;
+    border-radius: 17.5px;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+:root .menu-top-bar .menu-right .register-btn:hover,[data-theme=dark] .menu-top-bar .menu-right .register-btn:hover {
+    box-shadow: 0 0 12px 0 red,0 0 20px 0 red,0 0 110px 18px rgba(255,0,0,.7),0 0 130px 20px rgba(255,0,0,.5);
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8)
+}
+
+:root app-events-list-desktop-plus2 .card-container,[data-theme=dark] app-events-list-desktop-plus2 .card-container {
+    border-top: none !important
+}
+
+:root .game-details-header,[data-theme=dark] .game-details-header {
+    background-color: #000 !important
+}
+
+:root .container-quotations-mobile,[data-theme=dark] .container-quotations-mobile {
+    background-color: rgba(0,0,0,0) !important
+}
+
+:root .container-quotations-mobile,[data-theme=dark] .container-quotations-mobile {
+    background-color: rgba(0,0,0,0)
+}
+
+:root .odd_template__ml,[data-theme=dark] .odd_template__ml {
+    margin-left: 0 !important
+}
+
+.neon-bottom-border,app-sports-menu .sports_menu__tabs_item.active,.menu_top_bar__main_option::before {
+    border-bottom: 4px solid var(--custom-neon-border) !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    --y-offset-bottom-glow-inset: -5px;
+    --y-offset-bottom-glow-outer: 5px;
+    --spread-clip-horizontal: -5px;
+    --spread-clip-vertical-inset: -5px;
+    --spread-clip-vertical-outer: -5px;
+    box-shadow: inset 0 var(--y-offset-bottom-glow-inset) 5px var(--spread-clip-horizontal) var(--custom-neon-border),inset 0 var(--y-offset-bottom-glow-inset) 8px var(--spread-clip-horizontal) var(--custom-neon-glow1),0 var(--y-offset-bottom-glow-outer) 2px var(--spread-clip-horizontal) #ffa242,0 var(--y-offset-bottom-glow-outer) 2px var(--spread-clip-horizontal) #ff9234,0 var(--y-offset-bottom-glow-outer) 6px var(--spread-clip-horizontal) rgba(255,69,0,.77),0 var(--y-offset-bottom-glow-outer) 5px var(--spread-clip-horizontal) var(--custom-neon-glow3);
+    transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out
+}
+
+st-event-block .card_default .event-block {
+    background: rgba(30,30,30,.16) !important
+}
+
+st-event-block .card_default .event_block__header {
+    padding: 5px 12px !important;
+    border-top: none !important
+}
+
+st-event-block .card_default .event_block__header mat-icon {
+    color: #fff !important
+}
+
+st-event-block .card_default .event_block__header.highlight {
+    margin-bottom: 1px !important;
+    background: rgba(0,0,0,0) !important
+}
+
+st-event-block .card_default .event_block__header {
+    margin-bottom: 1px !important;
+    background: rgba(0,0,0,0) !important
+}
+
+app-event-highlight-card .event-odd-block__event-container {
+    background: rgba(0,0,0,0) linear-gradient(270deg, #1e1e23 0%, transparent 100%) 0 0 no-repeat padding-box !important
+}
+
+app-event-highlight-card #bar-charts {
+    fill: var(--text-primary)
+}
+
+app-event-highlight-card #field {
+    fill: none;
+    stroke: var(--text-primary)
+}
+
+st-event-block .card_default .custom-layout {
+    align-items: flex-start !important
+}
+
+st-event-block .card_default .view-more-btn {
+    display: none !important
+}
+
+.event-highlight-card__container {
+    background: var(--fill-alternative) !important
+}
+
+app-register-page .mat-icon,app-register-dialog .mat-icon {
+    color: #fff !important;
+    -webkit-text-stroke: .5px #f97a36;
+    text-shadow: 0 0 2px #fd1919,0 0 4px rgba(255,203,106,.4);
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.83))
+}
+
+app-register-page .mat-icon:hover,app-register-dialog .mat-icon:hover {
+    text-shadow: 0 0 3px #fdcb6a,0 0 6px rgba(255,203,106,.6)
+}
+
+app-register-page .st_button__large.st_button__large,app-register-page .st_button__register,app-register-dialog .st_button__large.st_button__large,app-register-dialog .st_button__register {
+    --btn-themed-default: var(--theme-color-2-plus2) !important;
+    padding: 0 20px;
+    border-radius: 17.5px !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+app-register-page .st_button__large.st_button__large:hover,app-register-page .st_button__register:hover,app-register-dialog .st_button__large.st_button__large:hover,app-register-dialog .st_button__register:hover {
+    box-shadow: 0 0 12px 0 red,0 0 20px 0 red,0 0 110px 18px rgba(255,0,0,.7),0 0 130px 20px rgba(255,0,0,.5);
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8)
+}
+
+app-menu-top-bar-mobile-plus2 .menu-top-bar {
+    border-bottom: 1px solid rgba(255,255,255,.16)
+}
+
+app-menu-top-bar-mobile-plus2 .logged-area.logged_button {
+    border-radius: 17.5px !important;
+    border: 2px solid #fffcf6 !important;
+    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+}
+
+app-menu-top-bar-mobile-plus2 .menu-top-bar .mat-icon {
+    color: #fff !important;
+    -webkit-text-stroke: .5px #f97a36;
+    text-shadow: 0 0 2px #fd1919,0 0 4px rgba(255,203,106,.4);
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.83))
+}
+
+app-menu-top-bar-mobile-plus2 .menu-top-bar .mat-icon:hover {
+    text-shadow: 0 0 3px #fdcb6a,0 0 6px rgba(255,203,106,.6)
+}
+
+app-bottom-nav-plus2 .scale-in-container {
+    scale: 1 !important
+}
+
+app-bottom-nav-plus2 .scale-in-container app-game-button-mobile-plus2 {
+    width: 71px;
+    height: 68px
+}
+
+app-bottom-nav-plus2 .submenu-item-container {
+    align-content: center;
+    --submenu-item-container-color: transparent !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .activeButtonMob .game-button-mobile-title {
+    --text-primary: white !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .activeButtonMob {
+    font-weight: 700;
+    border-radius: 8px;
+    background-color: #383a47 !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .img {
+    height: auto !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .container-button-mobile {
+    --neon-reddish-primary: #ff2a2a;
+    --neon-orange-secondary: rgb(249 77 77 / 80%);
+    --neon-orange-hover: rgba(255, 203, 106, 0.9);
+    width: 71px !important;
+    height: 68px !important;
+    margin-top: -5px !important;
+    margin-bottom: 2px !important;
+    justify-content: flex-start !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .container-button-mobile .game-icon {
+    filter: drop-shadow(0 0 3px var(--neon-reddish-primary)) drop-shadow(0 0 12px var(--neon-orange-secondary));
+    transition: filter .3s ease-in-out;
+    width: 24px;
+    height: 24px;
+    margin-top: 8px
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .container-button-mobile .game-icon:hover {
+    filter: drop-shadow(0 0 6px var(--neon-reddish-primary)) drop-shadow(0 0 20px var(--neon-orange-hover))
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .container-button-mobile .icon {
+    width: 24px !important;
+    height: 24px !important
+}
+
+app-bottom-nav-plus2 app-game-button-mobile-plus2 .container-button-mobile .game-button-mobile-title {
+    max-width: 55px !important;
+    font-size: 12px !important;
+    max-height: 28px !important;
+    line-height: 12px !important;
+    font-weight: bold;
+    align-content: baseline;
+    font-family: "Poppins", sans-serif !important; /* 🟠 DM Sans → Poppins - MODIFICADO */
+    color: #fff !important
+}
+
+app-bottom-nav-plus2 .bottom-nav-container {
+    padding: 6px;
+    height: 76px !important;
+    background: #000 !important;
+    border-top: 3px solid var(--custom-neon-border) !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    --y-offset-top-glow-inset: 5px;
+    --y-offset-top-glow-outer: -5px;
+    --spread-clip-horizontal: -5px;
+    --spread-clip-vertical-inset: -5px;
+    --spread-clip-vertical-outer: -5px;
+    box-shadow: inset 0 var(--y-offset-top-glow-inset) 5px var(--spread-clip-horizontal) var(--custom-neon-border),inset 0 var(--y-offset-top-glow-inset) 8px var(--spread-clip-horizontal) var(--custom-neon-glow1),0 var(--y-offset-top-glow-outer) 2px var(--spread-clip-horizontal) #ffa242,0 var(--y-offset-top-glow-outer) 2px var(--spread-clip-horizontal) #ff9234,0 var(--y-offset-top-glow-outer) 6px var(--spread-clip-horizontal) rgba(255,69,0,.77),0 var(--y-offset-top-glow-outer) 5px var(--spread-clip-horizontal) var(--custom-neon-glow3);
+    transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out
+}
+
+app-bottom-nav-plus2 .bottom-nav-container .item-indicator-active {
+    background-color: rgba(0,0,0,0) !important
+}
+
+app-bottom-nav-plus2 .main {
+    padding: 6px 0;
+    margin-top: -5px;
+    min-height: 82px
+}
+
+app-casino-item .casino_item__highlight.casino_item__container {
+    --custom-neon-border: #f7c767;
+    border: 3px solid var(--custom-neon-border) !important;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+app-casino-highlight-block .swiper-wrapper {
+    gap: 6px !important
+}
+
+app-register-page,app-register-dialog,app-edit-address-dialog {
+    --checkbox-gradient-start: #ff8c00;
+    --checkbox-gradient-end: #ffdc6e;
+    --checkbox-glow-color: #ffcc00;
+    --checkbox-glow-color-alt: #ff6600
+}
+
+app-register-page .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background,app-register-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background,app-edit-address-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+    background: linear-gradient(45deg, var(--checkbox-gradient-start), var(--checkbox-gradient-end));
+    box-shadow: 0 0 4px var(--neon-light-color),0 0 8px var(--checkbox-glow-color),0 0 15px var(--checkbox-glow-color-alt),0 0 25px var(--custom-neon-glow1),0 0 35px var(--neon-tertiary-color);
+    border: none;
+    transition: all .3s ease-in-out
+}
+
+app-register-page .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-checkmark-path,app-register-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-checkmark-path,app-edit-address-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-checkmark-path {
+    stroke: #c72f04 !important;
+    stroke-width: 3px
+}
+
+app-register-page .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background:hover,app-register-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background:hover,app-edit-address-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-checked.mat-accent .mat-checkbox-background:hover {
+    box-shadow: 0 0 6px var(--neon-light-color),0 0 12px var(--checkbox-glow-color),0 0 20px var(--checkbox-glow-color-alt),0 0 35px var(--custom-neon-glow1),0 0 50px var(--neon-tertiary-color)
+}
+
+app-register-page .register-user__container,app-register-dialog .register-user__container,app-edit-address-dialog .register-user__container {
+    padding-bottom: 18px
+}
+
+app-register-page .st_checkbox__container,app-register-dialog .st_checkbox__container,app-edit-address-dialog .st_checkbox__container {
+    border: none !important;
+    box-shadow: none !important
+}
+
+app-register-page .st_checkbox__container .st_checkbox__field,app-register-dialog .st_checkbox__container .st_checkbox__field,app-edit-address-dialog .st_checkbox__container .st_checkbox__field {
+    background: rgba(255,255,255,.0588235294) !important
+}
+
+app-register-page .st_checkbox__container .st_checkbox__large .mat-checkbox-frame,app-register-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-frame,app-edit-address-dialog .st_checkbox__container .st_checkbox__large .mat-checkbox-frame {
+    --theme-color-2-plus2: transparent !important;
+    background: rgba(255,255,255,.1607843137) !important
+}
+
+app-register-page .st_input_outlined input,app-register-page .st_input_outlined label,app-register-page .st_input_outlined .st_select__field,app-register-dialog .st_input_outlined input,app-register-dialog .st_input_outlined label,app-register-dialog .st_input_outlined .st_select__field,app-edit-address-dialog .st_input_outlined input,app-edit-address-dialog .st_input_outlined label,app-edit-address-dialog .st_input_outlined .st_select__field {
+    border-color: rgba(255,255,255,.3215686275) !important
+}
+
+/* 🟠 Checkbox - SOLUÇÃO FINAL - Centralizar elementos visuais com área clicável */
+/* Problema: elementos visuais (background, ripple) ficavam no canto superior direito */
+/* enquanto área clicável (input) ficava centralizada - causando desalinhamento */
+div#register-page__container mat-checkbox .mdc-checkbox__background,
+mat-checkbox#mat-mdc-checkbox-1 .mdc-checkbox__background {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+/* Ripple effects e animações de click também centralizados */
+div#register-page__container mat-checkbox .mdc-checkbox__ripple,
+div#register-page__container mat-checkbox .mat-mdc-checkbox-ripple,
+div#register-page__container mat-checkbox .mat-ripple,
+mat-checkbox#mat-mdc-checkbox-1 .mdc-checkbox__ripple,
+mat-checkbox#mat-mdc-checkbox-1 .mat-mdc-checkbox-ripple,
+mat-checkbox#mat-mdc-checkbox-1 .mat-ripple {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+
+
+
+
+
+app-display-game app-global-login .st_button__text {
+    margin-right: 5px !important
+}
+
+app-display-game app-global-login .row-reverse {
+    flex-direction: row-reverse !important
+}
+
+app-display-game app-global-login .st_input_outlined .st_input__suffix {
+    display: none !important
+}
+
+app-display-game app-global-login .st_input.filled-input .st_input__suffix.st_input__suffix,app-display-game app-global-login .st_date_picker__container.filled-input .st_input__suffix.st_input__suffix {
+    display: inherit !important
+}
+
+app-display-game app-global-login .st_input.filled-input {
+    border: 3px solid #ffe7ba;
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 2px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 6px rgba(255,69,0,.77),0 0 5px var(--custom-neon-glow3);
+    padding-bottom: 0;
+    margin-bottom: 12px
+}
+
+app-display-game app-global-login .st_input.filled-input .st_input__suffix.st_input__suffix {
+    display: inherit !important;
+    bottom: 10px !important
+}
+
+app-display-game app-global-login .st_button__text {
+    width: 160px !important;
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff7e7 !important;
+    height: 34px !important;
+    padding: 0 20px;
+    border-radius: 17px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    border: 2px solid #ffe7ba !important;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3) !important;
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
+    transition: all .3s ease-in-out
+}
+
+app-display-game app-global-login st_button__text:hover {
+    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
+}
+
+app-bottom-nav-plus2 .menu-item {
+    flex: 1 0 20% !important;
+    min-width: 20% !important;
+    max-width: 20% !important
+}
+
+app-game-button-mobile-plus2 {
+    min-height: 65px !important;
+    align-items: flex-start !important
+}
+
+app-game-button-mobile-plus2 .game-icon {
+    margin-bottom: 4px !important
+}
+
+app-game-button-mobile-plus2 img {
+    width: 40px !important;
+    height: 40px !important
+}
+
+app-game-button-mobile-plus2 .game-button-mobile-title {
+    font-size: 14px !important
+}
+
+app-game-button-mobile-plus2 .game-button-mobile-title {
+    display: flex;
+    line-height: 11px !important;
+    max-height: none !important;
+    background-color: rgba(0,0,0,0) !important
+}
+
+app-casino-button-filter .casino_button_filter__container {
+    transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out;
+    border: 2px solid #fffcf6 !important;
+    background: rgba(0,0,0,0);
+    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+}
+
+app-casino-button-filter .casino_button_filter__container .casino_button_filter__container_title {
+    --text-primary: white
+}
+
+app-casino-button-filter .casino_button_filter__container .mat-icon {
+    color: #fff !important;
+    text-shadow: 0 0 .7px #af0000,0 0 1px #fff,0 0 2px #fff,0 0 3px #f85500,0 0 3px #f85500,0 0 4px #f85500,0 0 1px red,0 0 3px red
+}
+
+
+
+
+app-floating-coupon .buttons-actions .st_button__icon_button.st_button__icon_button {
+    background: var(--bt-default)
+}
+
+app-floating-coupon .bottom-menu-gap.mobile-version {
+    margin-bottom: calc(var(--bottom-nav-height) + 10px) !important
+}
+
+.cookies-permission-dialog .mat-mdc-dialog-surface.mat-mdc-dialog-surface {
+    background: #1b1b1b !important;
+    border: 1px solid #464646
+}
+
+
+.cookies-permission-dialog .mat-mdc-dialog-content.mat-mdc-dialog-content {
+    color: #fff !important
+}
+
+app-cookies-permission .cookies-button.active {
+    background-color: #515151 !important
+}
+
+app-cookies-permission .cookies-permission-content h4,app-cookies-permission .more-info {
+    color: var(--theme-color-2-plus2) !important;
+    text-shadow: 0 0 5px rgba(255,0,0,.368627451),0 0 10px rgba(243,5,5,.4),0 0 20px rgba(255,0,0,.2784313725),0 0 30px rgba(255,0,0,.4)
+}
+
+app-cookies-permission .cookies-button {
+    font-family: "Poppins", serif !important /* 🟠 DM Sans → Poppins - MODIFICADO */
+}
+
+app-cookies-permission .cookies-button.cookies-manage {
+    color: #fff !important
+}
+
+app-cookies-permission .cookies-button.cookies-manage mat-icon {
+    color: #fff !important
+}
+
+app-cookies-permission .cookies-permission-content h4,app-cookies-permission .more-info {
+    color: #fff
+}
+
+app-cookies-permission .cookies-button.cookies-accept-button {
+    background-color: var(--theme-color-2-plus2) !important;
+    border-radius: 17.5px;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    box-shadow: 0 0 8.9px 0 red,0 0 15px 0 red,0 0 85.2px 13px rgba(255,0,0,.5),0 0 100px 10px rgba(255,0,0,.4);
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+app-cookies-permission .cookies-button.cookies-accept-button:hover {
+    box-shadow: 0 0 12px 0 red,0 0 20px 0 red,0 0 110px 18px rgba(255,0,0,.7),0 0 130px 20px rgba(255,0,0,.5);
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8)
+}
+
+
+
+app-cookies-permission .cookies-button.cookies-reject-button {
+    white-space: nowrap;
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff7e7 !important;
+    padding: 0 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 3px;
+    border: 2px solid #ffe7ba !important;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
+    transition: all .3s ease-in-out
+}
+
+app-cookies-permission .cookies-button.cookies-reject-button:hover {
+    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
+}
+
+.st_button__theme_color {
+    --coupon-config-main-hover-color: var(--theme-color-2-plus2) !important;
+    --coupon-config-main-color: var(--theme-color-2-plus2) !important;
+    --btn-themed-default: var(--theme-color-2-plus2) !important;
+    padding: 0 20px;
+    border-radius: 17.5px !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+.st_button__theme_color:hover {
+    box-shadow: 0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+}
+
+.st_button__undefined {
+    border-radius: 17.5px !important;
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+.st_button__undefined:focus {
+    background: rgba(0,0,0,0) !important
+}
+
+.st_button__undefined:hover {
+    background: rgba(0,0,0,0) !important;
+    text-shadow: 0 0 14px #fa1c1c,0 0 20px #ff7e22,0 0 25px #ff7100,0 0 35px rgba(255,69,0,.7) !important
+}
+
+app-display-game .mat-icon {
+    color: #fff !important;
+    -webkit-text-stroke: .5px #f97a36;
+    text-shadow: 0 0 2px #fd1919,0 0 4px rgba(255,203,106,.4);
+    transition: all .3s ease-in-out;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.83))
+}
+
+.st_button__large.st_button__large.st_button__large,.st_button__register,.deposit_button_themed,app-user-profile .st_button__small {
+    --btn-themed-default: var(--theme-color-2-plus2) !important;
+    background: var(--btn-themed-default) !important;
+    padding: 0 20px;
+    border-radius: 17.5px !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+.st_button__large.st_button__large:hover,.st_button__register:hover,.deposit_button_themed:hover,app-user-profile .st_button__small:hover {
+    box-shadow: 0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+}
+
+.register-user__container .mat-flat-button.mat-mdc-button-disabled.mat-mdc-button-disabled,app-user-deposit .mat-flat-button.mat-mdc-button-disabled.mat-mdc-button-disabled {
+    --input-text-disabled-color: #B52504 !important;
+    --text-disable: #B52504 !important;
+    box-shadow: inset 0 0 16px rgba(255,0,0,.12),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2) !important;
+    transition: all .3s ease-in-out
+}
+
+app-majority-dialog .close_button .st_button__stretch {
+    background-color: rgba(0,0,0,0) !important;
+    color: #fff7e7 !important;
+    height: 34px !important;
+    padding: 0 20px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
+    transition: all .3s ease-in-out
+}
+
+.event-block.card_default .mat-list-single-selected-option {
+    border: 3px solid #ffe7ba;
+    margin: 6px 0 6px 2px;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+
+.event-block.card_default .mat-list-item:not(.mat-list-single-selected-option) {
+    margin: 2px
+}
+
+app-authentication-info {
+    --fill-secondary: rgba(77, 77, 77, 0.30)
+}
+
+app-authentication-info .bonus_list__card {
+    background: var(--fill-secondary) !important;
+    color: #fff !important
+}
+
+app-authentication-info .authentication_info__container,app-authentication-info .authentication_info__container .authentication_info__payment-action-btn .authentication_info__payment-action-label,app-authentication-info .authentication_info__container .authentication_info__btn-animate {
+    color: #fff !important
+}
+
+app-authentication-info .alert__container.alert__info-gray {
+    --text-primary: white
+}
+
+app-authentication-info .alerts_v2 .verification-alerts__alert .alert__container .subtitle {
+    --text-secondary: #c0c0c0
+}
+
+app-authentication-info .authentication_info__container .authentication_info__card {
+    --theme-color-3: var(--fill-secondary);
+    --theme-color-8-plus2: white;
+    background: var(--theme-color-3);
+    color: var(--theme-color-8-plus2)
+}
+
+app-authentication-info .mat-icon {
+    color: #fff !important
+}
+
+app-authentication-info .authentication_info__container {
+    --theme-color-coupon: #262626;
+    --theme-color-8-plus2: #0D0D0D
+}
+
+app-authentication-info .authentication_info__option {
+    color: #fff
+}
+
+app-authentication-info .authentication_info__option .mat-icon {
+    color: #fff !important
+}
+
+app-authentication-info app-global-login .alert__container .error-code {
+    color: rgba(255,255,255,.6) !important
+}
+
+app-authentication-info app-global-login .st_input_outlined label,app-authentication-info app-global-login .st_input_outlined input {
+    border-color: rgba(255,255,255,0.3215686275) !important;
+    --text-tertiary: rgba(153, 153, 153, 1);
+    --input-default: #0A0E1C;
+    --text-primary: rgba(255, 255, 255, .9);
+    border: 1px solid rgba(255,255,255,0.3215686275)
+}
+
+app-authentication-info app-global-login .st_input_outlined label {
+    color: var(--text-tertiary) !important;
+    border-color: rgba(255,255,255,0.3215686275) !important
+}
+
+app-authentication-info app-global-login .st_input.filled-input {
+    border: 3px solid #ffe7ba;
+    border-radius: 12px;
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 2px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 6px rgba(255,69,0,.77),0 0 5px var(--custom-neon-glow3);
+    padding-bottom: 0;
+    margin-bottom: 12px
+}
+
+app-authentication-info app-global-login .st_input.filled-input .st_input__suffix.st_input__suffix {
+    display: inherit !important;
+    bottom: 10px !important
+}
+
+app-authentication-info .authentication_info__container .authentication_info__deposit {
+    background: var(--theme-color-2-plus2) !important;
+    border-radius: 17.5px !important;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+app-authentication-info .authentication_info__container .authentication_info__deposit .mat-icon {
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2)
+}
+
+app-authentication-info .authentication_info__container .authentication_info__deposit:hover {
+    box-shadow: 0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+}
+
+app-menu-login-sidebar-mobile-plus2 .sidebar {
+    --theme-color-coupon: #262626
+}
+
+app-login-container-mobile-plus2 .authentication_info__option,app-login-container-mobile-plus2 .menu-header {
+    color: #fff
+}
+
+.global_login__sign-in-btn {
+    background: var(--theme-color-2-plus2) !important;
+    border-radius: 17.5px !important;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+.global_login__sign-in-btn:hover {
+    box-shadow: 0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+}
+
+/* Regras removidas - conflitavam com novo estilo */
+}
+
+
+app-floating-coupon .coupon-info {
+    background: #fcb500 !important;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out;
+    box-shadow: 0 -1px 4px 0 red,0 -1px 1px 0 red,0 -4px 3.2px -3px rgba(255,0,0,.5),0 0px 13px 5px rgba(255,0,0,.4) !important
+}
+
+
+app-floating-coupon .badge-container {
+    border: none !important;
+    background: #b52504 !important
+}
+
+app-floating-coupon .badge-value {
+    color: #fff !important
+}
+
+app-authentication-field .authentication-field-2 .logged-area.logged_button {
+    border-radius: 17.5px !important;
+    border: 2px solid #fffcf6 !important;
+    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+}
+
+app-casino-item-portrait .casino_top__text {
+    -webkit-text-stroke-color: #f5ead4 !important;
+    text-shadow: 0 0 2px #ff630f,0 0 8px rgba(255,81,0,.968627451),0 0 9px #935c33
+}
+
+app-casino-item-portrait .casino_item__vertical_container {
+    background: rgba(0,0,0,0) !important
+}
+
+app-odd-button-plus2 button .odd {
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+app-odd-button-plus2 button .title.title {
+    color: #fff7e7;
+    text-shadow: 0 0 3px rgba(255,85,85,.7019607843),0 0 4px #fdcb6a,0 0 2px #ff7100,0 0 3px rgba(255,69,0,.7)
+}
+
+app-odd-button-plus2 .odd {
+    color: #fff7e7
+}
+
+app-odd-button-plus2 .odd .active div {
+    color: #000 !important
+}
+
+.majority-logo {
+    margin-left: 0 !important
+}
+
+app-cancel-dialog .cancel-container .cancel-container__actions {
+    justify-content: center !important
+}
+
+.st_button__text,.casino_item__play_button {
+    background: rgba(0,0,0,0) !important;
+    border-radius: 17.5px !important;
+    border: 2px solid #ffe7ba !important;
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+.st_button__text:focus,.casino_item__play_button:focus {
+    background: rgba(0,0,0,0) !important
+}
+
+.st_button__text:hover,.casino_item__play_button:hover {
+    background: rgba(0,0,0,0) !important;
+    text-shadow: 0 0 14px #fa1c1c,0 0 20px #ff7e22,0 0 25px #ff7100,0 0 35px rgba(255,69,0,.7)
+}
+
+.st_button__theme_color,.casino_item__demo_button,app-validators-code-dialog .themed_neon,.user-payment__payment-confirm,app-user-dashboard .st_button__secondary,app-waiting-pix-dialog .default-button {
+    --coupon-config-main-hover-color: var(--theme-color-2-plus2) !important;
+    --coupon-config-main-color: var(--theme-color-2-plus2) !important;
+    --btn-themed-default: var(--theme-color-2-plus2) !important;
+    background-color: var(--theme-color-2-plus2) !important;
+    padding: 0 20px;
+    border-radius: 17.5px !important;
+    border: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 4px 0 red,0 0 5px 0 red,0 0 5.2px 4px rgba(255,0,0,.5),0 0 40px 5px rgba(255,0,0,.4) !important;
+    color: #b52504 !important;
+    text-shadow: 0 0 2px rgba(0,0,0,.15),0 0 20px rgba(255,0,0,.2);
+    transition: all .3s ease-in-out
+}
+
+.st_button__theme_color:hover,.casino_item__demo_button:hover,app-validators-code-dialog .themed_neon:hover,.user-payment__payment-confirm:hover,app-user-dashboard .st_button__secondary:hover,app-waiting-pix-dialog .default-button:hover {
+    box-shadow: 0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+    text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+}
+
+app-casino-banners .swiper-slide {
+    margin-right: 5px !important
+}
+
+.home-mobile .content .panel {
+    background: #000
+}
+
+app-event-tabs .mat-list-base .mat-list-item .mat-list-item-content-reverse {
+    padding: 0 2px 4px 4px !important
+}
+
+.zoom_hover:hover {
+    transform: scale(0.99);
+    transition-duration: 200ms
+}
+
+app-sports-menu .sports_menu__tabs_item.active {
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+app-super-odds-item .super_odds__value .super_odds__highlight {
+    text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7)
+}
+
+app-casino-search-page .screen__container {
+    margin-top: 94px !important
+}
+
+app-casino-search-page .casino-sidebar-container {
+    top: 96px !important;
+    max-height: calc(100vh - 96px) !important
+}
+
+
+app-casino-v2 .casino-sidebar-container {
+    top: 96px !important;
+    max-height: calc(100vh - 96px) !important
+}
+
+app-casino-v2 app-casino-filter .casino_filter__categories app-casino-button-filter {
+    margin: 5px
+}
+
+.casino__v2-body {
+    margin-top: 0px !important
+}
+
+
+app-menu-top-bar-mobile-plus2 .deposit-button.deposit_button_themed {
+    margin-right: -4px
+}
+
+app-menu-top-bar-mobile-plus2 app-promotions-button .giftcard-button {
+    color: var(--theme-text-color-1);
+    width: 33px !important;
+    height: 33px !important;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--theme-text-color-1) !important;
+    border-radius: 50%;
+    background: rgba(0,0,0,0);
+    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px rgba(255,7,7,.29),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3)
+}
+
+app-menu-top-bar-mobile-plus2 app-promotions-button .giftcard-button mat-icon {
+    font-size: 16px !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+app-swiper-carousel .odd-container .odd-button-banner.center-horizontal {
+    bottom: 5px !important
+}
+
+::ng-deep app-swiper-carousel .swiper-pagination {
+    display: block
+}
+
+::ng-deep app-swiper-carousel .swiper-pagination-bullet-active {
+    background: #fdf7e6;
+    box-shadow: 0 0 12px 0 rgba(248,213,23,.5) inset,0 0 10px 0 #ffaf36 inset,0 0 4px 0 #ffaf36 inset,0 0 3px 0 #ff4336 inset;
+    filter: drop-shadow(0px 0px 62px #F00) drop-shadow(0px 0px 62.291px #F00) drop-shadow(0px 0px 47px #F00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 4px #F00) drop-shadow(0px 0px 46px rgba(255, 0, 0, 0.7))
+}
+
+::ng-deep app-carousel .owl-carousel .owl-dots {
+    display: block !important
+}
+
+::ng-deep app-carousel .owl-carousel .owl-dots .owl-dot.active span {
+    background: #fdf7e6;
+    box-shadow: 0 0 12px 0 rgba(248,213,23,.5) inset,0 0 10px 0 #ffaf36 inset,0 0 4px 0 #ffaf36 inset,0 0 3px 0 #ff4336 inset;
+    filter: drop-shadow(0px 0px 62px #F00) drop-shadow(0px 0px 62.291px #F00) drop-shadow(0px 0px 47px #F00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 4px #F00) drop-shadow(0px 0px 46px rgba(255, 0, 0, 0.7))
+}
+
+app-user-profile .st_button__outline.st_button__outline:hover:not(:disabled),app-user-profile .st_button__outline.st_button__hover {
+    background: #fcb500 !important
+}
+
+app-casino-categories .casino_categories__column .casino_button_filter__container {
+    border: none !important;
+    box-shadow: none !important;
+    background: var(--casino-filter-button) !important
+}
+
+app-bottom-nav-plus2 .item-indicator-active.show {
+    opacity: 0 !important
+}
+
+.text_session,.countdown-time {
+    color: #fff !important
+}
+
+app-smartico-gamification-menu .smartico-gamification-menu__user-profile {
+    background: linear-gradient(0deg, rgba(16, 16, 16, 0.8) 0%, rgba(16, 16, 16, 0.8) 100%),url("./img/gamification-bg.avif") #d3d3d3 50%/cover no-repeat !important
+}
+
+app-smartico-gamification-menu .smartico-gamification-menu__user-profile .smartico-gamification-menu__user-profile-info .smartico-gamification-menu__user-profile-info-level-progress-fill {
+    background: var(--theme-color-2-plus2) !important;
+    box-shadow: 0 0 7.329px 0 red !important
+}
+
+app-gamification-profile .profile_card_info_level_progress_fill {
+    background: var(--theme-color-2-plus2) !important;
+    box-shadow: 0 0 7.329px 0 red !important
+}
+
+app-gamification-tournament-item .tournament_header {
+    background: linear-gradient(0deg, rgba(16, 16, 16, 0.8) 0%, rgba(16, 16, 16, 0.8) 100%),url("./img/gamification-bg.avif") #d3d3d3 50%/cover no-repeat
+}
+
+app-gamification-tournament-item .tournament_header_title {
+    text-shadow: 0 0 1px #f8d517,0 0 1px #f8d517,0 0 1px #fab41c,0 0 85.2px rgba(255,0,0,.7),0 0 8.9px rgba(255,0,0,.6),0 0 4px #e7550a !important
+}
+
+app-gamification-tournament-item .tournament_header_prize {
+    color: #f7e015 !important;
+    text-shadow: 0 0 1px #f8d517,0 0 1px #f8d517,0 0 1px #fab41c,0 0 85.2px rgba(255,0,0,.7),0 0 8.9px rgba(255,0,0,.6),0 0 4px #e7550a !important;
+    -webkit-text-stroke-width: .4px !important;
+    -webkit-text-stroke-color: #fff !important
+}
+
+app-gamification-tournament-item .countdown_counter_item {
+    border: 2px solid #fffcf6 !important;
+    margin-left: -2px;
+    box-shadow: inset 0 0 4px rgba(255,179,0,.38),inset 0 0 12px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+}
+
+app-gamification-tournament-item .countdown_counter_item .countdown_counter_item_number,app-gamification-tournament-item .countdown_counter_item .countdown_counter_item_label {
+    color: #fff8f8 !important;
+    text-shadow: 0 0px 6px #f55,0 0 2px #fdcb6a,0px 0px 0px #ff7100,0 0 0px rgba(255,69,0,.7)
+}
+
+app-gamification-tournament-details .tournament_details_info_container {
+    background: linear-gradient(0deg, rgba(16, 16, 16, 0.8) 0%, rgba(16, 16, 16, 0.8) 100%),url("./img/gamification-bg.avif") #d3d3d3 50%/cover no-repeat
+}
+
+app-gamification-tournament-details .tournament_details_info_title {
+    color: #fff !important;
+    text-shadow: 0 0 1px #f8d517,0 0 1px #f8d517,0 0 1px #fab41c,0 0 85.2px rgba(255,0,0,.7),0 0 8.9px rgba(255,0,0,.6),0 0 4px #e7550a !important
+}
+
+app-gamification-tournament-details .tournament_details_info_prize {
+    color: #f7e015 !important;
+    text-shadow: 0 0 1px #f8d517,0 0 1px #f8d517,0 0 1px #fab41c,0 0 85.2px rgba(255,0,0,.7),0 0 8.9px rgba(255,0,0,.6),0 0 4px #e7550a !important;
+    -webkit-text-stroke-width: .4px !important;
+    -webkit-text-stroke-color: #fff !important
+}
+
+app-gamification-tournament-details .countdown_counter_item {
+    border: 2px solid #fffcf6 !important;
+    margin-left: -2px;
+    box-shadow: inset 0 0 4px rgba(255,179,0,.38),inset 0 0 12px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+}
+
+app-gamification-tournament-details .countdown_counter_item .countdown_counter_item_number,app-gamification-tournament-details .countdown_counter_item .countdown_counter_item_label {
+    color: #fff8f8 !important;
+    text-shadow: 0 0px 6px #f55,0 0 2px #fdcb6a,0px 0px 0px #ff7100,0 0 0px rgba(255,69,0,.7)
+}
+
+app-gamification-tournament-details .tournament_details_rewards_container .tournament_details_rewards_header_button.active {
+    box-shadow: 0px 0px 1px 0px #f8d517,0px 0px 0px 0px #f9c619 inset,0px 0px 85.2px 13px rgba(255,0,0,.7),0px 0px 8.9px 0px rgba(255,0,0,.6),0px 0px 4px 0px #e7550a
+}
+
+app-user-bets .user_bets__item_container.user_bets__item_container,app-user-bets .user_bets__item_container:focus.user_bets__item_container:focus,app-user-bets .user_bets__item_container:active.user_bets__item_container:active,app-user-bets .user_bets__item_container:focus-within.user_bets__item_container:focus-within {
+    background: var(--fill-1) !important
+}
+
+app-global-login app-alert .alert__container.alert__error .title-message {
+    --alert-error-default: #ff453a !important;
+    color: #ff453a !important
+}
+
+/*# sourceMappingURL=theme.css.map */
+
+/* 🟠 RESPONSIVE BREAKPOINTS - MEDIA QUERIES */
+/* 🟠 Sports Menu - borda fina azul apenas direita e embaixo */
+app-sports-menu {
+    border: none !important;
+    border-right: 1.5px solid #2D4484 !important;
+    border-bottom: 1.5px solid #2D4484 !important;
+    border-radius: 8px !important;
+    padding-top: 8px !important;
+    display: block !important;
+}
+
+/* Backup com seletor de atributo parcial para Angular */
+[_nghost-bet-plus-web-c948289396] app-sports-menu,
+app-sports-menu[class*="ng-"],
+app-sports-menu[id*="sports"] {
+    border: none !important;
+    border-right: 1.5px solid #2D4484 !important;
+    border-bottom: 1.5px solid #2D4484 !important;
+    border-radius: 8px !important;
+    padding-top: 8px !important;
+    display: block !important;
+}
+
+/* 🟠 Sports Menu Tabs - remover neon e aplicar estilo branco */
+div.sports_menu__tabs_item {
+    color: #BBBDD4 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: normal !important;
+    border: none !important;
+    border-bottom: 2px solid transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* Tab ativo/selecionado */
+div.sports_menu__tabs_item.active {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    border-bottom: 2px solid white !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    animation: none !important;
+}
+
+/* Remover qualquer efeito neon em hover */
+div.sports_menu__tabs_item:hover {
+    color: white !important;
+    opacity: 0.8 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* 🟠 Menu Top Bar - item ativo com estilo personalizado */
+li.cdk-option.menu_top_bar__main_option.active-bar,
+.menu_top_bar__main_option.active-bar,
+li.active-bar,
+li#cdk-option-3.active-bar {
+    color: white !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border: none !important;
+    border-bottom: 2px solid #FF6300 !important;
+    border-width: 0 0 2px 0 !important;
+    border-style: solid !important;
+    border-color: transparent transparent #FF6300 transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+    outline: none !important;
+}
+
+/* Items não ativos */
+li.cdk-option.menu_top_bar__main_option:not(.active-bar),
+.menu_top_bar__main_option:not(.active-bar) {
+    color: #BBBDD4 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: normal !important;
+    font-size: 14px !important;
+    border-bottom: 2px solid transparent !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* Forçar remoção de neon no container e elemento */
+#cdk-listbox-2,
+ul#cdk-listbox-2,
+.menu_top_bar__main_list {
+    box-shadow: none !important;
+    filter: none !important;
+    background: transparent !important;
+}
+
+#cdk-option-3,
+li#cdk-option-3,
+#cdk-listbox-2 #cdk-option-3,
+ul#cdk-listbox-2 li#cdk-option-3 {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    animation: none !important;
+    background-image: none !important;
+    border: none !important;
+    outline: none !important;
+}
+
+/* FORÇAR borda laranja com máxima prioridade */
+#cdk-option-3.active-bar,
+li#cdk-option-3.active-bar,
+#cdk-listbox-2 #cdk-option-3.active-bar,
+ul#cdk-listbox-2 li#cdk-option-3.active-bar,
+[id="cdk-option-3"].active-bar {
+    border-bottom: 2px solid #FF6300 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    position: relative !important;
+}
+
+/* Pseudo-elemento para garantir a borda laranja */
+#cdk-option-3.active-bar::after,
+li#cdk-option-3.active-bar::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 2px !important;
+    background-color: #FF6300 !important;
+    z-index: 999 !important;
+}
+
+/* 🟠 SIMPLES - Menu Início sem neon, só borda laranja */
+li#cdk-option-3,
+li#cdk-option-3.active-bar,
+li#cdk-option-3.cdk-option-active {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+li#cdk-option-3.active-bar {
+    border: none !important;
+    border-bottom: none !important;
+    position: relative !important;
+}
+
+/* Barra laranja INTERNA - fica dentro do elemento */
+li#cdk-option-3.active-bar::after {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 2px !important;
+    left: 2px !important;
+    right: 2px !important;
+    width: calc(100% - 4px) !important;
+    height: 2px !important;
+    background: #FF6300 !important;
+    background-color: #FF6300 !important;
+    z-index: 1 !important;
+    display: block !important;
+    pointer-events: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Bottom Nav Container - borda superior azul */
+div.bottom-nav-container,
+.bottom-nav-container,
+div.bottom-nav-container[class*="ng-tns-c"] {
+    border-top: 1px solid #2D4484 !important;
+    border-top-width: 1px !important;
+    border-top-style: solid !important;
+    border-top-color: #2D4484 !important;
+    display: block !important;
+}
+
+/* 🟠 OVERRIDE FINAL - Forçar botão Entrar sem efeitos neon */
+button.mat-mdc-menu-trigger.mdc-button.mat-mdc-button.hover-register,
+button.mat-mdc-menu-trigger.hover-register.menu-opened,
+button.mat-mdc-menu-trigger.hover-register[class*="mat-mdc"] {
+    background: transparent !important;
+    border: 2px solid #FF6300 !important;
+    border-image: none !important;
+    box-shadow: 0 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 0 transparent !important;
+    -moz-box-shadow: 0 0 0 0 transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    text-shadow: 0 0 0 transparent !important;
+    animation: none !important;
+    -webkit-animation: none !important;
+}
+
+@media (max-width: 1279px) {
+    /* Esconder coupon completamente */
+    div.container-coupon,
+    div.events-area-container.column-mode.coupon-column,
+    .events-area-container.column-mode.coupon-column {
+        display: none !important;
+        width: 0 !important;
+        max-width: 0 !important;
+        flex: 0 0 0% !important;
+    }
+    
+    /* Elemento central ocupa todo o espaço disponível */
+    div.router-outlet.scrollbar_hidden.events-area-outlet,
+    .router-outlet.scrollbar_hidden.events-area-outlet {
+        flex: 1 1 100% !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    /* Margem lateral de 80px em telas menores */
+    app-home.ng-star-inserted {
+        margin-left: 80px !important;
+        margin-right: 80px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Remove margem em dispositivos móveis */
+    app-home.ng-star-inserted {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    :root .event-body-custom .odds-area ::ng-deep app-odd-button-plus2,[data-theme=dark] .event-body-custom .odds-area ::ng-deep app-odd-button-plus2 {
+        min-width:65px !important;
+        height: 30px !important
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    app-register-user-single-step .st_checkbox__container.st_checkbox__container,app-register-user-multiple-steps .st_checkbox__container.st_checkbox__container {
+        padding-bottom:14px !important
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    app-register-user-single-step .st_checkbox__container.st_checkbox__container,app-register-user-multiple-steps .st_checkbox__container.st_checkbox__container {
+        padding-bottom:8px !important
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    app-register-user-multiple-steps .st_checkbox__container.st_checkbox__container {
+        padding-bottom:18px !important
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cookies-permission-dialog .mat-mdc-dialog-surface.mat-mdc-dialog-surface {
+        position:relative;
+        bottom: 10px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    app-cookies-permission .cookies-button.cookies-reject-button,app-cookies-permission .cookies-button.cookies-accept-button {
+        max-width:131px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    app-cookies-permission .cookies-button.cookies-reject-button,app-cookies-permission .cookies-button.cookies-accept-button {
+        max-width:106px;
+        height: 27px !important
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .event-block.card_default .mat-list-single-selected-option:hover {
+        box-shadow:0 0 6px 0 #7c0000,0 0 10px 0 #b60000,0 0 15px 8px rgba(255,0,0,.7),0 0 30px 10px rgba(255,0,0,.5) !important;
+        text-shadow: 0 0 3px rgba(0,0,0,.35),0 0 40px rgba(255,0,0,.8) !important
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    app-floating-coupon .coupon-container .opened__coupon_container {
+        padding-top:2px
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    app-floating-coupon .coupon-info {
+        margin-top:5px
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    app-casino-search-page .screen__container {
+        margin-top:12px !important
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .casino__v2-body {
+        margin-top:80px !important
+    }
+}
