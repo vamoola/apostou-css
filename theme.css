@@ -1759,6 +1759,95 @@ st-input-error {
     color: #FF9501 !important;
 }
 
+/* 🟠 Erro de senha - fundo transparente */
+div.st_input_error__error.passwordPattern.st_input_error_color__light_theme,
+div[class*="st_input_error__error"][class*="passwordPattern"],
+.st_input_error__error.passwordPattern,
+div.ng-trigger.ng-trigger-fadeInOut.st_input_error__error.passwordPattern,
+div[class*="ng-tns-c"][class*="st_input_error__error"][class*="passwordPattern"],
+st-input-error div.st_input_error__error.passwordPattern,
+.ng-tns-c2306435254-21,
+div.ng-tns-c2306435254-21.ng-trigger.ng-trigger-fadeInOut.st_input_error__error.passwordPattern.st_input_error_color__light_theme,
+div[class*="ng-tns-c2306435254"] {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Campo de senha - fundo transparente */
+st-input.mat-mdc-menu-trigger.password-field,
+st-input.password-field,
+.password-field {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Container do input com erro - fundo transparente NUCLEAR */
+div.st_input.st_input_outlined.filled-input[_ngcontent-bet-plus-web-c1282772257],
+div.st_input[class*="ng-tns-c1282772257"],
+div.st_input.ng-tns-c1282772257-6.st_input_outlined.ng-star-inserted.filled-input,
+[_ngcontent-bet-plus-web-c1282772257] .st_input.st_input_outlined,
+div.st_input.st_input_outlined,
+.password-field div.st_input,
+.password-field .st_input_outlined,
+st-input.password-field div.st_input.st_input_outlined {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    opacity: 1 !important;
+}
+
+/* 🟠 Força transparência no container pai do campo de senha */
+st-input.password-field,
+st-input.password-field > div,
+st-input.password-field .st_input {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Container access-data-form (pai 3) - border radius inferior */
+div.access-data-form__container,
+.access-data-form__container,
+div[class*="access-data-form__container"] {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* 🟠 Formulário e input de email - remove bordas NUCLEAR */
+form[_ngcontent-bet-plus-web-c1282772257],
+form[class*="ng-tns-c1282772257"],
+form.ng-untouched.ng-pristine.ng-valid,
+input[_ngcontent-bet-plus-web-c1282772257].form-control,
+input.form-control.w-100[class*="ng-tns-c1282772257"],
+input[type="email"].form-control.w-100,
+st-input form input,
+.st_input form input,
+div.st_input_outlined form input,
+.access-data-form__container form input,
+form input.form-control {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Remove borda do container st_input também */
+.st_input_outlined form,
+div.st_input form,
+st-input form {
+    border: none !important;
+    outline: none !important;
+}
+
+
 /* 🟠 Register User Container - gradiente azul vertical com padding */
 div.register-user__container,
 .register-user__container {
@@ -1915,7 +2004,16 @@ div#register-page__container st-button::before,
 div#register-page__container st-button::after,
 div#register-page__container st-button:hover,
 div#register-page__container st-button:focus,
-div#register-page__container st-button:active {
+div#register-page__container st-button:active,
+/* Novo seletor para o botão Concluir Registro com hierarquia específica */
+div.mt_12 st-button,
+div.mt_12 st-button button,
+div.mt_12 st-button button.mdc-button,
+div.mt_12 st-button button.st_button__large,
+div.mt_12 st-button,
+div.mt_12 st-button button,
+st-button[_ngcontent-bet-plus-web-c3721447479],
+st-button[_ngcontent-bet-plus-web-c3721447479] button {
     background: #202844 !important;
     background-color: #202844 !important;
     background-image: none !important;
@@ -3215,7 +3313,7 @@ app-display-game app-global-login .st_input.filled-input .st_input__suffix.st_in
 app-display-game app-global-login .st_input.filled-input {
     border: 3px solid #ffe7ba;
     border-radius: 12px;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 2px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 6px rgba(255,69,0,.77),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     padding-bottom: 0;
     margin-bottom: 12px
 }
@@ -3548,7 +3646,7 @@ app-authentication-info app-global-login .st_input_outlined label {
 app-authentication-info app-global-login .st_input.filled-input {
     border: 3px solid #ffe7ba;
     border-radius: 12px;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 2px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 6px rgba(255,69,0,.77),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     padding-bottom: 0;
     margin-bottom: 12px
 }
@@ -3600,7 +3698,6 @@ app-login-container-mobile-plus2 .authentication_info__option,app-login-containe
 }
 
 /* Regras removidas - conflitavam com novo estilo */
-}
 
 
 app-floating-coupon .coupon-info {
@@ -4226,3 +4323,620 @@ button.mat-mdc-menu-trigger.hover-register[class*="mat-mdc"] {
         margin-top:80px !important
     }
 }
+
+/* 🟠 Botão Concluir Registro - Gradiente Laranja Vibrante NOVO */
+div.mt_12 st-button button,
+div.mt_12 st-button button.mdc-button,
+div.mt_12 st-button button.st_button__large,
+st-button[_ngcontent-bet-plus-web-c3721447479] button,
+div.mt_12[_ngcontent-bet-plus-web-c3721447479] st-button button {
+    background: linear-gradient(90deg, #FF6300 0%, #FF9501 100%) !important;
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    border-radius: 8px !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(255, 99, 0, 0.3) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    padding: 14px 28px !important;
+    transition: all 0.3s ease !important;
+    min-height: 48px !important;
+}
+
+/* Hover estado habilitado */
+div.mt_12 st-button button:hover:not(:disabled),
+st-button[_ngcontent-bet-plus-web-c3721447479] button:hover:not(:disabled) {
+    background: linear-gradient(90deg, #FF7A1F 0%, #FFB033 100%) !important;
+    box-shadow: 0 6px 20px rgba(255, 99, 0, 0.5) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Estado desabilitado */
+div.mt_12 st-button button:disabled,
+div.mt_12 st-button button.mat-mdc-button-disabled,
+st-button[_ngcontent-bet-plus-web-c3721447479] button:disabled,
+st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled {
+    background: linear-gradient(90deg, #8B8B8B 0%, #6B6B6B 100%) !important;
+    color: #CCCCCC !important;
+    cursor: not-allowed !important;
+    opacity: 0.7 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Forçar em todos os estados do Material */
+div.mt_12 st-button button.mdc-button--unelevated,
+div.mt_12 st-button button.mat-mdc-unelevated-button {
+    background: linear-gradient(90deg, #FF6300 0%, #FF9501 100%) !important;
+}
+
+/* 🟠 Campo de Senha - Background Vermelho */
+input.st_input__with_suffix,
+input[type="password"],
+st-input.password-field input,
+st-input.mat-mdc-menu-trigger.password-field input,
+input#f1c91b99-67bf-40da-b2c9-e7a652836c59,
+input.form-control.w-100.st_input__with_suffix {
+    background-color: #FF0000 !important;
+    background: #FF0000 !important;
+    color: #FFFFFF !important;
+}
+
+
+/* 🟠 TODOS os inputs - Background Vermelho TESTE COM MÁXIMA PRIORIDADE */
+html body app-root app-generic-widgets-layout app-window-desktop-plus2 app-login-page-plus2 div st-input input,
+html body app-root app-generic-widgets-layout app-window-desktop-plus2 app-register-page div st-input input,
+html body * * * * * st-input input,
+html body * * * * * * input.form-control,
+html > body input.form-control,
+body input.form-control,
+input.form-control,
+input[class*="form-control"],
+input[id*="-"],
+* input,
+* * input,
+* * * input,
+* * * * input,
+* * * * * input {
+    background-color: #FF0000 !important;
+    background: #FF0000 !important;
+    color: #FFFFFF !important;
+    background-image: none !important;
+    -webkit-background-color: #FF0000 !important;
+    -moz-background-color: #FF0000 !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    appearance: none !important;
+}
+
+/* 🟠 Inputs - Bordas Arredondadas Inferiores ESPECÍFICO */
+
+/* CPF - Este está funcionando */
+div#personal-data-form-cpf input {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* EMAIL - Específico para campo de email */
+st-input[_ngcontent-bet-plus-web-c4053512509] input,
+st-input[_ngcontent-bet-plus-web-c4053512509] input.form-control,
+st-input.ng-tns-c1282772257-23 input,
+div.st_input.ng-tns-c1282772257-23 input {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+/* SENHA - Específico para campo de senha */
+st-input.password-field input,
+st-input.mat-mdc-menu-trigger.password-field input,
+st-input.ng-tns-c1282772257-28 input,
+div.st_input.ng-tns-c1282772257-28 input,
+input.st_input__with_suffix {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+/* Container DIV dos inputs - aplicar bordas também */
+div.st_input.st_input_outlined,
+div.st_input_outlined {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    overflow: visible !important;
+}
+
+/* Forçar com atributo ngcontent específico */
+[_ngcontent-bet-plus-web-c4053512509] input.form-control,
+[_ngcontent-bet-plus-web-c4053512509] div.st_input input {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* Super específico - usando múltiplos seletores */
+st-input input#218e2cb4-8479-4a9e-9b81-cb2d92718831,
+st-input input#e04a8666-0890-44f5-ac63-983c963fec51,
+form.ng-tns-c1282772257-23 input,
+form.ng-tns-c1282772257-28 input {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+/* Nuclear - forçar em QUALQUER input com essas classes */
+input.form-control.w-100.ng-pristine,
+input.form-control.w-100.ng-touched,
+input.form-control.w-100.ng-invalid {
+    border-bottom-left-radius: 8px !important !important;
+    border-bottom-right-radius: 8px !important !important;
+}
+
+/* 🟠 ABORDAGEM NUCLEAR - Máxima Especificidade */
+html body st-input input.form-control.w-100,
+html body div.st_input input.form-control,
+html body form input.form-control.w-100,
+html body [_ngcontent-bet-plus-web-c4053512509] input,
+html body [_ngcontent-bet-plus-web-c1282772257] input {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+    border-radius: 0 0 12px 12px !important;
+    -webkit-border-bottom-left-radius: 12px !important;
+    -webkit-border-bottom-right-radius: 12px !important;
+    -moz-border-radius-bottomleft: 12px !important;
+    -moz-border-radius-bottomright: 12px !important;
+}
+
+/* Teste com border-radius completo */
+html body input.form-control.w-100 {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+}
+
+/* Teste removendo qualquer override que possa existir */
+html body st-input input,
+html body div.st_input input,
+html body form input {
+    border-top-left-radius: unset !important;
+    border-top-right-radius: unset !important;
+    border-bottom-left-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
+    border-radius: 0 0 10px 10px !important;
+}
+
+/* 🟠 OVERRIDE FINAL - Campo CPF Azul - MÁXIMA PRIORIDADE */
+html body div#personal-data-form-cpf input,
+html body div#personal-data-form-cpf st-input input,
+html body div#personal-data-form-cpf div.st_input input,
+html body div#personal-data-form-cpf * input,
+html body * div#personal-data-form-cpf input,
+html body * * div#personal-data-form-cpf input,
+html body * * * div#personal-data-form-cpf input,
+body div#personal-data-form-cpf input.form-control {
+    background-color: #0000FF !important;
+    background: #0000FF !important;
+    color: #FFFFFF !important;
+    background-image: none !important;
+}
+
+/* 🟠 DIV st_select__field ESPECÍFICA - Remover bordas laterais e inferior, manter topo */
+div.st_select__field.st_input_error,
+div.ng-tns-c3463803563-4.st_select__field,
+div[_ngcontent-bet-plus-web-c3463803563].st_select__field,
+div[_ngcontent-bet-plus-web-c3463803563].st_select__field.st_input_error,
+html body div.st_select__field,
+html body div.st_select__field.st_input_error,
+html body * div.st_select__field,
+html body * * div.st_select__field,
+html body * * * div.st_select__field {
+    /* Remover bordas laterais e inferior COM FORÇA */
+    border-right: none !important;
+    border-right-width: 0px !important;
+    border-right-style: none !important;
+    border-right-color: transparent !important;
+    
+    border-bottom: none !important;
+    border-bottom-width: 0px !important;
+    border-bottom-style: none !important;
+    border-bottom-color: transparent !important;
+    
+    border-left: none !important;
+    border-left-width: 0px !important;
+    border-left-style: none !important;
+    border-left-color: transparent !important;
+    
+    /* Manter background transparente */
+    background-color: transparent !important;
+    background: transparent !important;
+    
+    /* Remover qualquer box-shadow que possa parecer borda */
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 🟠 FORMS - Tornar TODOS transparentes - PROBLEMA ENCONTRADO! */
+form,
+form[style],
+form.ng-untouched,
+form.ng-pristine,
+form.ng-valid,
+form.ng-star-inserted,
+form[class*="ng-tns"],
+st-input form,
+div.st_input form,
+html body form,
+html body * form,
+html body * * form,
+html body * * * form {
+    background-color: transparent !important;
+    background: transparent !important;
+    background-image: none !important;
+}
+
+/* 🟠 ULTRA OVERRIDE - Forçar TODOS inputs com laranja */
+html body app-root * * * * * * * * input,
+html body app-root * * * * * * * * input.form-control,
+html > body > app-root input,
+html > body > app-root input.form-control,
+body app-root input.form-control.w-100,
+body * * * * * * input.form-control.w-100 {
+    background-color: #FF6300 !important !important;
+    background: #FF6300 !important !important;
+    color: #FFFFFF !important !important;
+}
+
+/* Regra nuclear - TODOS os inputs sem exceção */
+input,
+input.form-control,
+input.w-100,
+input[class],
+input[id],
+input[type] {
+    background-color: #FF6300 !important !important;
+    background: #FF6300 !important !important;  
+    color: #FFFFFF !important !important;
+}
+
+/* 🟠 TENTATIVA COM ST-CONTACT PAI */
+st-contact#access_data_form__contact_input,
+st-contact#access_data_form__contact_input *,
+st-contact#access_data_form__contact_input div,
+st-contact#access_data_form__contact_input div.st_select__field,
+#access_data_form__contact_input div.st_select__field,
+#access_data_form__contact_input .st_select__field {
+    border-right: none !important !important;
+    border-bottom: none !important !important;
+    border-left: none !important !important;
+    border-right-width: 0px !important !important;
+    border-bottom-width: 0px !important !important;
+    border-left-width: 0px !important !important;
+}
+
+/* 🟠 ULTRA AGRESSIVO - st_select__field */
+html body div.st_select__field,
+html body div.st_select__field.st_input_error,
+html body * div.st_select__field,
+html body * * div.st_select__field,
+html body * * * div.st_select__field {
+    border: none !important !important;
+    border-top: 1px solid #FF6300 !important !important;
+    border-right: 0px none transparent !important !important;
+    border-bottom: 0px none transparent !important !important;
+    border-left: 0px none transparent !important !important;
+    border-right-width: 0px !important !important;
+    border-bottom-width: 0px !important !important;
+    border-left-width: 0px !important !important;
+    border-right-style: none !important !important;
+    border-bottom-style: none !important !important;
+    border-left-style: none !important !important;
+    border-right-color: transparent !important !important;
+    border-bottom-color: transparent !important !important;
+    border-left-color: transparent !important !important;
+}
+
+/* 🟠 NUCLEAR TOTAL - TODOS os elementos dentro do contact */
+html body #access_data_form__contact_input *,
+html body st-contact *,
+html body st-contact * *,
+html body st-contact * * *,
+html body [_ngcontent-bet-plus-web-c4053512509] st-contact *,
+html body div[_ngcontent-bet-plus-web-c4053512509] st-contact * {
+    border-right: 0px !important !important;
+    border-bottom: 0px !important !important; 
+    border-left: 0px !important !important;
+    border-right-width: 0px !important !important;
+    border-bottom-width: 0px !important !important;
+    border-left-width: 0px !important !important;
+    border-right-style: none !important !important;
+    border-bottom-style: none !important !important;
+    border-left-style: none !important !important;
+}
+
+/* 🟠 GENÉRICO PARA QUALQUER ng-tns-c3463803563-XX */
+div[_ngcontent-bet-plus-web-c3463803563][class*="ng-tns-c3463803563"].st_select__field,
+div[_ngcontent-bet-plus-web-c3463803563].ng-tns-c3463803563-15.st_select__field,
+html body div[_ngcontent-bet-plus-web-c3463803563][class*="ng-tns-c3463803563"].st_select__field,
+html body div[_ngcontent-bet-plus-web-c3463803563].ng-tns-c3463803563-15.st_select__field,
+html body * div[_ngcontent-bet-plus-web-c3463803563][class*="ng-tns-c3463803563"].st_select__field {
+    border-right: 0px !important !important;
+    border-bottom: 0px !important !important;
+    border-left: 0px !important !important;
+    border-right-width: 0px !important !important;
+    border-bottom-width: 0px !important !important;
+    border-left-width: 0px !important !important;
+    border-right-style: none !important !important;
+    border-bottom-style: none !important !important;
+    border-left-style: none !important !important;
+    border-right-color: transparent !important !important;
+    border-bottom-color: transparent !important !important;
+    border-left-color: transparent !important !important;
+}
+
+/* 🟠 REMOVER BOX-SHADOW QUE PARECE BORDA DO FORM */
+form.st_contact_edit_outlined,
+form[_ngcontent-bet-plus-web-c3463803563].st_contact_edit_outlined,
+form.ng-tns-c3463803563-15.st_contact_edit_outlined,
+html body form.st_contact_edit_outlined,
+html body form[_ngcontent-bet-plus-web-c3463803563].st_contact_edit_outlined {
+    box-shadow: none !important !important;
+    -webkit-box-shadow: none !important !important;
+    -moz-box-shadow: none !important !important;
+}
+
+/* 🟠 REMOVER BOX-SHADOW DA DIV st_select__field TAMBÉM */
+div.ng-tns-c3463803563-15.st_select__field,
+div[_ngcontent-bet-plus-web-c3463803563].st_select__field,
+html body div.ng-tns-c3463803563-15.st_select__field,
+html body div[_ngcontent-bet-plus-web-c3463803563].st_select__field,
+html body * div.ng-tns-c3463803563-15.st_select__field {
+    box-shadow: none !important !important;
+    -webkit-box-shadow: none !important !important;
+    -moz-box-shadow: none !important !important;
+}
+
+/* 🟠 MÁXIMA AGRESSIVIDADE - Remover TODOS os tipos de shadow/outline/border de st_select__field */
+div.st_select__field,
+div.st_select__field *,
+div.st_select__field::before,
+div.st_select__field::after,
+div[class*="st_select__field"],
+div[class*="st_select__field"] *,
+div[class*="st_select__field"]::before,
+div[class*="st_select__field"]::after,
+html body div.st_select__field,
+html body div.st_select__field *,
+html body div.st_select__field::before,
+html body div.st_select__field::after,
+html body * div.st_select__field,
+html body * div.st_select__field *,
+html body * div.st_select__field::before,
+html body * div.st_select__field::after {
+    box-shadow: none !important !important;
+    -webkit-box-shadow: none !important !important;
+    -moz-box-shadow: none !important !important;
+    outline: none !important !important;
+    -webkit-appearance: none !important !important;
+    -moz-appearance: none !important !important;
+    appearance: none !important !important;
+    border: none !important !important;
+    border-radius: 0 !important !important;
+    background-image: none !important !important;
+    text-shadow: none !important !important;
+    filter: none !important !important;
+}
+
+
+/* 🟠 Campo Telefone - Border Radius Inferior */
+div.ng-tns-c3463803563-65.st_select__field[_ngcontent-bet-plus-web-c3463803563],
+div[class*="ng-tns-c3463803563"].st_select__field[_ngcontent-bet-plus-web-c3463803563],
+div[class*="st_select__field"][_ngcontent-bet-plus-web-c3463803563],
+html body div[class*="st_select__field"][_ngcontent-bet-plus-web-c3463803563] {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+/* 🟠 Input Telefone - Border Radius Inferior também */
+div.st_select__field input.mat-mdc-input-element,
+div[class*="st_select__field"] input.mat-mdc-input-element,
+div.st_select__field input[class*="mat-input"],
+div[class*="st_select__field"] input[class*="mat-input"],
+html body div.st_select__field input.mat-mdc-input-element,
+html body div[class*="st_select__field"] input.mat-mdc-input-element {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+/* 🟠 Container Telefone (PAI 1) - Border Radius Inferior */
+div.ngx-mat-tel-input-container[_ngcontent-bet-plus-web-c4150375230],
+div[class*="ngx-mat-tel-input-container"],
+ngx-mat-intl-tel-input div.ngx-mat-tel-input-container,
+html body div.ngx-mat-tel-input-container,
+html body * div.ngx-mat-tel-input-container {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    overflow: hidden !important;
+}
+
+/* 🟠 ngx-mat-intl-tel-input (PAI 2) - Border Radius Inferior */
+ngx-mat-intl-tel-input.ng-tns-c3463803563-65[_ngcontent-bet-plus-web-c3463803563],
+ngx-mat-intl-tel-input[class*="ng-tns-c3463803563"][_ngcontent-bet-plus-web-c3463803563],
+ngx-mat-intl-tel-input[_ngcontent-bet-plus-web-c3463803563],
+html body ngx-mat-intl-tel-input,
+html body * ngx-mat-intl-tel-input {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+
+/* 🟠 REMOVER BOX-SHADOW LARANJA do campo telefone e formulário de contato */
+st-contact form.st_input.filled-input,
+st-contact#access_data_form__contact_input form.st_input.filled-input,
+st-contact div.st_select__field,
+div.ng-tns-c3463803563-65.st_select__field,
+form.st_contact_edit_outlined.filled-input {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 Input Email - Remover bordas laterais e inferiores */
+input.form-control.w-100.ng-tns-c1282772257-82[_ngcontent-bet-plus-web-c1282772257],
+input.form-control.w-100[class*="ng-tns-c1282772257"][_ngcontent-bet-plus-web-c1282772257],
+div.st_input.filled-input input.form-control.w-100,
+st-input div.st_input.filled-input input.form-control.w-100 {
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Input Casino Filter Search - Transparente */
+input.mat-mdc-input-element.ng-tns-c3989556486-145[_ngcontent-bet-plus-web-c3989556486],
+input[class*="mat-mdc-input-element"][class*="ng-tns-c3989556486"][_ngcontent-bet-plus-web-c3989556486],
+div.casino_filter__search_button input.mat-mdc-input-element,
+form input.mat-mdc-input-element.cdk-text-field-autofill-monitored {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Botão Depositar - Gradiente Laranja com estilo completo */
+button.authentication_info__deposit span.mat-mdc-button-touch-target,
+div.authentication_info__container button.authentication_info__deposit span.mat-mdc-button-touch-target,
+.authentication_info__deposit.mat-mdc-unelevated-button span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: #F75703 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+}
+
+/* 🟠 Botão Depositar - Remover box-shadow neon e aplicar fonte */
+button.authentication_info__deposit,
+div.authentication_info__container button.authentication_info__deposit,
+.authentication_info__deposit.mat-mdc-unelevated-button {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* 🟠 Botão Depositar (Payment Confirm) - Gradiente Laranja completo */
+div.user-payment__payment-confirm_button st-button button span.mat-mdc-button-touch-target,
+st-button.width-100 button span.mat-mdc-button-touch-target,
+button.st_button.st_button__large span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: #F75703 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 Botão Depositar (Payment Confirm) - Remover box-shadow neon e aplicar fonte */
+div.user-payment__payment-confirm_button st-button button,
+st-button.width-100 button.st_button,
+button.st_button.st_button__large,
+div.user-payment__payment-confirm_button st-button button.mdc-button.mat-mdc-unelevated-button,
+st-button.width-100 button.mdc-button.st_button.st_button__large {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* 🟠 st-button (classe mãe) - Remover todas as bordas */
+div.user-payment__payment-confirm_button st-button,
+st-button.width-100,
+div.user-payment__payment-confirm_button st-button:hover,
+st-button.width-100:hover,
+div.user-payment__payment-confirm_button st-button:focus,
+st-button.width-100:focus,
+div.user-payment__payment-confirm_button st-button:active,
+st-button.width-100:active {
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 Botão Depositar - Estados hover/focus/active - Remover bordas */
+div.user-payment__payment-confirm_button st-button button:hover,
+div.user-payment__payment-confirm_button st-button button:focus,
+div.user-payment__payment-confirm_button st-button button:active,
+div.user-payment__payment-confirm_button st-button button.mdc-button.mat-mdc-unelevated-button.st_button:hover,
+div.user-payment__payment-confirm_button st-button button.mdc-button.mat-mdc-unelevated-button.st_button:focus,
+div.user-payment__payment-confirm_button st-button button.mdc-button.mat-mdc-unelevated-button.st_button:active,
+st-button.width-100 button.st_button:hover,
+st-button.width-100 button.st_button:focus,
+st-button.width-100 button.st_button:active,
+button.st_button.st_button__large:hover,
+button.st_button.st_button__large:focus,
+button.st_button.st_button__large:active,
+button.st_button.st_button__large:hover span.mat-mdc-button-touch-target,
+button.st_button.st_button__large:focus span.mat-mdc-button-touch-target,
+button.st_button.st_button__large:active span.mat-mdc-button-touch-target {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    border: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Botão Pix Copia e Cola - Gradiente Laranja completo */
+div.waiting-pix__container button.default-button span.mat-mdc-button-touch-target,
+button.default-button.mat-mdc-unelevated-button span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: #F75703 !important;
+    border-radius: 8px !important;
+    height: 40px !important;
+}
+
+/* 🟠 Botão Pix Copia e Cola - Remover box-shadow neon e aplicar fonte */
+div.waiting-pix__container button.default-button,
+button.default-button.mat-mdc-unelevated-button {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    color: #EEEEF0 !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+

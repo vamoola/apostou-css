@@ -10,9 +10,10 @@ const autoInjectCSS = () => {
         console.log('🔄 Parando instância anterior...');
     }
     
+    
     const injectCSS = () => {
         // Carregar CSS do servidor local com timestamp para evitar cache
-        fetch(`http://localhost:8001/theme.css?t=${Date.now()}`)
+        fetch(`http://localhost:8080/theme.css?t=${Date.now()}`)
             .then(response => response.text())
             .then(css => {
                 // Criar hash simples do CSS para detectar mudanças
@@ -32,7 +33,7 @@ const autoInjectCSS = () => {
                     const style = document.createElement('style');
                     style.id = 'apostou-neon-theme';
                     style.textContent = css;
-                    document.head.appendChild(style);
+                    document.body.appendChild(style); // Mudando de head para body para maior prioridade
                     
                     console.log('🔄 CSS atualizado automaticamente');
                 }
@@ -42,6 +43,7 @@ const autoInjectCSS = () => {
             });
     };
 
+    
     // Executar imediatamente
     injectCSS();
     

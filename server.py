@@ -9,7 +9,7 @@ class CORSRequestHandler(http.server.SimpleHTTPRequestHandler):
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
         super().end_headers()
 
-PORT = 8001
+PORT = 8080
 Handler = CORSRequestHandler
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:

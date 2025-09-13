@@ -297,3 +297,15 @@ curl http://localhost:8000/theme.css
 - **Azul Claro**: #2E4182 (bordas e gradientes topo)
 - **Azul Header**: #172448 (menu-top-bar)
 - **Laranja**: #FF6300 (acentos e elementos ativos)
+
+## ⚠️ IMPORTANTE - REGRAS DE DESENVOLVIMENTO
+
+### 🚫 NUNCA FAZER:
+- **NUNCA criar arquivos JavaScript** para resolver problemas de CSS
+- **NUNCA usar JavaScript inline** para aplicar estilos
+- **NUNCA criar scripts separados** como paint-input-red.js, remove-borders.js, etc.
+
+### ✅ SEMPRE FAZER:
+- **SEMPRE fazer mudanças APENAS no theme.css**
+- **SEMPRE usar o auto-inject.js apenas para injetar CSS**
+- **SEMPRE resolver problemas de estilo através de CSS**
