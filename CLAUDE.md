@@ -220,10 +220,35 @@ curl http://localhost:8000/theme.css
   }
   ```
 
+### 🟠 Menu Promoções - Design Responsivo
+- **Esconder label "Promoções"** em telas < 1280px via @media query
+- **Ajustar width do botão** para apenas o ícone quando label está escondido
+- **Manter área clicável** alinhada com o ícone
+- **Posicionamento do ícone**: margin-top: -15px para centralização vertical
+
+### 🟠 Botões Casino Filter - Cores e Alturas
+- **Botão Buscar**: altura 37px, fundo azul #172448
+- **Botões Carousel**: altura 65px, gradiente azul #2E4182 → #0A0E1C
+- **Overflow**: visible para evitar corte de ícones
+
+### 🟠 Espaçamentos e Layout
+- **Header Top Jogos**: padding reduzido para 8px
+- **Casino Filter**: movido 8px para cima (margin-top: -8px)
+- **Swiper Container**: padding lateral 6px
+
+### 🟠 Inputs - Background Azul Escuro
+- **Background color**: #0A0E1C (azul escuro) para todos os inputs
+- **Especificidade alta** com múltiplos seletores para garantir aplicação
+
+### 🟠 Border Radius Ajustado
+- **Botões carousel**: border-radius aumentado para 20px
+- **Containers**: padding ajustado para 15px (top)
+
 ### 🟠 Organização do CSS
 - Todos os emojis padronizados como 🟠 (bola laranja)
 - @media queries movidas para final do arquivo
 - Backup criado antes da reorganização
+- Comentários organizados por funcionalidade
 
 ## Solução de Problemas
 
@@ -309,3 +334,47 @@ curl http://localhost:8000/theme.css
 - **SEMPRE fazer mudanças APENAS no theme.css**
 - **SEMPRE usar o auto-inject.js apenas para injetar CSS**
 - **SEMPRE resolver problemas de estilo através de CSS**
+
+## 🎯 ÚLTIMA SESSÃO - PRINCIPAIS ALTERAÇÕES
+
+### 🟠 Botão Concluir Registro - Fundo Transparente
+- **PROBLEMA**: Botão desabilitado estava com fundo azul #172448
+- **SOLUÇÃO**: Alterado para fundo transparente em todos os estados desabilitados
+- **LOCALIZAÇÃO**: theme.css linhas 2153-2159
+
+### 🟠 Inputs - Remoção TOTAL de Bordas Laranjas  
+- **PROBLEMA**: Bordas laranjas #FF6300 apareciam em vários estados dos inputs
+- **SOLUÇÃO NUCLEAR**: Removidas TODAS as bordas laranjas do CSS:
+  - `border-left: 1px solid #FF6300` → `none`
+  - `border-right: 1px solid #FF6300` → `none`  
+  - `border-top: 1px solid #FF6300` → `none`
+  - `border-bottom: 1px solid #FF6300` → `none`
+  - `border: 1px solid #FF6300` → `none`
+  - `border-color: #FF6300` → `transparent`
+
+### 🏆 POSICIONAMENTO R$ - SOLUÇÃO DEFINITIVA
+- **PROBLEMA**: Prefixo R$ desalinhado em diferentes estados do input currency
+- **SOLUÇÃO SAGRADA**: Posições específicas por estado:
+  - Estado `ng-invalid` + `st_input_error`: top: 15px ✅
+  - Estado `st_input_error.ng-valid`: top: 24px ✅  
+  - Estado `ng-valid` sem erro: top: 24px ✅
+- **⚠️ NÃO MEXER NESSAS REGRAS! FUNCIONAM PERFEITAMENTE!**
+
+### 🟠 Autofill - Problema e Solução
+- **PROBLEMA**: Background E8F0FE no autofill não conseguia ser alterado
+- **TENTATIVAS**: Múltiplas tentativas com webkit-autofill
+- **CONCLUSÃO**: Background do autofill é protegido pelo navegador
+- **SOLUÇÃO**: Aplicada cor de texto preta (#000000) para contraste
+
+### 🟠 Componentes Visuais
+- **Promotions Button**: Altura 35px, border-radius 4px, ícone 25px
+- **Logged Area**: Altura 35px, border-radius 8px, borda/texto laranja #FF9501
+- **Gamificação**: Fundos azuis #172448 e #0A0E1C
+- **Payment Buttons**: Borda verde limão #89F336 fina (1px) quando selecionado
+
+### 🟠 Correções de Layout
+- **Forgot Password**: Gradientes azuis e containers com border-radius
+- **Currency Input**: Label com fundo azul escuro e border-radius topo
+- **Swiper Containers**: Border-radius 8px no topo com overflow hidden
+
+

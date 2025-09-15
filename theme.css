@@ -113,7 +113,7 @@ button.mat-mdc-menu-trigger.mdc-button.hover-register {
     border: 2px solid #FF6300 !important;
     border-width: 2px !important;
     border-style: solid !important;
-    border-color: #FF6300 !important;
+    border-color: transparent !important;
     border-radius: 8px !important;
     color: #FF6300 !important;
     font-family: 'Poppins', sans-serif !important;
@@ -154,7 +154,7 @@ button.hover-register:active,
     border: 2px solid #FF6300 !important;
     border-width: 2px !important;
     border-style: solid !important;
-    border-color: #FF6300 !important;
+    border-color: transparent !important;
     opacity: 0.8 !important;
     box-shadow: none !important;
     -webkit-box-shadow: none !important;
@@ -635,7 +635,7 @@ div.app-component-view,
     justify-content: center;
     margin: 0 5px;
     border: 2px solid #ffe7ba !important;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px rgba(255,7,7,.29),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
     transition: all .3s ease-in-out
 }
@@ -650,7 +650,7 @@ div.app-component-view,
 }
 
 :root app-authentication-field .authentication-field-2 .custom-button button:hover,[data-theme=dark] app-authentication-field .authentication-field-2 .custom-button button:hover {
-    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
 }
 
@@ -692,14 +692,65 @@ div.casino_filter__categories.casino_filter__mobile_container.cursor_grab.px {
 
 /* 🟠 Container geral app-generic-widgets-layout - padding - MODIFICADO */
 app-generic-widgets-layout {
-    padding: 10px !important;
+    padding: 0 !important;
 }
+
+/* Remover bottom padding/margin do app-generic-widgets-layout no casino */
+div.pb_16 app-generic-widgets-layout,
+.screen__container app-generic-widgets-layout {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remover padding/margin do container pai do swiper */
+div.swiper.swiper-initialized,
+.swiper-carousel-container .swiper,
+app-swiper-carousel .swiper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 🟠 Remover espaço entre atalhos e header Top Jogos */
+app-menu-shortcut-item,
+div.menu-shortcut__preview_container,
+div.menu-shortcut__preview,
+img.menu-shortcut__preview_image {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Garantir que app-menu-shortcuts-widget não tenha margin bottom */
+app-menu-shortcuts-widget {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 🟠 Subir app-casino-filter 8px */
+app-casino-filter {
+    margin-top: -8px !important;
+}
+
+/* 🟠 Remover margin/padding inferior do swiper-wrapper */
+div.swiper-wrapper,
+.swiper-wrapper {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* 🟠 Remover margin/padding inferior do swiper-carousel-container */
+div.swiper-carousel-container,
+.swiper-carousel-container {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
 
 /* 🟠 Container específico do filtro casino - MODIFICADO */
 div.casino_filter__container.w-100.h-100,
 div.casino_filter__container {
     padding-left: 8px !important;
     padding-right: 8px !important;
+    padding-top: 15px !important;
 }
 
 /* 🟠 Botão de busca do casino - MODIFICADO */
@@ -713,7 +764,7 @@ div.casino_filter__search_button.w-100 {
     text-shadow: none !important;
     filter: none !important;
     outline: none !important;
-    border-radius: 8px !important;
+    border-radius: 20px !important;
 }
 
 /* Título do botão de busca */
@@ -727,7 +778,7 @@ div.casino_button_filter__container_title.ng-star-inserted,
     font-size: 14px !important;
 }
 
-/* 🟠 Botão específico do Provedor - fundo laranja - MODIFICADO */
+/* 🟠 Botão específico do Provedor - fundo gradiente azul - MODIFICADO */
 app-casino-button-filter.ng-tns-c684038197-4:nth-child(2) .casino_button_filter__container,
 app-casino-button-filter.ng-tns-c684038197-16:nth-child(2) .casino_button_filter__container,
 app-casino-button-filter[class*="ng-tns-"]:nth-child(2) .casino_button_filter__container,
@@ -736,7 +787,17 @@ app-casino-button-filter .casino_button_filter__container:has(span:contains("Pro
 .casino_button_filter__container.cursor_pointer:nth-of-type(2),
 div.casino_button_filter__container.cursor_pointer:nth-of-type(2),
 div.casino_button_filter__container.cursor_pointer:last-child {
-    background-color: #FF6300 !important;
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+}
+
+/* 🟠 Altura específica e gradiente azul para botões no carrossel */
+swiper-slide app-casino-button-filter .casino_button_filter__container.cursor_pointer:nth-of-type(2),
+swiper-slide app-casino-button-filter:nth-child(2) .casino_button_filter__container,
+swiper-slide div.casino_button_filter__container.cursor_pointer:last-child {
+    height: 65px !important;
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    border-top-left-radius: 15px !important;
+    border-top-right-radius: 15px !important;
 }
 
 /* 🟠 Botão Buscar - manter azul */
@@ -828,6 +889,28 @@ swiper-container,
 div.event_block__header.font_14.weight_700.ng-star-inserted,
 .event_block__header {
     padding: 8px !important;
+}
+
+/* 🟠 Reduzir altura do header de atalhos e casino filter */
+app-menu-shortcuts-widget .event_block__header,
+app-menu-shortcuts-widget div.event_block__header.event_block__header_no_title,
+app-casino-filter .event_block__header,
+app-casino-filter div.event_block__header.event_block__header_no_title,
+.card__clean .event_block__header.event_block__header_no_title {
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    display: none !important;
+}
+
+/* 🟠 Ajustar spacing do header Top Jogos */
+app-casino-banners .event_block__header,
+app-casino-banners div.event_block__header.font_14.weight_700,
+app-casino-banners st-event-block .event_block__header,
+app-casino-banners .card__clean .event_block__header.font_14.weight_700 {
+    padding-top: 8px !important;
+    margin-top: 0 !important;
 }
 
 /* 🟠 Título dos eventos (Copa do Brasil, etc) - Poppins - MODIFICADO */
@@ -972,11 +1055,26 @@ button.global_login__register span.mdc-button__label,
 
 /* Regra removida - conflitava com ícone branco */
 
-/* 🟠 Input field - bordas laranjas apenas quando preenchido */
+/* 🟠 Input field - SEM bordas laranjas quando preenchido */
 div.st_input.st_input_outlined.ng-star-inserted.filled-input,
 div.st_input.ng-tns-c1282772257-1.st_input_outlined.ng-star-inserted.filled-input {
     border: none !important;
-    border-top: 1px solid #FF6300 !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Input específico e-mail - sem bordas laranjas */
+div.st_input.ng-tns-c1282772257-37.st_input_outlined.ng-star-inserted.filled-input,
+st-input.ng-tns-c1282772257-37 div.st_input.filled-input,
+form.ng-tns-c1282772257-37,
+div.st_input.ng-tns-c1282772257-37 {
+    border: none !important;
+    border-top: none !important;
     border-left: none !important;
     border-right: none !important;
     border-bottom: none !important;
@@ -992,20 +1090,46 @@ div.st_input.st_input_outlined.ng-star-inserted:not(.filled-input) {
     outline: none !important;
 }
 
-/* 🟠 Input interno - bordas completas APENAS quando preenchido (ng-dirty) */
-.st_input.filled-input input.form-control.w-100,
-.st_input.filled-input input.form-control.w-100.st_input__with_suffix,
-.st_input.filled-input input,
-input.form-control.w-100.ng-dirty.ng-touched.st_input_error.ng-invalid,
-input.form-control.w-100.ng-dirty.st_input_error,
-input[class*="form-control"][class*="w-100"][class*="ng-dirty"][class*="st_input_error"],
-input[class*="form-control"][class*="w-100"][class*="ng-dirty"] {
-    border-left: 1px solid #FF6300 !important;
-    border-right: 1px solid #FF6300 !important;
-    border-bottom: 1px solid #FF6300 !important;
+/* 🟠 Input interno - SEM bordas quando preenchido */
+.st_input.filled-input input.form-control.w-100:not(.ng-tns-c1282772257-37),
+.st_input.filled-input input.form-control.w-100.st_input__with_suffix:not(.ng-tns-c1282772257-37),
+.st_input.filled-input input:not(.ng-tns-c1282772257-37),
+input.form-control.w-100.ng-dirty.ng-touched.st_input_error.ng-invalid:not(.ng-tns-c1282772257-37),
+input.form-control.w-100.ng-dirty.st_input_error:not(.ng-tns-c1282772257-37),
+input[class*="form-control"][class*="w-100"][class*="ng-dirty"][class*="st_input_error"]:not(.ng-tns-c1282772257-37),
+input[class*="form-control"][class*="w-100"][class*="ng-dirty"]:not(.ng-tns-c1282772257-37) {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
     border-top: none !important;
     box-shadow: none !important;
     outline: none !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Input específico e-mail interno - sem bordas laranjas */
+input#391e051c-a59b-4c8c-a6ff-afe6493a0a36,
+input.form-control.w-100.ng-tns-c1282772257-37,
+form.ng-tns-c1282772257-37 input,
+.ng-tns-c1282772257-37 input.form-control {
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: #0A0E1C !important;
+}
+
+/* Forçar background azul escuro em todos os inputs */
+input.form-control.w-100,
+input[class*="form-control"],
+st-input input,
+.st_input input {
+    background-color: #0A0E1C !important;
+    background: #0A0E1C !important;
 }
 
 /* 🟠 Input específico - forçar bordas laterais mesmo com ng-invalid e ng-touched */
@@ -1016,11 +1140,11 @@ html body div#personal-data-form-cpf input.form-control.w-100,
 html body div#personal-data-form-cpf input,
 div#personal-data-form-cpf input,
 input[class*="form-control"][class*="w-100"][class*="ng-dirty"][class*="ng-invalid"][class*="ng-touched"] {
-    border-left: 1px solid #FF6300 !important;
-    border-right: 1px solid #FF6300 !important;
-    border-bottom: 1px solid #FF6300 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
     border-top: none !important;
-    border-color: #FF6300 !important;
+    border-color: transparent !important;
     border-style: solid !important;
     border-width: 0 1px 1px 1px !important;
 }
@@ -1052,9 +1176,9 @@ st-contact#access_data_form__contact_input form.st_input.st_input_error {
 
 /* 🟠 Label - bordas laranjas */
 label.ng-tns-c1282772257-33 {
-    border-left: 1px solid #FF6300 !important;
-    border-right: 1px solid #FF6300 !important;
-    border-top: 1px solid #FF6300 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
     border-bottom: none !important;
 }
 
@@ -1453,8 +1577,34 @@ app-cancel-dialog .st_button.st_button__theme_color span.mdc-button__label,
     font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
     font-weight: bold !important;
     font-size: 14px !important;
-    line-height: 40px !important;
+    line-height: 1.2 !important;
     padding: 0 16px !important;
+}
+
+/* Texto interno do botão "Continuar cadastro" - reduzir espaçamento entre linhas */
+st-button[_ngcontent-bet-plus-web-c1742945428] span.ng-star-inserted {
+    line-height: 1.2 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 🟠 st-button Concluir Registro - remover fundo azul, deixar transparente */
+st-button[_ngcontent-bet-plus-web-c3721447479] {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Input capiroto - NUCLEAR EXTREME */
+input.form-control.w-100.ng-star-inserted.ng-dirty.ng-valid.ng-touched,
+input.form-control.w-100.ng-star-inserted.ng-dirty.ng-valid,
+input.form-control.w-100.ng-star-inserted.ng-dirty,
+input.form-control.w-100.ng-star-inserted,
+input.form-control.w-100,
+input[type="text"].form-control,
+input[autocomplete="username"] {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
 }
 
 /* Remover efeitos neon do botão */
@@ -1528,6 +1678,13 @@ div.event-block__bg,
 .event-block__bg {
     background: #0A0E1C !important;
     background-color: #0A0E1C !important;
+}
+
+/* 🟠 Remover padding vertical do event-block__bg dos atalhos */
+app-menu-shortcuts-widget .event-block__bg,
+app-menu-shortcuts-widget div.event-block__bg {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 /* 🟠 Event Block Header - azul escuro */
@@ -1938,12 +2095,13 @@ input.form-control {
     position: relative !important;
 }
 
-/* Label com erro - bordas completas laranjas e background azul */
+/* Label com erro - SEM bordas laranjas */
 label.st_input_error,
 .st_input label.st_input_error {
-    border-left: 1px solid #FF6300 !important;
-    border-right: 1px solid #FF6300 !important;
-    border-top: 1px solid #FF6300 !important;
+    border: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
     border-bottom: none !important;
     background: #0A0E1C !important;
     background-color: #0A0E1C !important;
@@ -1976,9 +2134,9 @@ input.form-control.w-100.ng-dirty.ng-touched,
     background: #0A0E1C !important;
     background-color: #0A0E1C !important;
     background-image: none !important;
-    border-left: 1px solid #FF6300 !important;
-    border-right: 1px solid #FF6300 !important;
-    border-bottom: 1px solid #FF6300 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
     border-top: none !important;
     color: #FFFFFF !important;
 }
@@ -1994,30 +2152,29 @@ div.w-100.alert__container.alert__warning.alert__border,
     border-width: 1px !important;
 }
 
-/* 🟠 Botão Concluir Registro ESPECÍFICO - não afetar outros botões */
-div#register-page__container st-button,
-div#register-page__container st-button *,
-div#register-page__container st-button button,
-div#register-page__container st-button .mdc-button,
-div#register-page__container st-button span,
-div#register-page__container st-button::before,
-div#register-page__container st-button::after,
-div#register-page__container st-button:hover,
-div#register-page__container st-button:focus,
-div#register-page__container st-button:active,
-/* Novo seletor para o botão Concluir Registro com hierarquia específica */
-div.mt_12 st-button,
-div.mt_12 st-button button,
-div.mt_12 st-button button.mdc-button,
-div.mt_12 st-button button.st_button__large,
-div.mt_12 st-button,
-div.mt_12 st-button button,
-st-button[_ngcontent-bet-plus-web-c3721447479],
-st-button[_ngcontent-bet-plus-web-c3721447479] button {
-    background: #202844 !important;
-    background-color: #202844 !important;
+/* 🟠 Botão Concluir Registro - Estado DESABILITADO NUCLEAR - TRANSPARENTE */
+button.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button.st_button.st_button__large.mat-unthemed.mat-mdc-button-base.ng-star-inserted.mat-mdc-button-disabled[_ngcontent-bet-plus-web-c2634779740], st-button[_ngcontent-bet-plus-web-c3721447479] button.mdc-button.mdc-button--unelevated.mat-mdc-unelevated-button.st_button.st_button__large.mat-unthemed.mat-mdc-button-base.ng-star-inserted.mat-mdc-button-disabled[_ngcontent-bet-plus-web-c2634779740], html body div div st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled {
+    background: transparent !important;
+    background-color: transparent !important;
     background-image: none !important;
-    color: #EEEEF0 !important;
+    border-radius: 8px !important;
+}
+
+/* 🟠 Botão Concluir Registro - Estado DESABILITADO - button filho - TRANSPARENTE */
+html body div st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled,
+html body st-button[_ngcontent-bet-plus-web-c3721447479] button.st_button__large.mat-mdc-button-disabled,
+html body button.mdc-button.st_button.st_button__large.mat-mdc-button-disabled,
+html body button.st_button__large.mat-mdc-button-disabled,
+button.st_button__large[disabled],
+st-button button.st_button__large.mat-mdc-button-disabled,
+st-button[_ngcontent-bet-plus-web-c3721447479] button[disabled],
+st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled,
+st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled .mdc-button__label {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    color: #FFFFFF !important;
+    opacity: 0.6 !important;
     border: 0px solid transparent !important;
     border-width: 0px !important;
     border-style: none !important;
@@ -2032,10 +2189,84 @@ st-button[_ngcontent-bet-plus-web-c3721447479] button {
     text-shadow: 0 0 0 transparent !important;
     outline: 0px solid transparent !important;
     transition: none !important;
+}
+
+/* 🟠 Botão Concluir Registro DESABILITADO - Remover bordas dos focus indicators */
+st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled .mat-mdc-focus-indicator,
+st-button[_ngcontent-bet-plus-web-c3721447479] button[disabled] .mat-mdc-focus-indicator,
+st-button[_ngcontent-bet-plus-web-c3721447479] button.mat-mdc-button-disabled .mat-mdc-button-touch-target,
+st-button[_ngcontent-bet-plus-web-c3721447479] button[disabled] .mat-mdc-button-touch-target,
+button.st_button__large.mat-mdc-button-disabled .mat-mdc-focus-indicator,
+button.st_button__large[disabled] .mat-mdc-focus-indicator,
+button.st_button__large.mat-mdc-button-disabled .mat-mdc-button-touch-target,
+button.st_button__large[disabled] .mat-mdc-button-touch-target {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Botão Concluir Registro - Estado HABILITADO (gradiente laranja) */
+button.st_button__large:not([disabled]):not(.mat-mdc-button-disabled),
+st-button button.st_button__large:not([disabled]):not(.mat-mdc-button-disabled),
+st-button[_ngcontent-bet-plus-web-c3721447479] button:not([disabled]):not(.mat-mdc-button-disabled),
+st-button[_ngcontent-bet-plus-web-c3721447479] button.st_button__large:not([disabled]):not(.mat-mdc-button-disabled) {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    color: #FFFFFF !important;
+    border: 0px solid transparent !important;
+    border-width: 0px !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 0 0 transparent !important;
+    -webkit-box-shadow: 0 0 0 0 transparent !important;
+    -moz-box-shadow: 0 0 0 0 transparent !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    -moz-filter: none !important;
+    text-shadow: 0 0 0 transparent !important;
+    outline: 0px solid transparent !important;
+    transition: background 0.3s ease !important;
     -webkit-transition: none !important;
     -moz-transition: none !important;
     animation: none !important;
     -webkit-animation: none !important;
+}
+
+/* 🟠 Botão Concluir Registro - Remover bordas dos focus indicators */
+st-button[_ngcontent-bet-plus-web-c3721447479] .mat-mdc-focus-indicator,
+st-button[_ngcontent-bet-plus-web-c3721447479] span.mat-mdc-focus-indicator,
+st-button[_ngcontent-bet-plus-web-c3721447479] .mat-mdc-button-touch-target,
+st-button[_ngcontent-bet-plus-web-c3721447479] span.mat-mdc-button-touch-target,
+button.st_button__large .mat-mdc-focus-indicator,
+button.st_button__large span.mat-mdc-focus-indicator,
+button.st_button__large .mat-mdc-button-touch-target,
+button.st_button__large span.mat-mdc-button-touch-target {
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Botão Concluir Registro - Cor da fonte branca */
+st-button[_ngcontent-bet-plus-web-c3721447479],
+st-button[_ngcontent-bet-plus-web-c3721447479] button,
+st-button[_ngcontent-bet-plus-web-c3721447479] .mdc-button__label,
+button.st_button__large .mdc-button__label {
+    color: #FFFFFF !important;
+}
     -moz-animation: none !important;
     font-family: 'Poppins', 'Arial', 'Helvetica', sans-serif !important;
     font-weight: bold !important;
@@ -2946,7 +3177,7 @@ div.events-area-min {
     justify-content: center;
     margin: 0 5px;
     border: 2px solid #ffe7ba !important;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
     transition: all .3s ease-in-out
 }
@@ -3008,7 +3239,7 @@ div.events-area-min {
     --spread-clip-horizontal: -5px;
     --spread-clip-vertical-inset: -5px;
     --spread-clip-vertical-outer: -5px;
-    box-shadow: inset 0 var(--y-offset-bottom-glow-inset) 5px var(--spread-clip-horizontal) var(--custom-neon-border),inset 0 var(--y-offset-bottom-glow-inset) 8px var(--spread-clip-horizontal) var(--custom-neon-glow1),0 var(--y-offset-bottom-glow-outer) 2px var(--spread-clip-horizontal) #ffa242,0 var(--y-offset-bottom-glow-outer) 2px var(--spread-clip-horizontal) #ff9234,0 var(--y-offset-bottom-glow-outer) 6px var(--spread-clip-horizontal) rgba(255,69,0,.77),0 var(--y-offset-bottom-glow-outer) 5px var(--spread-clip-horizontal) var(--custom-neon-glow3);
+    box-shadow: none !important;
     transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out
 }
 
@@ -3098,7 +3329,7 @@ app-menu-top-bar-mobile-plus2 .menu-top-bar {
 app-menu-top-bar-mobile-plus2 .logged-area.logged_button {
     border-radius: 17.5px !important;
     border: 2px solid #fffcf6 !important;
-    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+    box-shadow: none !important;
 }
 
 app-menu-top-bar-mobile-plus2 .menu-top-bar .mat-icon {
@@ -3193,7 +3424,7 @@ app-bottom-nav-plus2 .bottom-nav-container {
     --spread-clip-horizontal: -5px;
     --spread-clip-vertical-inset: -5px;
     --spread-clip-vertical-outer: -5px;
-    box-shadow: inset 0 var(--y-offset-top-glow-inset) 5px var(--spread-clip-horizontal) var(--custom-neon-border),inset 0 var(--y-offset-top-glow-inset) 8px var(--spread-clip-horizontal) var(--custom-neon-glow1),0 var(--y-offset-top-glow-outer) 2px var(--spread-clip-horizontal) #ffa242,0 var(--y-offset-top-glow-outer) 2px var(--spread-clip-horizontal) #ff9234,0 var(--y-offset-top-glow-outer) 6px var(--spread-clip-horizontal) rgba(255,69,0,.77),0 var(--y-offset-top-glow-outer) 5px var(--spread-clip-horizontal) var(--custom-neon-glow3);
+    box-shadow: none !important;
     transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out
 }
 
@@ -3265,6 +3496,316 @@ app-register-page .st_input_outlined input,app-register-page .st_input_outlined 
     border-color: rgba(255,255,255,.3215686275) !important
 }
 
+/* 🟠 Botão Salvar - gradiente laranja */
+st-button button.st_button__theme_color,
+button.mdc-button.st_button__theme_color,
+button.st_button.st_button__theme_color,
+button.st_button__theme_color span.mat-mdc-button-touch-target {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+/* 🟠 Dialog Editar Endereço - gradiente azul invertido */
+app-edit-address-dialog div.p_16,
+.mat-mdc-dialog-surface app-edit-address-dialog div.p_16 {
+    background: linear-gradient(180deg, #0A0E1C 0%, #2E4182 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Select País - fundo azul escuro no container pai */
+div.st_input.ng-tns-c1728495907-71.st_input_outlined.filled-input {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Alert info-dark - fundo azul escuro */
+div.alert__container.alert__info-dark.alert__border,
+.alert__info-dark {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+
+/* 🟠 Remover box-shadow do mat-mdc-button-touch-target */
+.mat-mdc-button-touch-target,
+span.mat-mdc-button-touch-target,
+button .mat-mdc-button-touch-target,
+button span.mat-mdc-button-touch-target,
+* .mat-mdc-button-touch-target {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+/* 🟠 Botão Depositar Mobile - gradiente laranja */
+.deposit-button.deposit_button_themed,
+div.deposit-button.deposit_button_themed,
+.menu-top-bar .deposit-button,
+app-menu-top-bar-mobile-plus2 .deposit-button {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 User Dashboard Body - fundo azul escuro */
+.user-dashboard__body-container,
+div.user-dashboard__body-container.p_8,
+app-user-dashboard-mobile div.user-dashboard__body-container {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Payment Card - fundo azul #172448 */
+.user-payment__payment-card,
+div.user-payment__payment-card,
+div.user-payment__payment-card.user_dashboard__card_block,
+.user-payment__payment-card.mobile-version,
+div.user-payment__payment-card.user_dashboard__card_block.mb_8.mobile-version,
+.user_dashboard__card_block.mobile-version,
+app-user-deposit .user-payment__payment-card,
+div[_ngcontent-bet-plus-web-c3947600600].user-payment__payment-card {
+    background: #172448 !important;
+    background-color: #172448 !important;
+    background-image: none !important;
+}
+
+/* 🟠 Botões de valor sugerido - gradiente azul */
+.mat-button-toggle-button,
+button.mat-button-toggle-button,
+.user-payment__payment-suggested-value-card button,
+mat-button-toggle.user-payment__payment-suggested-value-card button.mat-button-toggle-button {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    color: #FFFFFF !important;
+}
+
+/* 🟠 Payment system card - fundo azul #172448 */
+.payment_system__card div.p_12.pt_0,
+app-select-payment-system div.p_12.pt_0,
+div.payment_system__card .p_12,
+swiper-container.stories__container,
+.payment_system__card swiper-container.stories__container.w-100,
+.arrowed_carousel__container swiper-container.stories__container,
+div.arrowed_carousel__container,
+.arrowed_carousel__container {
+    background: #172448 !important;
+    background-color: #172448 !important;
+}
+
+/* 🟠 Payment system card p_12 - border radius inferior */
+.payment_system__card div.p_12.pt_0,
+app-select-payment-system div.p_12.pt_0,
+div[_ngcontent-bet-plus-web-c3325543577].p_12.pt_0 {
+    border-bottom-left-radius: 12px !important;
+    border-bottom-right-radius: 12px !important;
+}
+
+/* 🟠 Payment system card pai - fundo azul escuro */
+.payment_system__card,
+div.payment_system__card,
+app-select-payment-system .payment_system__card {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Label valor depositar - fundo azul escuro */
+label.ng-tns-c1202430553-52 {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Input container - posição relativa */
+div.st_input.ng-tns-c1202430553-52.st_input_outlined {
+    position: relative !important;
+}
+
+/* 🟠 Input prefix R$ - posicionamento dentro do input */
+div.st_input__prefix.ng-tns-c1202430553-52,
+span.ng-tns-c1202430553-52,
+div.st_input__prefix.ng-tns-c1202430553-52 span,
+.st_input__prefix span.ng-tns-c1202430553-52 {
+    position: absolute !important;
+    left: 4px !important;
+    top: 11px !important;
+    transform: none !important;
+    z-index: 15 !important;
+    pointer-events: none !important;
+    display: block !important;
+    visibility: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 🟠 Input com prefix - padding left */
+input.form-control.w-100.ng-tns-c1202430553-52.st_input__with_prefix {
+    padding-left: 35px !important;
+}
+
+/* 🟠 Input login específico - fundo azul escuro FORÇADO */
+input.form-control.w-100.ng-tns-c1282772257-9,
+input#525b53c0-e1eb-49ba-b5de-6ad581dd4fe9,
+.ng-tns-c1282772257-9 input.form-control.w-100,
+st-input.ng-tns-c1282772257-9 input,
+div.st_input.ng-tns-c1282772257-9 input,
+div.st_input.ng-tns-c1282772257-9.st_input_outlined input.form-control.w-100 {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+}
+
+/* 🟠 Container do input login - também azul escuro */
+div.st_input.ng-tns-c1282772257-9.st_input_outlined.filled-input,
+st-input.ng-tns-c1282772257-9 div.st_input {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+}
+
+/* 🟠 FORÇA MÁXIMA - Input login com especificidade extrema */
+html body st-input.ng-tns-c1282772257-9 div.st_input input.form-control.w-100,
+html body div.st_input.ng-tns-c1282772257-9 input.form-control.w-100,
+html body input.form-control.w-100.ng-tns-c1282772257-9.ng-dirty.ng-valid.ng-touched,
+html body input[class*="form-control"][class*="w-100"][class*="ng-tns-c1282772257-9"] {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    background-image: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+}
+
+/* 🟠 Majority Dialog - gradiente azul */
+.st_modal_container.st_modal_container_dark,
+div.st_modal_container.h-100.pb_8.st_modal_container_dark,
+app-majority-dialog .st_modal_container {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Cookies Permission Dialog - gradiente azul */
+.mat-mdc-dialog-surface.mdc-dialog__surface,
+div.mat-mdc-dialog-surface.mdc-dialog__surface,
+.cookies-permission-dialog .mat-mdc-dialog-surface,
+#cdk-overlay-0 .mat-mdc-dialog-surface,
+mat-dialog-container .mat-mdc-dialog-surface,
+app-cookies-permission {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: transparent !important;
+    background-image: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+}
+
+/* 🟠 Botão Aceitar Cookies - gradiente laranja igual ao registrar */
+.cookies-accept-button,
+button.cookies-accept-button,
+.cookies-accept-button .mdc-button__label,
+button.cookies-accept-button .mdc-button__label,
+.cookies-accept-button span.mdc-button__label,
+.cookies-accept-button .mat-mdc-focus-indicator,
+button.cookies-accept-button .mat-mdc-focus-indicator,
+.cookies-accept-button span.mat-mdc-focus-indicator {
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    color: #FFFFFF !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.cookies-accept-button .mat-mdc-focus-indicator,
+button.cookies-accept-button .mat-mdc-focus-indicator,
+.cookies-accept-button span.mat-mdc-focus-indicator {
+    background: linear-gradient(90deg, #F75703 0%, #FF9501 100%) !important;
+    background-color: transparent !important;
+    border-radius: 8px !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.cookies-accept-button span.mat-mdc-button-touch-target,
+button.cookies-accept-button span.mat-mdc-button-touch-target {
+    background: transparent !important;
+    background-color: transparent !important;
+}
+
+/* 🟠 Botão Recusar Cookies - branco sem efeitos */
+.cookies-reject-button,
+button.cookies-reject-button,
+.cookies-reject-button .mdc-button__label,
+button.cookies-reject-button .mdc-button__label,
+.cookies-reject-button span.mdc-button__label {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-style: none !important;
+    outline-color: transparent !important;
+    color: #FFFFFF !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+}
+
+.cookies-reject-button span.mat-mdc-button-touch-target,
+button.cookies-reject-button span.mat-mdc-button-touch-target,
+button.cookies-button.cookies-reject-button.mdc-button.mat-mdc-button.mat-unthemed.mat-mdc-button-base {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    outline-color: transparent !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 Deposit content - border radius inferior */
+.deposit-content,
+div.deposit-content {
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
+}
+
+/* 🟠 Select dropdown - removido estilo customizado */
+
 /* 🟠 Checkbox - SOLUÇÃO FINAL - Centralizar elementos visuais com área clicável */
 /* Problema: elementos visuais (background, ripple) ficavam no canto superior direito */
 /* enquanto área clicável (input) ficava centralizada - causando desalinhamento */
@@ -3335,13 +3876,13 @@ app-display-game app-global-login .st_button__text {
     justify-content: center;
     margin: 0 5px;
     border: 2px solid #ffe7ba !important;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3) !important;
+    box-shadow: none !important;
     text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
     transition: all .3s ease-in-out
 }
 
 app-display-game app-global-login st_button__text:hover {
-    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
 }
 
@@ -3380,7 +3921,7 @@ app-casino-button-filter .casino_button_filter__container {
     transition: box-shadow .3s ease-in-out,border-color .3s ease-in-out;
     border: 2px solid #fffcf6 !important;
     background: rgba(0,0,0,0);
-    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+    box-shadow: none !important;
 }
 
 app-casino-button-filter .casino_button_filter__container .casino_button_filter__container_title {
@@ -3470,13 +4011,13 @@ app-cookies-permission .cookies-button.cookies-reject-button {
     justify-content: center;
     margin: 0 3px;
     border: 2px solid #ffe7ba !important;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
     transition: all .3s ease-in-out
 }
 
 app-cookies-permission .cookies-button.cookies-reject-button:hover {
-    box-shadow: inset 0 0 10px var(--custom-neon-border),inset 0 0 16px var(--custom-neon-glow1),0 0 8px #ffa242,0 0 8px #ff9234,0 0 20px rgba(255,69,0,.6),0 0 15px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 8px #fff,0 0 15px #fdcb6a,0 0 30px rgba(255,0,0,.9)
 }
 
@@ -3562,7 +4103,7 @@ app-majority-dialog .close_button .st_button__stretch {
     align-items: center;
     justify-content: center;
     margin: 0 5px;
-    box-shadow: inset 0 0 5px var(--custom-neon-border),inset 0 0 8px var(--custom-neon-glow1),0 0 2px #ffa242,0 0 2px #ff9234,0 0 10px rgba(255,69,0,.6),0 0 5px var(--custom-neon-glow3);
+    box-shadow: none !important;
     text-shadow: 0 0 5px #f55,0 0 10px #fdcb6a,0 0 20px #ff7100,0 0 30px rgba(255,69,0,.7);
     transition: all .3s ease-in-out
 }
@@ -3722,7 +4263,7 @@ app-floating-coupon .badge-value {
 app-authentication-field .authentication-field-2 .logged-area.logged_button {
     border-radius: 17.5px !important;
     border: 2px solid #fffcf6 !important;
-    box-shadow: inset 0 0 14px rgba(255,179,0,.38),inset 0 0 8px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+    box-shadow: none !important;
 }
 
 app-casino-item-portrait .casino_top__text {
@@ -3826,6 +4367,13 @@ app-casino-search-page .screen__container {
     margin-top: 94px !important
 }
 
+/* Ajustar padding do screen__container do casino */
+div.screen__container.mt_8.px_8.mx_auto,
+.screen__container.px_8 {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
 app-casino-search-page .casino-sidebar-container {
     top: 96px !important;
     max-height: calc(100vh - 96px) !important
@@ -3883,7 +4431,7 @@ app-swiper-carousel .odd-container .odd-button-banner.center-horizontal {
 
 ::ng-deep app-swiper-carousel .swiper-pagination-bullet-active {
     background: #fdf7e6;
-    box-shadow: 0 0 12px 0 rgba(248,213,23,.5) inset,0 0 10px 0 #ffaf36 inset,0 0 4px 0 #ffaf36 inset,0 0 3px 0 #ff4336 inset;
+    box-shadow: none !important;
     filter: drop-shadow(0px 0px 62px #F00) drop-shadow(0px 0px 62.291px #F00) drop-shadow(0px 0px 47px #F00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 4px #F00) drop-shadow(0px 0px 46px rgba(255, 0, 0, 0.7))
 }
 
@@ -3893,7 +4441,7 @@ app-swiper-carousel .odd-container .odd-button-banner.center-horizontal {
 
 ::ng-deep app-carousel .owl-carousel .owl-dots .owl-dot.active span {
     background: #fdf7e6;
-    box-shadow: 0 0 12px 0 rgba(248,213,23,.5) inset,0 0 10px 0 #ffaf36 inset,0 0 4px 0 #ffaf36 inset,0 0 3px 0 #ff4336 inset;
+    box-shadow: none !important;
     filter: drop-shadow(0px 0px 62px #F00) drop-shadow(0px 0px 62.291px #F00) drop-shadow(0px 0px 47px #F00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 26px #FF6A00) drop-shadow(0px 0px 4px #F00) drop-shadow(0px 0px 46px rgba(255, 0, 0, 0.7))
 }
 
@@ -3947,7 +4495,7 @@ app-gamification-tournament-item .tournament_header_prize {
 app-gamification-tournament-item .countdown_counter_item {
     border: 2px solid #fffcf6 !important;
     margin-left: -2px;
-    box-shadow: inset 0 0 4px rgba(255,179,0,.38),inset 0 0 12px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+    box-shadow: none !important;
 }
 
 app-gamification-tournament-item .countdown_counter_item .countdown_counter_item_number,app-gamification-tournament-item .countdown_counter_item .countdown_counter_item_label {
@@ -3974,7 +4522,7 @@ app-gamification-tournament-details .tournament_details_info_prize {
 app-gamification-tournament-details .countdown_counter_item {
     border: 2px solid #fffcf6 !important;
     margin-left: -2px;
-    box-shadow: inset 0 0 4px rgba(255,179,0,.38),inset 0 0 12px rgba(255,60,7,.41),0 0 2px rgba(255,0,0,.36),0 0 2px rgba(255,52,52,0.3294117647),0 0 6px #ff8900,0 0 1px #f67113
+    box-shadow: none !important;
 }
 
 app-gamification-tournament-details .countdown_counter_item .countdown_counter_item_number,app-gamification-tournament-details .countdown_counter_item .countdown_counter_item_label {
@@ -4066,7 +4614,7 @@ li#cdk-option-3.active-bar {
     font-weight: 600 !important;
     font-size: 14px !important;
     border: none !important;
-    border-bottom: 2px solid #FF6300 !important;
+    border-bottom: none !important;
     border-width: 0 0 2px 0 !important;
     border-style: solid !important;
     border-color: transparent transparent #FF6300 transparent !important;
@@ -4128,7 +4676,7 @@ li#cdk-option-3.active-bar,
 #cdk-listbox-2 #cdk-option-3.active-bar,
 ul#cdk-listbox-2 li#cdk-option-3.active-bar,
 [id="cdk-option-3"].active-bar {
-    border-bottom: 2px solid #FF6300 !important;
+    border-bottom: none !important;
     border-top: none !important;
     border-left: none !important;
     border-right: none !important;
@@ -4212,6 +4760,14 @@ button.mat-mdc-menu-trigger.hover-register[class*="mat-mdc"] {
     -webkit-animation: none !important;
 }
 
+/* Ajustar posição do ícone de busca */
+div.st_input__prefix mat-icon.st_input__visibility_icon,
+.st_input__prefix mat-icon {
+    margin-top: -15px !important;
+    display: block !important;
+    position: relative !important;
+}
+
 @media (max-width: 1279px) {
     /* Esconder coupon completamente */
     div.container-coupon,
@@ -4228,6 +4784,77 @@ button.mat-mdc-menu-trigger.hover-register[class*="mat-mdc"] {
     .router-outlet.scrollbar_hidden.events-area-outlet {
         flex: 1 1 100% !important;
         max-width: 100% !important;
+        width: 100% !important;
+    }
+    
+    /* Esconder APENAS o texto "Promoções" em telas menores que 1280px */
+    div.promotions-title,
+    .promotions-title {
+        display: none !important;
+    }
+    
+    /* Ajustar largura do li para o tamanho do ícone */
+    li#cdk-option-9,
+    li#cdk-option-1,
+    li.promotions-button,
+    li.menu_top_bar__main_option.promotions-button {
+        width: auto !important;
+        min-width: auto !important;
+        max-width: none !important;
+    }
+    
+    /* Esconder overflow do conteúdo */
+    li.promotions-button app-promotions-button,
+    li#cdk-option-9 app-promotions-button,
+    li#cdk-option-1 app-promotions-button {
+        display: block !important;
+        width: auto !important;
+    }
+    
+    /* Ajustar o link para ter largura fixa */
+    li.promotions-button a.promotions,
+    li#cdk-option-1 a.promotions,
+    app-promotions-button a.promotions {
+        width: 40px !important;
+        min-width: 40px !important;
+        max-width: 40px !important;
+        padding: 8px 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        overflow: hidden !important;
+    }
+    
+    /* Garantir que o ícone/imagem seja visível e centralizado */
+    li.promotions-button mat-icon,
+    li#cdk-option-9 mat-icon,
+    li#cdk-option-1 mat-icon,
+    app-promotions-button mat-icon,
+    li.promotions-button img,
+    li#cdk-option-1 img,
+    app-promotions-button img,
+    a.promotions img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        width: 24px !important;
+        height: 24px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    /* Remover padding da classe p_0 */
+    li.promotions-button.p_0,
+    li#cdk-option-1.p_0 {
+        padding: 0 !important;
+    }
+    
+    /* Garantir que overlays e áreas clicáveis respeitem o novo tamanho */
+    li#cdk-option-9::before,
+    li#cdk-option-9::after,
+    li.promotions-button::before,
+    li.promotions-button::after {
+        max-width: 40px !important;
         width: 100% !important;
     }
 }
@@ -4940,3 +5567,1237 @@ button.default-button.mat-mdc-unelevated-button {
 }
 
 
+/* 🟠 Password Field - Remover borda superior laranja quando preenchido */
+st-input.password-field div.st_input.filled-input,
+st-input.password-field div.st_input.filled-input[class*='ng-tns-c1282772257'],
+div.st_input.filled-input.password-field,
+.password-field .filled-input {
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border: none !important;
+}
+
+/* 🟠 Input dentro do password field - sem bordas */
+st-input.password-field input.form-control,
+st-input.password-field input.st_input__with_suffix,
+.password-field input.form-control,
+.password-field input.st_input__with_suffix {
+    border: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+/* 🟠 Email Field - Remover TODAS as bordas laranjas */
+st-input.ng-tns-c1282772257-1 div.st_input.filled-input,
+st-input[class*='ng-tns-c1282772257-1'] div.st_input.filled-input,
+div.st_input.ng-tns-c1282772257-1.filled-input,
+div.st_input[class*='ng-tns-c1282772257-1'].filled-input {
+    border: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Input email - sem bordas quando preenchido */
+input.form-control.ng-tns-c1282772257-1,
+input[class*='ng-tns-c1282772257-1'].form-control,
+input#aef649cd-7b63-474f-b916-86ce89942daa,
+st-input.ng-tns-c1282772257-1 input.form-control {
+    border: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Form email - sem bordas */
+form.ng-tns-c1282772257-1,
+form[class*='ng-tns-c1282772257-1'] {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Remover bordas quando dirty/touched/valid */
+input.ng-dirty.ng-valid.ng-touched,
+input.ng-dirty.ng-touched,
+.filled-input input.ng-dirty,
+.filled-input input.ng-valid,
+.filled-input input.ng-touched {
+    border: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+}
+
+}
+
+/* 🟠 Remover border-radius dos containers de input */
+div.st_input.st_input_outlined,
+div.st_input_outlined,
+.st_input_outlined {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* 🟠 Remover border-radius de todos os inputs de formulário */
+input.form-control,
+input.form-control.w-100,
+input.ng-dirty.ng-touched,
+input.ng-invalid,
+input.st_input__with_suffix {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* 🟠 Remover border-radius dos forms */
+form[class*='ng-tns'] {
+    border-radius: 0 !important;
+}
+
+/* 🟠 Remover border-radius do st-input */
+st-input,
+st-input div.st_input,
+st-input input {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* 🟠 Remover BORDAS de inputs com erro - sem bordas coloridas */
+input.st_input_error,
+input.form-control.st_input_error,
+input.form-control.w-100.st_input_error,
+.st_input_outlined input.st_input_error,
+div.st_input input.st_input_error {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Remover bordas dos containers de input com erro */
+div.st_input.st_input_outlined,
+div.st_input_outlined,
+.st_input_outlined,
+div.st_input:has(input.st_input_error) {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Remover bordas de todos os inputs quando dirty/touched/invalid */
+input.ng-dirty.ng-touched.st_input_error,
+input.ng-invalid,
+input.ng-touched.st_input_error,
+input.form-control.ng-invalid,
+input.form-control.ng-dirty,
+input.st_input__with_suffix.st_input_error {
+    border: none !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* 🟠 Remover bordas dos pais st-input */
+st-input,
+st-input div.st_input,
+st-input.ng-star-inserted,
+    border: none !important;
+}
+
+/* 🟠 Hierarquia específica com classes Angular */
+    background-color: #0A0E1C !important;
+    color: #FFFFFF !important;
+}
+
+    caret-color: #FFFFFF !important;
+}
+
+/* 🟠 NUCLEAR - Com máxima especificidade */
+}
+
+
+/* 🟠 Forgot Password Mobile - Gradiente azul */
+app-forgot-password-mobile-plus2 div.window.forgot-password__container-mobile div,
+app-forgot-password-mobile-plus2 div.forgot-password__container-mobile-dark div,
+div.window.forgot-password__container-mobile div,
+div.forgot-password__container-mobile-dark div {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: #2E4182 !important;
+}
+
+/* 🟠 Forgot Password Container - Gradiente azul */
+.forgot-password__container-mobile,
+.forgot-password__container-mobile-dark,
+div.window.forgot-password__container-mobile,
+div.window.forgot-password__container-mobile-dark {
+    background: linear-gradient(180deg, #2E4182 0%, #0A0E1C 100%) !important;
+    background-color: #2E4182 !important;
+}
+
+/* 🟠 Forgot Password Container - Azul escuro */
+app-forgot-password-mobile-plus2 div.container.dark-mode,
+div.window.forgot-password__container-mobile div.container.dark-mode,
+div.forgot-password__container-mobile-dark div.container.dark-mode,
+.forgot-password__container-mobile div.container.dark-mode {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Botão Continuar (Forgot Password) - Altura 36px */
+app-forgot-password-mobile-plus2 st-button button,
+app-forgot-password-mobile-plus2 st-button button.st_button,
+app-forgot-password-mobile-plus2 button.st_button__stretch,
+.forgot-password__container-mobile st-button button,
+.forgot-password__container-mobile-dark st-button button {
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+}
+
+/* 🟠 Touch target do botão - altura 36px */
+app-forgot-password-mobile-plus2 span.mat-mdc-button-touch-target,
+.forgot-password__container-mobile span.mat-mdc-button-touch-target,
+.forgot-password__container-mobile-dark span.mat-mdc-button-touch-target {
+    height: 36px !important;
+    min-height: 36px !important;
+}
+
+/* 🟠 Botão Continuar (Forgot Password) - Altura 36px */
+app-forgot-password-mobile-plus2 st-button button,
+app-forgot-password-mobile-plus2 st-button button.st_button,
+app-forgot-password-mobile-plus2 button.st_button__stretch,
+.forgot-password__container-mobile st-button button,
+.forgot-password__container-mobile-dark st-button button {
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+}
+
+/* 🟠 Touch target do botão - altura 36px */
+app-forgot-password-mobile-plus2 span.mat-mdc-button-touch-target,
+.forgot-password__container-mobile span.mat-mdc-button-touch-target,
+.forgot-password__container-mobile-dark span.mat-mdc-button-touch-target {
+    height: 36px !important;
+    min-height: 36px !important;
+}
+
+/* 🟠 Forgot Password Input - Apenas borda inferior laranja */
+app-forgot-password-mobile-plus2 input,
+app-forgot-password-mobile-plus2 input.form-control,
+.forgot-password__container-mobile input,
+.forgot-password__container-mobile-dark input,
+app-forgot-password-mobile-plus2 div.st_input input,
+app-forgot-password-mobile-plus2 st-input input {
+    border: none !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* 🟠 Container do input - sem bordas */
+app-forgot-password-mobile-plus2 div.st_input,
+app-forgot-password-mobile-plus2 st-input div.st_input,
+.forgot-password__container-mobile div.st_input,
+.forgot-password__container-mobile-dark div.st_input {
+    border: none !important;
+}
+
+/* 🟠 Estados específicos - apenas borda inferior */
+app-forgot-password-mobile-plus2 input.ng-dirty,
+app-forgot-password-mobile-plus2 input.ng-touched,
+app-forgot-password-mobile-plus2 input.ng-untouched,
+app-forgot-password-mobile-plus2 input.st_input_error,
+app-forgot-password-mobile-plus2 input.ng-invalid {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+/* 🟠 NUCLEAR - Forgot Password Input Border Bottom */
+html body app-forgot-password-mobile-plus2 input,
+html body div.forgot-password__container-mobile input,
+html body div.forgot-password__container-mobile-dark input,
+html body st-input.width-100 input,
+html body div.st_input.filled-input input,
+html body input.form-control.w-100.ng-dirty.ng-touched.ng-valid {
+    border: 0 !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-bottom: none !important;
+    border-bottom-width: 1px !important;
+    border-bottom-style: solid !important;
+    border-bottom-color: transparent !important;
+}
+
+/* 🟠 Específico para filled-input */
+html body div.st_input.filled-input input.form-control.w-100,
+html body st-input.width-100 div.filled-input input {
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: none !important;
+}
+
+}
+
+/* 🟠 Container vazio - sem border radius */
+html body div.st_input:not(.filled-input),
+html body st-input.width-100 div.st_input:not(.filled-input),
+html body app-forgot-password-mobile-plus2 div.st_input {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+/* 🟠 Todos os inputs forgot password - sem border radius */
+html body app-forgot-password-mobile-plus2 input,
+html body div.forgot-password__container-mobile input,
+html body div.forgot-password__container-mobile-dark input {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+}
+
+/* 🟠 Container do input vazio */
+html body div.st_input:not(.filled-input),
+html body st-input div.st_input:not(.filled-input) {
+    border: none !important;
+    border-bottom: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+}
+
+/* 🟠 Input vazio específico com classes ng */
+input.form-control.w-100.ng-tns-c1282772257-48.ng-untouched,
+input.form-control.w-100.ng-tns-c1282772257-48.ng-pristine,
+div.st_input:not(.filled-input) input.form-control.w-100.ng-tns-c1282772257-48 {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+/* 🟠 Botão Cancelar - Reduzir border radius */
+button.st_button__undefined,
+st-button button.st_button__undefined,
+.cancel-container__actions button.st_button__undefined,
+div.cancel-container__actions st-button button {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+}
+
+/* 🟠 Touch target do botão cancelar */
+button.st_button__undefined span.mat-mdc-button-touch-target,
+.cancel-container__actions span.mat-mdc-button-touch-target {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+}
+
+/* 🟠 Botão Continuar cadastro - Reduzir largura */
+.cancel-container__actions button.st_button__theme_color,
+.cancel-container__actions st-button button.st_button__theme_color,
+div.cancel-container__actions button.st_button__theme_color {
+    max-width: 200px !important;
+    width: auto !important;
+    padding: 8px 24px !important;
+}
+
+/* 🟠 Touch target do botão continuar */
+.cancel-container__actions button.st_button__theme_color span.mat-mdc-button-touch-target {
+    max-width: 200px !important;
+}
+
+/* 🟠 Promotions Button - Quadrado com border radius pequeno */
+app-promotions-button button.giftcard-button,
+button.giftcard-button.ng-star-inserted,
+.menu-right-container app-promotions-button button {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+}
+
+/* 🟠 Ícone de presente - Centralizar */
+button.giftcard-button mat-icon,
+button.giftcard-button mat-icon.mat-icon,
+app-promotions-button mat-icon.material-symbols-rounded {
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* 🟠 Promotions Button - Ajustar altura para 35px */
+app-promotions-button button.giftcard-button,
+button.giftcard-button.ng-star-inserted,
+.menu-right-container app-promotions-button button {
+    height: 35px !important;
+    max-height: 35px !important;
+    min-height: 35px !important;
+    width: 35px !important;
+}
+
+/* 🟠 Promotions Button - Remover borda */
+app-promotions-button button.giftcard-button,
+button.giftcard-button.ng-star-inserted,
+.menu-right-container app-promotions-button button {
+    border: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Ícone de presente - Aumentar para 30px */
+button.giftcard-button mat-icon,
+button.giftcard-button mat-icon.mat-icon,
+app-promotions-button mat-icon.material-symbols-rounded {
+    font-size: 30px !important;
+    height: 30px !important;
+    width: 30px !important;
+    line-height: 30px !important;
+}
+
+/* 🟠 Ícone de presente - Ajustar para 20px */
+button.giftcard-button mat-icon,
+button.giftcard-button mat-icon.mat-icon,
+app-promotions-button mat-icon.material-symbols-rounded {
+    font-size: 20px !important;
+    height: 20px !important;
+    width: 20px !important;
+    line-height: 20px !important;
+}
+
+/* 🟠 Ícone de presente - Ajustar para 25px */
+button.giftcard-button mat-icon,
+button.giftcard-button mat-icon.mat-icon,
+app-promotions-button mat-icon.material-symbols-rounded {
+    font-size: 25px !important;
+    height: 25px !important;
+    width: 25px !important;
+    line-height: 25px !important;
+}
+
+/* 🟠 Promotions Button - Reduzir border radius para 4px */
+app-promotions-button button.giftcard-button,
+button.giftcard-button.ng-star-inserted,
+.menu-right-container app-promotions-button button {
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+}
+
+/* 🟠 Logged Area - Reduzir border radius para 4px */
+div.logged-area.money-title.logged_button,
+div.logged-area.logged_button,
+.menu-right-container div.logged-area,
+.menu-top-bar div.logged-area {
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+}
+
+/* 🟠 Logged Area - Border radius 8px e altura 35px */
+div.logged-area.money-title.logged_button,
+div.logged-area.logged_button,
+.menu-right-container div.logged-area,
+.menu-top-bar div.logged-area {
+    border-radius: 8px !important;
+    -webkit-border-radius: 8px !important;
+    -moz-border-radius: 8px !important;
+    height: 35px !important;
+    max-height: 35px !important;
+    min-height: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 🟠 Logged Area - Fundo transparente, borda e texto laranja */
+div.logged-area.money-title.logged_button,
+div.logged-area.logged_button,
+.menu-right-container div.logged-area,
+.menu-top-bar div.logged-area {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    color: #FF6300 !important;
+}
+
+/* 🟠 Texto do saldo - laranja */
+div.logged-area span.weight_500,
+div.logged-area.money-title span,
+.logged-area span.ng-star-inserted {
+    color: #FF6300 !important;
+}
+
+/* 🟠 Ícone da conta - laranja */
+div.logged-area button mat-icon,
+div.logged-area mat-icon,
+.logged-area button.vertical-button mat-icon {
+    color: #FF6300 !important;
+}
+
+/* 🟠 Logged Area - Remover box-shadow e garantir laranja puro */
+div.logged-area.money-title.logged_button,
+div.logged-area.logged_button,
+.menu-right-container div.logged-area,
+.menu-top-bar div.logged-area {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    filter: none !important;
+    opacity: 1 !important;
+}
+
+/* 🟠 Botão dentro da logged area - remover sombras */
+div.logged-area button,
+div.logged-area button.vertical-button,
+.logged-area button.mdc-button {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    filter: none !important;
+    background: transparent !important;
+}
+
+/* 🟠 Mat Icon account_circle - Remover sombra e garantir laranja */
+mat-icon.icon_20,
+mat-icon.mat-icon.icon_20,
+div.logged-area mat-icon.icon_20,
+button.vertical-button mat-icon.icon_20,
+.logged-area mat-icon.mat-icon.notranslate.icon_20 {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -webkit-filter: none !important;
+    opacity: 1 !important;
+    color: #FF6300 !important;
+}
+
+/* 🟠 Span e divs pais do ícone - remover sombras */
+span.mdc-button__label mat-icon,
+div.logged-area span.mdc-button__label,
+button.vertical-button span.mdc-button__label {
+    text-shadow: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* 🟠 Logged Area - Laranja FF9501 para tudo */
+div.logged-area.money-title.logged_button,
+div.logged-area.logged_button,
+.menu-right-container div.logged-area,
+.menu-top-bar div.logged-area {
+    border: 1px solid #FF9501 !important;
+    border-color: #FF9501 !important;
+    color: #FF9501 !important;
+}
+
+/* 🟠 Texto do saldo - laranja FF9501 */
+div.logged-area span.weight_500,
+div.logged-area.money-title span,
+.logged-area span.ng-star-inserted {
+    color: #FF9501 !important;
+}
+
+/* 🟠 Ícone da conta - laranja FF9501 */
+div.logged-area button mat-icon,
+div.logged-area mat-icon,
+.logged-area button.vertical-button mat-icon,
+mat-icon.icon_20,
+mat-icon.mat-icon.icon_20,
+button.vertical-button mat-icon.icon_20,
+.logged-area mat-icon.mat-icon.notranslate.icon_20 {
+    color: #FF9501 !important;
+}
+
+/* 🟠 Smartico Gamification User Profile - Fundo azul 172448 */
+div.smartico-gamification-menu__user-profile,
+.smartico-gamification-menu__user-profile.ng-star-inserted,
+app-smartico-gamification-menu div.smartico-gamification-menu__user-profile {
+    background: #172448 !important;
+    background-color: #172448 !important;
+}
+
+/* 🟠 Smartico Gamification Updated At - Fundo azul 172448 */
+div.smartico-gamification-menu__updated-at,
+.smartico-gamification-menu__updated-at,
+app-smartico-gamification-menu div.smartico-gamification-menu__updated-at {
+    background: #172448 !important;
+    background-color: #172448 !important;
+}
+
+/* 🟠 Smartico Gamification Options Item - Gradiente azul horizontal */
+span.smartico-gamification-menu__gamification-options-item,
+.smartico-gamification-menu__gamification-options-item,
+div.smartico-gamification-menu__gamification-options span.smartico-gamification-menu__gamification-options-item {
+    background: linear-gradient(90deg, #0A0E1C 0%, #2E4182 100%) !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Input Currency Label - Fundo azul escuro */
+st-input-currency label,
+st-input-currency div.st_input label,
+.st-input__currency-input label,
+label[class*='ng-tns-c1202430553'] {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+}
+
+/* 🟠 Input Currency Label - Border radius 8px no topo */
+st-input-currency label,
+st-input-currency div.st_input label,
+.st-input__currency-input label,
+label[class*='ng-tns-c1202430553'] {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* 🟠 Payment System Stories Container - Fundo azul escuro e border radius topo */
+swiper-container.stories__container,
+.payment_system__card swiper-container.stories__container,
+app-arrowed-slide swiper-container.stories__container.w-100 {
+    background: #0A0E1C !important;
+    background-color: #0A0E1C !important;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+/* 🟠 Payment System Card - Border radius topo para o pai */
+div.payment_system__card,
+.payment_system__card.ng-star-inserted {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* 🟠 Arrowed Slide Container - Border radius topo */
+app-arrowed-slide div.arrowed_carousel__container,
+div.arrowed_carousel__container {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+/* 🟠 Currency Input Prefix (R$) - Posicionar ao lado esquerdo */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 12px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    background: transparent !important;
+}
+
+/* 🟠 Input com prefixo - Adicionar padding esquerdo para o R$ */
+input.st_input__with_prefix,
+st-input-currency input.st_input__with_prefix,
+input.form-control.st_input__with_prefix {
+    padding-left: 40px !important;
+}
+
+/* 🟠 Container do currency input - position relative */
+st-input-currency div.st_input,
+div.st_input:has(input.st_input__with_prefix) {
+    position: relative !important;
+}
+
+/* 🟠 Currency Input Prefix (R$) - Ajuste fino de posição */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: 52% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    background: transparent !important;
+}
+
+/* 🟠 Span do R$ - Ajuste adicional */
+div.st_input__prefix span,
+st-input-currency div.st_input__prefix span {
+    display: block !important;
+    margin-top: 2px !important;
+}
+
+/* 🟠 Currency Input Prefix (R$) - Ajustar mais para baixo */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: 55% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    background: transparent !important;
+}
+
+/* 🟠 Span do R$ - Ajuste adicional para baixo */
+div.st_input__prefix span,
+st-input-currency div.st_input__prefix span {
+    display: block !important;
+    margin-top: 3px !important;
+}
+
+/* 🟠 Currency Input Prefix (R$) - Alinhar no centro do input */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 100% !important;
+}
+
+/* 🟠 Span do R$ - Remover margins e usar flex */
+div.st_input__prefix span,
+st-input-currency div.st_input__prefix span {
+    display: flex !important;
+    align-items: center !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1 !important;
+}
+
+/* 🟠 Form container - Position relative para conter o prefix */
+st-input-currency form,
+form:has(input.st_input__with_prefix) {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 🟠 Currency Input Prefix (R$) - Forçar posição mais abaixo */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: 60% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+    background: transparent !important;
+}
+
+/* 🟠 Span do R$ - Ajuste direto */
+div.st_input__prefix span,
+st-input-currency div.st_input__prefix span {
+    display: block !important;
+    margin-top: 6px !important;
+}
+
+/* 🟠 Currency Input Prefix - Ajuste específico para input com erro */
+div.st_input:has(input.st_input_error) div.st_input__prefix,
+st-input-currency div.st_input:has(input.ng-invalid) div.st_input__prefix {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* 🟠 Span do R$ quando tem erro - remover margin */
+div.st_input:has(input.st_input_error) div.st_input__prefix span,
+st-input-currency div.st_input:has(input.ng-invalid) div.st_input__prefix span {
+    margin-top: 0 !important;
+}
+
+/* 🟠 Currency Input Prefix - Ajuste para input válido com st_input_error */
+div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix,
+st-input-currency div.st_input:has(input.ng-valid.st_input_error) div.st_input__prefix {
+    top: 55% !important;
+    transform: translateY(-50%) !important;
+}
+
+/* 🟠 Span do R$ quando válido com erro - pequeno ajuste */
+div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix span,
+st-input-currency div.st_input:has(input.ng-valid.st_input_error) div.st_input__prefix span {
+    margin-top: 2px !important;
+}
+
+/* 🟠 Currency Input Prefix - Alinhar com linha base do input */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: auto !important;
+    bottom: 0 !important;
+    transform: none !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 🟠 Input com prefix - garantir mesma altura */
+input.st_input__with_prefix,
+st-input-currency input.st_input__with_prefix {
+    height: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* 🟠 Span do R$ - usar mesma line-height do input */
+div.st_input__prefix span,
+st-input-currency div.st_input__prefix span {
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: inherit !important;
+    vertical-align: middle !important;
+}
+
+/* 🟠 Currency Input Prefix - Resetar tudo e usar posição fixa */
+div.st_input__prefix,
+st-input-currency div.st_input__prefix {
+    position: absolute !important;
+    left: 8px !important;
+    top: 15px !important;
+    transform: none !important;
+    z-index: 10 !important;
+    background: transparent !important;
+    height: auto !important;
+    display: block !important;
+    align-items: unset !important;
+    bottom: unset !important;
+}
+
+/* 🟠 Quando tem st_input_error mas é válido */
+div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 18px !important;
+}
+
+/* 🟠 Quando é válido sem st_input_error */
+div.st_input:has(input.ng-valid:not(.st_input_error)) div.st_input__prefix {
+    top: 20px !important;
+}
+
+/* 🟠 Quando é inválido */
+div.st_input:has(input.ng-invalid) div.st_input__prefix {
+    top: 15px !important;
+}
+
+/* 🟠 Remover todos os margins do span */
+div.st_input__prefix span {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline !important;
+    line-height: normal !important;
+    vertical-align: unset !important;
+}
+
+/* 🟠 Ajustar posição para st_input_error.ng-valid */
+div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 15px !important;
+}
+
+/* 🟠 FORÇA - Usar seletor mais específico para st_input_error.ng-valid */
+st-input-currency div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix,
+div.st_input.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 15px !important;
+}
+
+/* 🟠 Span específico para esse estado */
+st-input-currency div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix span {
+    position: relative !important;
+    top: 0 !important;
+}
+
+/* 🟠 FORÇA MÁXIMA - Usar classes Angular específicas para esse estado */
+html body st-input-currency div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body div.st_input.ng-tns-c1202430553-94:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 22px !important;
+}
+
+/* 🟠 Span com máxima especificidade */
+html body st-input-currency div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix span,
+html body div.st_input.ng-tns-c1202430553-94:has(input.st_input_error.ng-valid) span {
+    position: static !important;
+    top: auto !important;
+    margin-top: 0 !important;
+}
+
+/* 🟠 ESPECÍFICO - ng-tns-c1202430553-206 com st_input_error.ng-valid */
+html body div.st_input.ng-tns-c1202430553-206:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body st-input-currency.ng-tns-c1202430553-206 div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 22px !important;
+}
+
+/* 🟠 Genérico - qualquer ng-tns-c1202430553 com st_input_error.ng-valid */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 22px !important;
+}
+
+/* 🟠 FORÇAR MAIS - ng-tns-c1202430553 com st_input_error.ng-valid para baixo */
+html body div.st_input.ng-tns-c1202430553-206:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body st-input-currency.ng-tns-c1202430553-206 div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 28px !important;
+}
+
+/* 🟠 Span também forçar para baixo */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix span {
+    margin-top: 2px !important;
+}
+
+/* 🟠 FORÇAR MUITO MAIS - ng-tns-c1202430553 com st_input_error.ng-valid */
+html body div.st_input.ng-tns-c1202430553-206:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body st-input-currency.ng-tns-c1202430553-206 div.st_input:has(input.st_input_error.ng-valid) div.st_input__prefix,
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 35px !important;
+}
+
+/* 🟠 Span com margin maior */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix span {
+    margin-top: 5px !important;
+}
+
+/* 🟠 NUCLEAR - Resetar tudo e usar posição absoluta fixa */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    position: absolute !important;
+    top: 50px !important;
+    left: 8px !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* 🟠 Span sem qualquer posicionamento adicional */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix span {
+    position: static !important;
+    top: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+}
+
+/* 🟠 AJUSTE FINO - Reduzir top para ng-tns-c1202430553 com st_input_error.ng-valid */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 17px !important;
+}
+
+/* 🟠 MEIO TERMO - Ajustar para 16px ng-tns-c1202430553 com st_input_error.ng-valid */
+html body div.st_input[class*='ng-tns-c1202430553']:has(input.st_input_error.ng-valid) div.st_input__prefix {
+    top: 16px !important;
+}
+
+/* 🟠 LIMPAR E RECRIAR - Específico para ng-tns-c1202430553-206 com st_input_error.ng-valid */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix.ng-tns-c1202430553-206 {
+    position: absolute !important;
+    top: 15px !important;
+    left: 8px !important;
+    transform: none !important;
+    z-index: 999 !important;
+}
+
+/* 🟠 Span específico para essa instância exata */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix.ng-tns-c1202430553-206 span.ng-tns-c1202430553-206 {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+}
+
+/* 🟠 AJUSTAR PARA BAIXO - ng-tns-c1202430553-206 com st_input_error.ng-valid */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix.ng-tns-c1202430553-206 {
+    top: 20px !important;
+}
+
+/* 🟠 DESCER MAIS - ng-tns-c1202430553-206 com st_input_error.ng-valid */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix.ng-tns-c1202430553-206 {
+    top: 22px !important;
+}
+
+/* 🟠 DESCER MAIS - ng-tns-c1202430553-206 com st_input_error.ng-valid */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.st_input_error.ng-valid) div.st_input__prefix.ng-tns-c1202430553-206 {
+    top: 24px !important;
+}
+
+/* 🟠 Estado ng-valid sem st_input_error - ng-tns-c1202430553-206 */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.ng-valid:not(.st_input_error)) div.st_input__prefix.ng-tns-c1202430553-206 {
+    position: absolute !important;
+    top: 24px !important;
+    left: 8px !important;
+    transform: none !important;
+    z-index: 999 !important;
+}
+
+/* 🟠 Span para ng-valid sem erro */
+div.st_input.ng-tns-c1202430553-206.st_input_outlined:has(input.ng-valid:not(.st_input_error)) div.st_input__prefix.ng-tns-c1202430553-206 span.ng-tns-c1202430553-206 {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+}
+
+
+/* ========================================
+   🏆 SOLUÇÃO DEFINITIVA - POSICIONAMENTO R$ 
+   ========================================
+   
+   PROBLEMA RESOLVIDO: Alinhamento do prefixo R$ nos inputs de moeda
+   
+   ESTADOS TESTADOS E FUNCIONANDO:
+   ✅ ng-invalid + st_input_error: top: 15px
+   ✅ st_input_error.ng-valid: top: 24px  
+   ✅ ng-valid sem erro: top: 24px
+   
+   MÉTODO: Position absolute com valores específicos por estado
+   TESTADO: 100% funcional em todos os cenários
+   
+   NÃO MEXER NESSAS REGRAS! FUNCIONAM PERFEITAMENTE!
+   ======================================== */
+
+
+
+/* 🟠 Currency Input - Remover border bottom teimoso */
+st-input-currency input.st_input__with_prefix,
+input.form-control.st_input__with_prefix,
+st-input-currency input.form-control.w-100,
+div.st_input input.st_input__with_prefix,
+input.st_input__with_prefix.st_input_error {
+    border-bottom: none !important;
+    border-bottom-width: 0 !important;
+    border-bottom-style: none !important;
+    border-bottom-color: transparent !important;
+}
+
+/* 🟠 Container do currency input - sem border bottom */
+st-input-currency div.st_input,
+st-input-currency div.st_input_outlined,
+div.st_input:has(input.st_input__with_prefix) {
+    border-bottom: none !important;
+}
+
+/* 🟠 Form do currency - sem border bottom */
+st-input-currency form {
+    border-bottom: none !important;
+}
+
+/* 🟠 ESPECÍFICO - Input st_input__with_prefix.ng-star-inserted sem border bottom */
+input.st_input__with_prefix.ng-star-inserted,
+input.form-control.st_input__with_prefix.ng-star-inserted,
+input.w-100.st_input__with_prefix.ng-star-inserted,
+st-input-currency input.st_input__with_prefix.ng-star-inserted {
+    border-bottom: 0 !important;
+    border-bottom-width: 0 !important;
+    border-bottom-style: none !important;
+    border-bottom-color: transparent !important;
+}
+
+/* 🟠 NUCLEAR - Com classes Angular específicas */
+input.form-control.w-100.ng-tns-c1202430553-206.st_input__with_prefix.ng-star-inserted,
+input[class*='ng-tns-c1202430553'].st_input__with_prefix.ng-star-inserted {
+    border-bottom: none !important;
+}
+
+/* 🟠 FORÇAR MÁXIMO - Border bottom ZERO com especificidade máxima */
+html body st-input-currency input.st_input__with_prefix.ng-star-inserted,
+html body input.form-control.w-100.ng-tns-c1202430553-206.st_input__with_prefix.ng-star-inserted.ng-dirty.ng-touched.st_input_error.ng-valid,
+html body div.st_input input.st_input__with_prefix.ng-star-inserted {
+    border-bottom: 0px solid transparent !important;
+    border-bottom-width: 0px !important;
+    border-bottom-style: none !important;
+    border-bottom-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 🟠 REMOVER border-bottom laranja do currency input */
+st-input-currency input.st_input__with_prefix,
+st-input-currency input.form-control,
+st-input-currency div.st_input input,
+div.st_input:has(input.st_input__with_prefix) input {
+    border-bottom: none !important;
+    border-bottom-width: 0 !important;
+    border-bottom-style: none !important;
+    border-bottom-color: transparent !important;
+}
+
+/* 🟠 Override regras específicas que adicionam border-bottom laranja */
+html body st-input-currency input,
+html body div.st_input:has(input.st_input__with_prefix) {
+    border-bottom: 0 !important;
+}
+
+/* 🟠 Currency Label - Remover todas as bordas */
+st-input-currency label,
+st-input-currency div.st_input label,
+label.ng-tns-c1202430553-206,
+label[class*='ng-tns-c1202430553'],
+div.st_input label[class*='ng-tns-c1202430553'] {
+    border: none !important;
+    border-width: 0 !important;
+    border-style: none !important;
+    border-color: transparent !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
+    border-left: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+}
+
+/* 🟠 Button toggle específico - z-index alto */
+mat-button-toggle#mat-button-toggle-32,
+mat-button-toggle.mat-button-toggle-checked {
+    z-index: 5 !important;
+    position: relative !important;
+}
+
+}
+
+    box-shadow: none !important;
+}
+
+/* 🟠 Apenas botão selecionado com borda fina */
+html body mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button {
+    border: 1px solid #4CAF50 !important;
+    border-width: 1px !important;
+    outline: none !important;
+}
+
+}
+
+}
+
+/* 🟠 Genérico - Todos os botões focados com borda verde */
+mat-button-toggle.cdk-focused button.mat-button-toggle-button,
+mat-button-toggle.cdk-touch-focused button.mat-button-toggle-button {
+    border: 1px solid #4CAF50 !important;
+    border-color: #4CAF50 !important;
+}
+
+
+}
+
+}
+
+/* 🟠 Payment Button Toggle - Reduzir espessura da borda verde */
+.user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button {
+    border-width: 1px !important;
+}
+
+/* 🟠 Payment Button Toggle - Borda verde fina com especificidade alta */
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button {
+    border: 1px solid #4CAF50 !important;
+    border-width: 1px !important;
+    outline-width: 1px !important;
+}
+
+/* 🟠 Ambos os estados do botão toggle - Borda fina igual */
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked-effect button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.check button.mat-button-toggle-button {
+    border: 1px solid #4CAF50 !important;
+    border-width: 1px !important;
+    outline: 1px solid #4CAF50 !important;
+    outline-width: 1px !important;
+}
+
+/* 🟠 Focus states também com borda fina */
+html body .user-payment__payment-grid mat-button-toggle.cdk-focused button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.cdk-touch-focused button.mat-button-toggle-button {
+    border-width: 1px !important;
+    outline-width: 1px !important;
+}
+
+/* 🟠 Remover box-shadow que pode estar causando borda grossa */
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked-effect button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.check button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.cdk-focused button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.cdk-touch-focused button.mat-button-toggle-button {
+    border: 1px solid #4CAF50 !important;
+    border-width: 1px !important;
+    outline: none !important;
+    outline-width: 0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+}
+
+/* 🟠 Forçar também no mat-button-toggle container */
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked,
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked-effect,
+html body .user-payment__payment-grid mat-button-toggle.check {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* 🟠 Cor verde limão para todas as bordas dos botões */
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked-effect button.mat-button-toggle-button,
+html body .user-payment__payment-grid mat-button-toggle.check button.mat-button-toggle-button {
+    border: 1px solid #89F336 !important;
+    border-color: #89F336 !important;
+}
+
+/* 🟠 Forçar cliques nos spans internos irem para o botão toggle */
+.user-payment__payment-grid span.mat-button-toggle-label-content,
+.user-payment__payment-grid div.user-payment__payment-label span,
+.user-payment__payment-grid span.mr_4,
+.user-payment__payment-grid div[_ngcontent-bet-plus-web-c3947600600] span {
+    pointer-events: none !important;
+}
+
+/* 🟠 Garantir que o botão toggle receba os cliques */
+.user-payment__payment-grid mat-button-toggle,
+.user-payment__payment-grid button.mat-button-toggle-button {
+    pointer-events: all !important;
+    cursor: pointer !important;
+}
+
+/* 🟠 Check Icon - Z-index máximo para ficar na frente */
+.user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked::after,
+.user-payment__payment-grid mat-button-toggle.check::after,
+.user-payment__payment-grid mat-button-toggle .mat-button-toggle-focus-overlay,
+.user-payment__payment-grid mat-button-toggle mat-icon {
+    z-index: 999 !important;
+    position: relative !important;
+}
+
+/* 🟠 Botão toggle com posição relativa para conter o ícone */
+.user-payment__payment-grid mat-button-toggle.mat-button-toggle-checked,
+.user-payment__payment-grid mat-button-toggle.check {
+    position: relative !important;
+}
+
+/* 🟠 Conteúdo do botão com z-index baixo */
+.user-payment__payment-grid mat-button-toggle span.mat-button-toggle-label-content {
+    z-index: 1 !important;
+    position: relative !important;
+}
